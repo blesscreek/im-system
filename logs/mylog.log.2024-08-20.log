@@ -1,0 +1,558 @@
+2024-08-20 12:48:28 -Starting Application on bless with PID 60128 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 12:48:28 -The following profiles are active: dev
+2024-08-20 12:48:29 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 12:48:29 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 12:48:29 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 12:48:29 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 12:48:29 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:48:29 -Starting service [Tomcat]
+2024-08-20 12:48:29 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 12:48:29 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 12:48:29 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 12:48:29 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 12:48:29 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 12:48:29 -Initializing Spring embedded WebApplicationContext
+2024-08-20 12:48:29 -Root WebApplicationContext: initialization completed in 893 ms
+2024-08-20 12:48:29 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imUserController': Unsatisfied dependency expressed through field 'imUserService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bless.service.user.service.ImUserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-08-20 12:48:29 -Stopping service [Tomcat]
+2024-08-20 12:48:29 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-08-20 12:48:29 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field imUserService in com.bless.service.user.controller.ImUserController required a bean of type 'com.bless.service.user.service.ImUserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bless.service.user.service.ImUserService' in your configuration.
+
+2024-08-20 12:48:48 -Starting Application on bless with PID 49232 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 12:48:48 -The following profiles are active: dev
+2024-08-20 12:48:48 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 12:48:48 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 12:48:48 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 12:48:48 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 12:48:48 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:48:48 -Starting service [Tomcat]
+2024-08-20 12:48:48 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 12:48:48 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 12:48:48 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 12:48:48 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 12:48:48 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 12:48:48 -Initializing Spring embedded WebApplicationContext
+2024-08-20 12:48:48 -Root WebApplicationContext: initialization completed in 730 ms
+2024-08-20 12:48:49 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:48:50 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:48:50 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 12:48:50 -Started Application in 2.448 seconds (JVM running for 3.094)
+2024-08-20 12:49:08 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 12:49:08 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 12:49:08 -Completed initialization in 4 ms
+2024-08-20 12:49:08 -HikariPool-1 - Starting...
+2024-08-20 12:49:09 -HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:93)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:55)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:85)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy58.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy61.insert(Unknown Source)
+	at com.bless.service.user.service.impl.ImUserServiceImpl.importUser(ImUserServiceImpl.java:41)
+	at com.bless.service.user.controller.ImUserController.importUser(ImUserController.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-08-20 12:49:09 -HikariPool-1 - Starting...
+2024-08-20 12:49:10 -HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:93)
+	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doUpdate(MybatisSimpleExecutor.java:55)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.update(MybatisCachingExecutor.java:85)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy58.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:60)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy61.insert(Unknown Source)
+	at com.bless.service.user.service.impl.ImUserServiceImpl.importUser(ImUserServiceImpl.java:41)
+	at com.bless.service.user.controller.ImUserController.importUser(ImUserController.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-08-20 12:49:50 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:49:52 -Starting Application on bless with PID 54320 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 12:49:52 -The following profiles are active: dev
+2024-08-20 12:49:53 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 12:49:53 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 12:49:53 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 12:49:53 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 12:49:53 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:49:53 -Starting service [Tomcat]
+2024-08-20 12:49:53 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 12:49:53 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 12:49:53 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 12:49:53 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 12:49:53 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 12:49:53 -Initializing Spring embedded WebApplicationContext
+2024-08-20 12:49:53 -Root WebApplicationContext: initialization completed in 755 ms
+2024-08-20 12:49:54 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:49:55 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:49:55 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 12:49:55 -Started Application in 2.457 seconds (JVM running for 3.153)
+2024-08-20 12:50:00 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 12:50:00 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 12:50:00 -Completed initialization in 3 ms
+2024-08-20 12:50:00 -HikariPool-1 - Starting...
+2024-08-20 12:50:00 -HikariPool-1 - Start completed.
+2024-08-20 12:54:35 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:54:35 -HikariPool-1 - Shutdown initiated...
+2024-08-20 12:54:35 -HikariPool-1 - Shutdown completed.
+2024-08-20 12:54:38 -Starting Application on bless with PID 2428 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 12:54:38 -The following profiles are active: dev
+2024-08-20 12:54:39 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 12:54:39 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 12:54:39 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 12:54:39 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 12:54:39 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:54:39 -Starting service [Tomcat]
+2024-08-20 12:54:39 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 12:54:39 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 12:54:39 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 12:54:39 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 12:54:39 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 12:54:39 -Initializing Spring embedded WebApplicationContext
+2024-08-20 12:54:39 -Root WebApplicationContext: initialization completed in 841 ms
+2024-08-20 12:54:40 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:54:40 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:54:40 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 12:54:40 -Started Application in 2.674 seconds (JVM running for 3.802)
+2024-08-20 12:54:44 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 12:54:44 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 12:54:44 -Completed initialization in 4 ms
+2024-08-20 12:55:11 -HikariPool-1 - Starting...
+2024-08-20 12:55:11 -HikariPool-1 - Start completed.
+2024-08-20 12:55:12 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:55:12 -HikariPool-1 - Shutdown initiated...
+2024-08-20 12:55:12 -HikariPool-1 - Shutdown completed.
+2024-08-20 12:55:14 -Starting Application on bless with PID 47256 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 12:55:14 -The following profiles are active: dev
+2024-08-20 12:55:14 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 12:55:14 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 12:55:14 -Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2024-08-20 12:55:15 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 12:55:15 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:55:15 -Starting service [Tomcat]
+2024-08-20 12:55:15 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 12:55:15 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 12:55:15 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 12:55:15 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 12:55:15 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 12:55:15 -Initializing Spring embedded WebApplicationContext
+2024-08-20 12:55:15 -Root WebApplicationContext: initialization completed in 870 ms
+2024-08-20 12:55:16 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:55:16 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:55:16 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 12:55:16 -Started Application in 2.681 seconds (JVM running for 3.594)
+2024-08-20 12:55:21 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 12:55:21 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 12:55:21 -Completed initialization in 5 ms
+2024-08-20 12:57:37 -HikariPool-1 - Starting...
+2024-08-20 12:57:37 -HikariPool-1 - Start completed.
+2024-08-20 12:57:37 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:57:37 -HikariPool-1 - Shutdown initiated...
+2024-08-20 12:57:37 -HikariPool-1 - Shutdown completed.
+2024-08-20 12:57:42 -Starting Application on bless with PID 35064 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 12:57:42 -The following profiles are active: dev
+2024-08-20 12:57:42 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 12:57:42 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 12:57:42 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 12:57:42 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 12:57:42 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:57:42 -Starting service [Tomcat]
+2024-08-20 12:57:42 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 12:57:42 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 12:57:42 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 12:57:42 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 12:57:42 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 12:57:42 -Initializing Spring embedded WebApplicationContext
+2024-08-20 12:57:42 -Root WebApplicationContext: initialization completed in 745 ms
+2024-08-20 12:57:43 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 12:57:44 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 12:57:44 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 12:57:44 -Started Application in 2.435 seconds (JVM running for 3.071)
+2024-08-20 12:57:47 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 12:57:47 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 12:57:47 -Completed initialization in 4 ms
+2024-08-20 12:57:47 -HikariPool-1 - Starting...
+2024-08-20 12:57:47 -HikariPool-1 - Start completed.
+2024-08-20 13:31:56 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:31:56 -HikariPool-1 - Shutdown initiated...
+2024-08-20 13:31:56 -HikariPool-1 - Shutdown completed.
+2024-08-20 13:32:41 -Starting Application on bless with PID 46504 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 13:32:41 -The following profiles are active: dev
+2024-08-20 13:32:42 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 13:32:42 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 13:32:42 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 13:32:42 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 13:32:42 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:32:42 -Starting service [Tomcat]
+2024-08-20 13:32:42 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 13:32:42 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 13:32:42 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 13:32:42 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 13:32:42 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 13:32:42 -Initializing Spring embedded WebApplicationContext
+2024-08-20 13:32:42 -Root WebApplicationContext: initialization completed in 848 ms
+2024-08-20 13:32:43 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:32:44 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:32:44 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 13:32:44 -Started Application in 2.559 seconds (JVM running for 3.241)
+2024-08-20 13:33:34 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 13:33:34 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 13:33:34 -Completed initialization in 3 ms
+2024-08-20 13:33:34 -HikariPool-1 - Starting...
+2024-08-20 13:33:34 -HikariPool-1 - Start completed.
+2024-08-20 13:36:00 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:36:00 -HikariPool-1 - Shutdown initiated...
+2024-08-20 13:36:00 -HikariPool-1 - Shutdown completed.
+2024-08-20 13:36:07 -Starting Application on bless with PID 49604 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 13:36:07 -The following profiles are active: dev
+2024-08-20 13:36:08 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 13:36:08 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 13:36:08 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 13:36:08 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 13:36:08 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:36:08 -Starting service [Tomcat]
+2024-08-20 13:36:08 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 13:36:08 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 13:36:08 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 13:36:08 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 13:36:08 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 13:36:08 -Initializing Spring embedded WebApplicationContext
+2024-08-20 13:36:08 -Root WebApplicationContext: initialization completed in 752 ms
+2024-08-20 13:36:09 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:36:09 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:36:10 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 13:36:10 -Started Application in 2.445 seconds (JVM running for 3.167)
+2024-08-20 13:36:13 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 13:36:13 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 13:36:13 -Completed initialization in 6 ms
+2024-08-20 13:36:13 -HikariPool-1 - Starting...
+2024-08-20 13:36:13 -HikariPool-1 - Start completed.
+2024-08-20 13:38:14 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:38:14 -HikariPool-1 - Shutdown initiated...
+2024-08-20 13:38:14 -HikariPool-1 - Shutdown completed.
+2024-08-20 13:38:19 -Starting Application on bless with PID 16292 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 13:38:19 -The following profiles are active: dev
+2024-08-20 13:38:20 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 13:38:20 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 13:38:20 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 13:38:20 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 13:38:20 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:38:20 -Starting service [Tomcat]
+2024-08-20 13:38:20 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 13:38:20 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 13:38:20 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 13:38:20 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 13:38:20 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 13:38:20 -Initializing Spring embedded WebApplicationContext
+2024-08-20 13:38:20 -Root WebApplicationContext: initialization completed in 725 ms
+2024-08-20 13:38:21 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:38:21 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:38:21 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 13:38:21 -Started Application in 2.445 seconds (JVM running for 3.104)
+2024-08-20 13:38:24 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 13:38:24 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 13:38:24 -Completed initialization in 3 ms
+2024-08-20 13:38:24 -HikariPool-1 - Starting...
+2024-08-20 13:38:24 -HikariPool-1 - Start completed.
+2024-08-20 13:41:53 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:41:53 -HikariPool-1 - Shutdown initiated...
+2024-08-20 13:41:53 -HikariPool-1 - Shutdown completed.
+2024-08-20 13:41:59 -Starting Application on bless with PID 50132 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 13:41:59 -The following profiles are active: dev
+2024-08-20 13:42:00 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 13:42:00 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 13:42:00 -Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2024-08-20 13:42:00 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 13:42:00 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:42:00 -Starting service [Tomcat]
+2024-08-20 13:42:00 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 13:42:00 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 13:42:00 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 13:42:00 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 13:42:00 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 13:42:00 -Initializing Spring embedded WebApplicationContext
+2024-08-20 13:42:00 -Root WebApplicationContext: initialization completed in 745 ms
+2024-08-20 13:42:01 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:42:01 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:42:01 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 13:42:01 -Started Application in 2.474 seconds (JVM running for 3.124)
+2024-08-20 13:42:51 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 13:42:51 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 13:42:51 -Completed initialization in 4 ms
+2024-08-20 13:44:18 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:44:22 -Starting Application on bless with PID 59920 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 13:44:22 -The following profiles are active: dev
+2024-08-20 13:44:23 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 13:44:23 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 13:44:23 -Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2024-08-20 13:44:23 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 13:44:23 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:44:23 -Starting service [Tomcat]
+2024-08-20 13:44:23 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 13:44:23 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 13:44:23 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 13:44:23 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 13:44:23 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 13:44:23 -Initializing Spring embedded WebApplicationContext
+2024-08-20 13:44:23 -Root WebApplicationContext: initialization completed in 718 ms
+2024-08-20 13:44:24 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:44:24 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:44:24 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 13:44:24 -Started Application in 2.373 seconds (JVM running for 3.03)
+2024-08-20 13:44:27 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 13:44:27 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 13:44:27 -Completed initialization in 4 ms
+2024-08-20 13:45:09 -HikariPool-1 - Starting...
+2024-08-20 13:45:09 -HikariPool-1 - Start completed.
+2024-08-20 13:48:34 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:48:34 -HikariPool-1 - Shutdown initiated...
+2024-08-20 13:48:34 -HikariPool-1 - Shutdown completed.
+2024-08-20 13:48:40 -Starting Application on bless with PID 26724 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 13:48:40 -The following profiles are active: dev
+2024-08-20 13:48:40 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 13:48:40 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 13:48:40 -Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2024-08-20 13:48:41 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 13:48:41 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:48:41 -Starting service [Tomcat]
+2024-08-20 13:48:41 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 13:48:41 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 13:48:41 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 13:48:41 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 13:48:41 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 13:48:41 -Initializing Spring embedded WebApplicationContext
+2024-08-20 13:48:41 -Root WebApplicationContext: initialization completed in 784 ms
+2024-08-20 13:48:41 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 13:48:42 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 13:48:42 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 13:48:42 -Started Application in 2.504 seconds (JVM running for 3.175)
+2024-08-20 13:51:51 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 13:51:51 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 13:51:52 -Completed initialization in 6 ms
+2024-08-20 13:52:10 -HikariPool-1 - Starting...
+2024-08-20 13:52:11 -HikariPool-1 - Start completed.
+2024-08-20 14:11:50 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 14:11:50 -HikariPool-1 - Shutdown initiated...
+2024-08-20 14:11:50 -HikariPool-1 - Shutdown completed.
+2024-08-20 14:11:59 -Starting Application on bless with PID 53076 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 14:11:59 -The following profiles are active: dev
+2024-08-20 14:12:00 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 14:12:00 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 14:12:00 -Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2024-08-20 14:12:00 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 14:12:00 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 14:12:00 -Starting service [Tomcat]
+2024-08-20 14:12:00 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 14:12:00 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 14:12:00 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 14:12:00 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 14:12:00 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 14:12:00 -Initializing Spring embedded WebApplicationContext
+2024-08-20 14:12:00 -Root WebApplicationContext: initialization completed in 907 ms
+2024-08-20 14:12:01 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 14:12:02 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 14:12:02 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 14:12:02 -Started Application in 2.731 seconds (JVM running for 3.678)
+2024-08-20 14:14:42 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 14:14:48 -Starting Application on bless with PID 18372 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-20 14:14:48 -The following profiles are active: dev
+2024-08-20 14:14:48 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-20 14:14:48 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-20 14:14:48 -Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2024-08-20 14:14:49 -Tomcat initialized with port(s): 8000 (http)
+2024-08-20 14:14:49 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-20 14:14:49 -Starting service [Tomcat]
+2024-08-20 14:14:49 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-20 14:14:49 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-20 14:14:49 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-20 14:14:49 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-20 14:14:49 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-20 14:14:49 -Initializing Spring embedded WebApplicationContext
+2024-08-20 14:14:49 -Root WebApplicationContext: initialization completed in 739 ms
+2024-08-20 14:14:50 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-20 14:14:50 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-20 14:14:50 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-20 14:14:50 -Started Application in 2.44 seconds (JVM running for 3.083)
+2024-08-20 14:15:34 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-20 14:15:34 -Initializing Servlet 'dispatcherServlet'
+2024-08-20 14:15:34 -Completed initialization in 3 ms
+2024-08-20 14:16:31 -HikariPool-1 - Starting...
+2024-08-20 14:16:31 -HikariPool-1 - Start completed.
+2024-08-20 14:26:19 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-20 14:26:19 -HikariPool-1 - Shutdown initiated...
+2024-08-20 14:26:19 -HikariPool-1 - Shutdown completed.
