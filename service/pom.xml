@@ -2,16 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.bless</groupId>
         <artifactId>im-system</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>com.bless</groupId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <description>service</description>
-    <artifactId>service</artifactId>
+
+    <description>lld-im-service project</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <artifactId>service</artifactId>
+
     <dependencies>
         <!-- rabbitmq -->
         <dependency>
@@ -41,7 +44,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>com.bless</groupId>
+            <artifactId>codec</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
 
         <!-- hutool -->
         <dependency>
@@ -77,13 +84,7 @@
         <dependency>
             <groupId>com.bless</groupId>
             <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.bless</groupId>
-            <artifactId>codec</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

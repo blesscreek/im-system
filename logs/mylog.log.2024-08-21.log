@@ -328,3 +328,30 @@
 2024-08-21 14:54:01 -Shutting down ExecutorService 'applicationTaskExecutor'
 2024-08-21 14:54:01 -HikariPool-1 - Shutdown initiated...
 2024-08-21 14:54:01 -HikariPool-1 - Shutdown completed.
+2024-08-21 14:54:08 -Starting Application on bless with PID 60204 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-21 14:54:08 -The following profiles are active: dev
+2024-08-21 14:54:08 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-21 14:54:08 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-21 14:54:09 -Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2024-08-21 14:54:09 -Tomcat initialized with port(s): 8000 (http)
+2024-08-21 14:54:09 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-21 14:54:09 -Starting service [Tomcat]
+2024-08-21 14:54:09 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-21 14:54:09 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-21 14:54:09 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-21 14:54:09 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-21 14:54:09 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-21 14:54:09 -Initializing Spring embedded WebApplicationContext
+2024-08-21 14:54:09 -Root WebApplicationContext: initialization completed in 821 ms
+2024-08-21 14:54:10 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-21 14:54:10 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-21 14:54:10 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-21 14:54:10 -Started Application in 2.769 seconds (JVM running for 3.426)
+2024-08-21 14:54:13 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-21 14:54:13 -Initializing Servlet 'dispatcherServlet'
+2024-08-21 14:54:13 -Completed initialization in 4 ms
+2024-08-21 14:54:13 -HikariPool-1 - Starting...
+2024-08-21 14:54:13 -HikariPool-1 - Start completed.
+2024-08-21 14:57:18 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-21 14:57:18 -HikariPool-1 - Shutdown initiated...
+2024-08-21 14:57:18 -HikariPool-1 - Shutdown completed.
