@@ -117,3 +117,4 @@ httpclient:
 
 mpp:
   entityBasePath: com.lld.im.service.friendship.dao
+

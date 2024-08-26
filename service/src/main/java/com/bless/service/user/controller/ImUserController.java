@@ -2,11 +2,14 @@ package com.bless.service.user.controller;
 
 import com.bless.common.ClientType;
 import com.bless.common.ResponseVO;
+import com.bless.common.route.RouteHandle;
+import com.bless.common.route.RouteInfo;
+import com.bless.common.utils.RouteInfoParseUtil;
 import com.bless.service.user.model.req.DeleteUserReq;
 import com.bless.service.user.model.req.ImportUserReq;
 import com.bless.service.user.model.req.LoginReq;
 import com.bless.service.user.service.ImUserService;
-import org.apache.http.conn.routing.RouteInfo;
+import com.bless.service.utils.ZKit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +29,11 @@ import java.util.List;
 public class ImUserController {
     @Autowired
     ImUserService imUserService;
+    @Autowired
+    RouteHandle routeHandle;
 
+    @Autowired
+    ZKit zKit;
 
 
     @RequestMapping("importUser")
@@ -41,21 +48,28 @@ public class ImUserController {
         return imUserService.deleteUser(req);
     }
 
-//    /**
-//     * @description im的登录接口，返回im地址
-//     */
-//    @RequestMapping("/login")
-//    public ResponseVO login(@RequestBody @Validated LoginReq req, Integer appId) {
-//        req.setAppId(appId);
-//
-//        ResponseVO login = imUserService.login(req);
-//        if (login.isOk()) {
-//
-//            return null;
-//        }
-//
-//        return ResponseVO.errorResponse();
-//    }
+    /**
+     * @description im的登录接口，返回im地址
+     */
+    @RequestMapping("/login")
+    public ResponseVO login(@RequestBody @Validated LoginReq req, Integer appId) {
+        req.setAppId(appId);
+
+        ResponseVO login = imUserService.login(req);
+        if (login.isOk()) {
+            List<String> allNode = new ArrayList<>();
+            if (req.getClientType() == ClientType.WEB.getCode()) {
+                allNode = zKit.getAllWebNode();
+            } else {
+                allNode = zKit.getAllTcpNode();
+            }
+            String s = routeHandle.routeServer(allNode, req.getUserId());
+            RouteInfo parse = RouteInfoParseUtil.parse(s);
+            return ResponseVO.successResponse(parse);
+        }
+
+        return ResponseVO.errorResponse();
+    }
 
 //    @RequestMapping("/getUserSequence")
 //    public ResponseVO getUserSequence(@RequestBody @Validated
