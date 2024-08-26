@@ -28,8 +28,10 @@ public class UserSession {
     //连接状态 1=在线 2=离线
     private Integer connectState;
 
+    //服务id
     private Integer brokerId;
 
+    //服务器ip
     private String brokerHost;
 
     private String imei;

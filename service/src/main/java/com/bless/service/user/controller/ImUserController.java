@@ -1,9 +1,12 @@
 package com.bless.service.user.controller;
 
+import com.bless.common.ClientType;
 import com.bless.common.ResponseVO;
 import com.bless.service.user.model.req.DeleteUserReq;
 import com.bless.service.user.model.req.ImportUserReq;
+import com.bless.service.user.model.req.LoginReq;
 import com.bless.service.user.service.ImUserService;
+import org.apache.http.conn.routing.RouteInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,10 +42,7 @@ public class ImUserController {
     }
 
 //    /**
-//     * @param [req]
-//     * @return com.lld.im.common.ResponseVO
 //     * @description im的登录接口，返回im地址
-//     * @author chackylee
 //     */
 //    @RequestMapping("/login")
 //    public ResponseVO login(@RequestBody @Validated LoginReq req, Integer appId) {
@@ -50,21 +50,13 @@ public class ImUserController {
 //
 //        ResponseVO login = imUserService.login(req);
 //        if (login.isOk()) {
-//            List<String> allNode = new ArrayList<>();
-//            if (req.getClientType() == ClientType.WEB.getCode()) {
-//                allNode = zKit.getAllWebNode();
-//            } else {
-//                allNode = zKit.getAllTcpNode();
-//            }
-//            String s = routeHandle.routeServer(allNode, req
-//                    .getUserId());
-//            RouteInfo parse = RouteInfoParseUtil.parse(s);
-//            return ResponseVO.successResponse(parse);
+//
+//            return null;
 //        }
 //
 //        return ResponseVO.errorResponse();
 //    }
-//
+
 //    @RequestMapping("/getUserSequence")
 //    public ResponseVO getUserSequence(@RequestBody @Validated
 //                                              GetUserSequenceReq req, Integer appId) {

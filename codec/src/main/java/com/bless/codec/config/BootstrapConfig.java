@@ -27,6 +27,10 @@ public class BootstrapConfig {
         private Long heartBeatTime; //心跳超时时间 单位毫秒
 
         private Integer loginModel;
+        /**
+         * zk配置
+         */
+        private ZkConfig zkConfig;
 
         /**
          * redis配置
@@ -36,8 +40,27 @@ public class BootstrapConfig {
          * rabbitmq配置
          */
         private Rabbitmq rabbitmq;
-    }
 
+        /**
+         * brokerId 区分服务
+         */
+        private Integer brokerId;
+
+
+
+    }
+    @Data
+    public static class ZkConfig {
+        /**
+         * zk连接地址
+         */
+        private String zkAddr;
+
+        /**
+         * zk连接超时时间
+         */
+        private Integer zkConnectTimeOut;
+    }
 
     @Data
     @Builder

@@ -1,6 +1,7 @@
 package com.bless.tcp.server;
 
 import com.bless.codec.MessageDecoder;
+import com.bless.codec.MessageEncoder;
 import com.bless.tcp.handler.HeartBeatHandler;
 import com.bless.tcp.handler.NettyServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
@@ -47,11 +48,12 @@ public class ImServer {
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
                         ch.pipeline().addLast(new MessageDecoder());
-                        ch.pipeline().addLast(new IdleStateHandler(
-                                0,0,10
-                        ));
+                        ch.pipeline().addLast(new MessageEncoder());
+//                        ch.pipeline().addLast(new IdleStateHandler(
+//                                0,0,10
+//                        ));
                         ch.pipeline().addLast(new HeartBeatHandler(config.getHeartBeatTime()));
-                        ch.pipeline().addLast(new NettyServerHandler());
+                        ch.pipeline().addLast(new NettyServerHandler(config.getBrokerId()));
                     }
                  });
     }

@@ -16,8 +16,24 @@ public class Constants {
 
     public static final String ClientType = "clientType";
 
+    public static final String Imei = "imei";
+
     public static final String ReadTime = "readTime";
+
+    public static final String ImCoreZkRoot = "/im-coreRoot";
+
+    public static final String ImCoreZkRootTcp = "/tcp";
+
+    public static final String ImCoreZkRootWeb = "/web";
+
     public static class RedisConstants{
+
+        /**
+         * 用户上线通知channel
+         */
+        public static final String UserLoginChannel
+                = "signal/channel/LOGIN_USER_INNER_QUEUE";
+
 
         /**
          * 用户session: appId + UserSessionConstants + 用户id

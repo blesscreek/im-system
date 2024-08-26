@@ -9,10 +9,7 @@ import com.bless.common.enums.UserErrorCode;
 import com.bless.common.exception.ApplicationException;
 import com.bless.service.user.dao.ImUserDataEntity;
 import com.bless.service.user.dao.mapper.ImUserDataMapper;
-import com.bless.service.user.model.req.DeleteUserReq;
-import com.bless.service.user.model.req.GetUserInfoReq;
-import com.bless.service.user.model.req.ImportUserReq;
-import com.bless.service.user.model.req.ModifyUserInfoReq;
+import com.bless.service.user.model.req.*;
 import com.bless.service.user.model.resp.GetUserInfoResp;
 import com.bless.service.user.model.resp.ImportUserResp;
 import com.bless.service.user.service.ImUserService;
@@ -162,6 +159,10 @@ public class ImUserServiceImpl implements ImUserService {
             return ResponseVO.successResponse();
         }
         throw new ApplicationException(UserErrorCode.MODIFY_USER_ERROR);
+    }
+    @Override
+    public ResponseVO login(LoginReq req) {
+        return ResponseVO.successResponse();
     }
 
 }

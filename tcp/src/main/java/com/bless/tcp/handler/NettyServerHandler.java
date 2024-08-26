@@ -8,17 +8,23 @@ import com.bless.codec.proto.Message;
 import com.bless.common.constant.Constants;
 import com.bless.common.enums.ImConnectStatusEnum;
 import com.bless.common.enums.command.SystemCommand;
+import com.bless.common.model.UserClientDto;
 import com.bless.common.model.UserSession;
 import com.bless.tcp.redis.RedisManager;
 import com.bless.tcp.utils.SessionSocketHolder;
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexTypeModel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.AttributeKey;
 import org.redisson.api.RMap;
+import org.redisson.api.RTopic;
 import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * @Author bless
@@ -31,6 +37,12 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
 
     private final static Logger logger = LoggerFactory.getLogger(NettyServerHandler.class);
 
+    private Integer brokerId;
+
+    public NettyServerHandler(Integer brokerId) {
+        this.brokerId = brokerId;
+    }
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Message msg) throws Exception {
         Integer command = msg.getMessageHeader().getCommand();
@@ -42,6 +54,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
             ctx.channel().attr(AttributeKey.valueOf(Constants.UserId)).set(loginpack.getUserId());
             ctx.channel().attr(AttributeKey.valueOf(Constants.AppId)).set(msg.getMessageHeader().getAppId());
             ctx.channel().attr(AttributeKey.valueOf(Constants.ClientType)).set(msg.getMessageHeader().getClientType());
+            ctx.channel().attr(AttributeKey.valueOf(Constants.Imei)).set(msg.getMessageHeader().getImei());
 
             //Redis map
             UserSession userSession = new UserSession();
@@ -49,15 +62,38 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
             userSession.setClientType(msg.getMessageHeader().getClientType());
             userSession.setUserId(loginpack.getUserId());
             userSession.setConnectState(ImConnectStatusEnum.OFFLINE_STATUS.getCode());
+            userSession.setBrokerId(brokerId);
+            try {
+                InetAddress localHost = InetAddress.getLocalHost();
+                userSession.setBrokerHost(localHost.getHostAddress());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
 
             //存到redis中
             RedissonClient redissonClient = RedisManager.getRedissonClient();
             RMap<String, String> map = redissonClient.getMap(msg.getMessageHeader().getAppId() + Constants.RedisConstants.UserSessionConstants + loginpack.getUserId());
-            map.put(msg.getMessageHeader().getClientType() + "", JSONObject.toJSONString(userSession));
+            map.put(msg.getMessageHeader().getClientType() + ":" + msg.getMessageHeader().getImei()
+                    , JSONObject.toJSONString(userSession));
 
             //将channel存起来
-            SessionSocketHolder.put(msg.getMessageHeader().getAppId(), loginpack.getUserId()
-                                    ,msg.getMessageHeader().getClientType(), (NioSocketChannel) ctx.channel());
+            SessionSocketHolder.put(msg.getMessageHeader().getAppId()
+                    , loginpack.getUserId()
+                    ,msg.getMessageHeader().getClientType()
+                    , (NioSocketChannel) ctx.channel()
+                    , msg.getMessageHeader().getImei());
+
+            //广播发布用户上线通知，方便踢端口下线
+            UserClientDto dto = new UserClientDto();
+            dto.setImei(msg.getMessageHeader().getImei());
+            dto.setUserId(loginpack.getUserId());
+            dto.setClientType(msg.getMessageHeader().getClientType());
+            dto.setAppId(msg.getMessageHeader().getAppId());
+            RTopic topic = redissonClient.getTopic(Constants.RedisConstants.UserLoginChannel);
+            topic.publish(JSONObject.toJSONString(dto));
+
+
         }else if (command == SystemCommand.LOGOUT.getCommand()) {
             SessionSocketHolder.removeUserSession((NioSocketChannel) ctx.channel());
 
@@ -73,3 +109,6 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
 
     }
 }
+
+
+

@@ -1,6 +1,7 @@
 package com.bless.tcp.redis;
 
 import com.bless.codec.config.BootstrapConfig;
+import com.bless.tcp.reciver.UserLoginMessageListener;
 import org.redisson.api.RedissonClient;
 
 /**
@@ -12,9 +13,15 @@ import org.redisson.api.RedissonClient;
 
 public class RedisManager {
     private static RedissonClient redissonClient;
+
+    private static Integer loginModel;
     public static void init(BootstrapConfig config) {
+        loginModel = config.getIm().getLoginModel();
         SingleClientStrategy singleClientStrategy = new SingleClientStrategy();
         redissonClient = singleClientStrategy.getRedissonClient(config.getIm().getRedis());
+        UserLoginMessageListener userLoginMessageListener = new UserLoginMessageListener(loginModel);
+        userLoginMessageListener.listenerUserLogin();
+
     }
     public static RedissonClient getRedissonClient() {
         return redissonClient;
