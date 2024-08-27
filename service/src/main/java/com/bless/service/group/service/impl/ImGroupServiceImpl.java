@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.bless.common.ResponseVO;
+import com.bless.common.config.AppConfig;
+import com.bless.common.constant.Constants;
 import com.bless.common.enums.GroupErrorCode;
 import com.bless.common.enums.GroupMemberRoleEnum;
 import com.bless.common.enums.GroupStatusEnum;
@@ -12,11 +14,13 @@ import com.bless.common.enums.GroupTypeEnum;
 import com.bless.common.exception.ApplicationException;
 import com.bless.service.group.dao.ImGroupEntity;
 import com.bless.service.group.dao.mapper.ImGroupMapper;
+import com.bless.service.group.model.callback.DestroyGroupCallbackDto;
 import com.bless.service.group.model.req.*;
 import com.bless.service.group.model.resp.GetJoinedGroupResp;
 import com.bless.service.group.model.resp.GetRoleInGroupResp;
 import com.bless.service.group.service.ImGroupMemberService;
 import com.bless.service.group.service.ImGroupService;
+import com.bless.service.utils.CallbackService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +45,12 @@ public class ImGroupServiceImpl implements ImGroupService {
 
     @Autowired
     ImGroupMemberService groupMemberService;
+
+    @Autowired
+    AppConfig appConfig;
+
+    @Autowired
+    CallbackService callbackService;
 
     @Override
     public ResponseVO importGroup(ImportGroupReq req) {
@@ -137,6 +147,10 @@ public class ImGroupServiceImpl implements ImGroupService {
             groupMemberService.addGroupMember(req.getGroupId(), req.getAppId(), dto);
         }
 
+        if(appConfig.isCreateGroupAfterCallback()){
+            callbackService.callback(req.getAppId(), Constants.CallbackCommand.CreateGroupAfter,
+                    JSONObject.toJSONString(imGroupEntity));
+        }
         return ResponseVO.successResponse();
     }
     @Override
@@ -206,6 +220,11 @@ public class ImGroupServiceImpl implements ImGroupService {
         int row = imGroupDataMapper.update(update, query);
         if (row != 1) {
             throw new ApplicationException(GroupErrorCode.THIS_OPERATE_NEED_MANAGER_ROLE);
+        }
+
+        if(appConfig.isModifyGroupAfterCallback()){
+            callbackService.callback(req.getAppId(),Constants.CallbackCommand.UpdateGroupAfter,
+                    JSONObject.toJSONString(imGroupDataMapper.selectOne(query)));
         }
 
         return ResponseVO.successResponse();
@@ -290,6 +309,14 @@ public class ImGroupServiceImpl implements ImGroupService {
         if (update1 != 1) {
             throw new ApplicationException(GroupErrorCode.UPDATE_GROUP_BASE_INFO_ERROR);
         }
+        if(appConfig.isModifyGroupAfterCallback()){
+            DestroyGroupCallbackDto dto = new DestroyGroupCallbackDto();
+            dto.setGroupId(req.getGroupId());
+            callbackService.callback(req.getAppId()
+                    ,Constants.CallbackCommand.DestoryGroupAfter,
+                    JSONObject.toJSONString(dto));
+        }
+
         return ResponseVO.successResponse();
     }
     @Override

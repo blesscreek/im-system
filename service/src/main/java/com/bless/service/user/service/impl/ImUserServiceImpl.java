@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.bless.codec.pack.user.UserModifyPack;
 import com.bless.common.ResponseVO;
+import com.bless.common.config.AppConfig;
+import com.bless.common.constant.Constants;
 import com.bless.common.enums.DelFlagEnum;
 import com.bless.common.enums.UserErrorCode;
 import com.bless.common.exception.ApplicationException;
@@ -13,6 +15,7 @@ import com.bless.service.user.model.req.*;
 import com.bless.service.user.model.resp.GetUserInfoResp;
 import com.bless.service.user.model.resp.ImportUserResp;
 import com.bless.service.user.service.ImUserService;
+import com.bless.service.utils.CallbackService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +35,11 @@ import java.util.List;
 public class ImUserServiceImpl implements ImUserService {
     @Autowired
     ImUserDataMapper imUserDataMapper;
+    @Autowired
+    AppConfig appConfig;
+
+    @Autowired
+    CallbackService callbackService;
     @Override
     public ResponseVO importUser(ImportUserReq req) {
 
@@ -156,6 +164,11 @@ public class ImUserServiceImpl implements ImUserService {
         update.setUserId(null);
         int update1 = imUserDataMapper.update(update, query);
         if(update1 == 1){
+            if (appConfig.isModifyUserAfterCallback()) {
+                callbackService.callback(req.getAppId(),
+                        Constants.CallbackCommand.ModifyUserAfter,
+                        JSONObject.toJSONString(req));
+            }
             return ResponseVO.successResponse();
         }
         throw new ApplicationException(UserErrorCode.MODIFY_USER_ERROR);
