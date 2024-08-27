@@ -8,6 +8,7 @@ import com.bless.common.config.AppConfig;
 import com.bless.common.constant.Constants;
 import com.bless.common.enums.DelFlagEnum;
 import com.bless.common.enums.UserErrorCode;
+import com.bless.common.enums.command.UserEventCommand;
 import com.bless.common.exception.ApplicationException;
 import com.bless.service.user.dao.ImUserDataEntity;
 import com.bless.service.user.dao.mapper.ImUserDataMapper;
@@ -16,6 +17,7 @@ import com.bless.service.user.model.resp.GetUserInfoResp;
 import com.bless.service.user.model.resp.ImportUserResp;
 import com.bless.service.user.service.ImUserService;
 import com.bless.service.utils.CallbackService;
+import com.bless.service.utils.MessageProducer;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,6 +42,8 @@ public class ImUserServiceImpl implements ImUserService {
 
     @Autowired
     CallbackService callbackService;
+    @Autowired
+    MessageProducer messageProducer;
     @Override
     public ResponseVO importUser(ImportUserReq req) {
 
@@ -164,6 +168,10 @@ public class ImUserServiceImpl implements ImUserService {
         update.setUserId(null);
         int update1 = imUserDataMapper.update(update, query);
         if(update1 == 1){
+            UserModifyPack pack = new UserModifyPack();
+            BeanUtils.copyProperties(req, pack);
+            messageProducer.sendToUser(req.getUserId(),req.getClientType()
+            ,req.getImei(), UserEventCommand.USER_MODIFY, pack, req.getAppId());
             if (appConfig.isModifyUserAfterCallback()) {
                 callbackService.callback(req.getAppId(),
                         Constants.CallbackCommand.ModifyUserAfter,

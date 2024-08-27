@@ -2,9 +2,12 @@ package com.bless.service.friendship.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.bless.codec.pack.friendship.ApproverFriendRequestPack;
+import com.bless.codec.pack.friendship.ReadAllFriendRequestPack;
 import com.bless.common.ResponseVO;
 import com.bless.common.enums.ApproverFriendRequestStatusEnum;
 import com.bless.common.enums.FriendShipErrorCode;
+import com.bless.common.enums.command.FriendshipEventCommand;
 import com.bless.common.exception.ApplicationException;
 import com.bless.service.friendship.dao.ImFriendShipRequestEntity;
 import com.bless.service.friendship.dao.mapper.ImFriendShipRequestMapper;
@@ -13,6 +16,7 @@ import com.bless.service.friendship.model.req.FriendDto;
 import com.bless.service.friendship.model.req.ReadFriendShipRequestReq;
 import com.bless.service.friendship.service.ImFriendService;
 import com.bless.service.friendship.service.ImFriendShipRequestService;
+import com.bless.service.utils.MessageProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +31,8 @@ public class ImFriendShipRequestServiceImpl implements ImFriendShipRequestServic
 
     @Autowired
     ImFriendService imFriendShipService;
+    @Autowired
+    MessageProducer messageProducer;
     //A + B
     @Override
     public ResponseVO addFienshipRequest(String fromId, FriendDto dto, Integer appId) {
@@ -65,6 +71,10 @@ public class ImFriendShipRequestServiceImpl implements ImFriendShipRequestServic
             request.setReadStatus(0);
             imFriendShipRequestMapper.updateById(request);
         }
+        //发送好友申请的tcp给接收方
+        messageProducer.sendToUser(dto.getToId(),
+                null, "", FriendshipEventCommand.FRIEND_REQUEST,
+                request, appId);
 
         return ResponseVO.successResponse();
     }
@@ -96,7 +106,7 @@ public class ImFriendShipRequestServiceImpl implements ImFriendShipRequestServic
             dto.setAddWording(imFriendShipRequestEntity.getAddWording());
             dto.setRemark(imFriendShipRequestEntity.getRemark());
             dto.setToId(imFriendShipRequestEntity.getToId());
-            ResponseVO responseVO = imFriendShipService.doAddFriend(/*req,*/imFriendShipRequestEntity.getFromId(), dto,req.getAppId());
+            ResponseVO responseVO = imFriendShipService.doAddFriend(req,imFriendShipRequestEntity.getFromId(), dto,req.getAppId());
 //            if(!responseVO.isOk()){
 ////                TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
 //                return responseVO;
@@ -105,6 +115,11 @@ public class ImFriendShipRequestServiceImpl implements ImFriendShipRequestServic
                 return responseVO;
             }
         }
+        ApproverFriendRequestPack approverFriendRequestPack = new ApproverFriendRequestPack();
+        approverFriendRequestPack.setId(req.getId());
+        approverFriendRequestPack.setStatus(req.getStatus());
+        messageProducer.sendToUser(imFriendShipRequestEntity.getToId(),req.getClientType(),req.getImei(), FriendshipEventCommand
+                .FRIEND_REQUEST_APPROVER,approverFriendRequestPack,req.getAppId());
 
         return ResponseVO.successResponse();
     }
@@ -129,6 +144,12 @@ public class ImFriendShipRequestServiceImpl implements ImFriendShipRequestServic
         ImFriendShipRequestEntity update = new ImFriendShipRequestEntity();
         update.setReadStatus(1);
         imFriendShipRequestMapper.update(update, query);
+        //TCP通知
+        ReadAllFriendRequestPack readAllFriendRequestPack = new ReadAllFriendRequestPack();
+        readAllFriendRequestPack.setFromId(req.getFromId());
+        messageProducer.sendToUser(req.getFromId(),req.getClientType(),req.getImei(),FriendshipEventCommand
+                .FRIEND_REQUEST_READ,readAllFriendRequestPack,req.getAppId());
+
         return ResponseVO.successResponse();
     }
 

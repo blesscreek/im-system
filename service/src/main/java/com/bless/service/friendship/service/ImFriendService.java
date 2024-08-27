@@ -22,7 +22,7 @@ public interface ImFriendService {
 
     public ResponseVO getRelation(GetRelationReq req);
 
-    public ResponseVO doAddFriend(/*RequestBase requestBase,*/ String fromId, FriendDto dto, Integer appId);
+    public ResponseVO doAddFriend(RequestBase requestBase, String fromId, FriendDto dto, Integer appId);
 
     public ResponseVO checkFriendship(CheckFriendShipReq req);
 

@@ -3,12 +3,10 @@ package com.bless.codec.pack.user;
 import lombok.Data;
 
 /**
- * @Author bless
- * @Version 1.0
- * @Description
- * @Date 2024-08-20 14:04
+ * @description:
+ * @author: lld
+ * @version: 1.0
  */
-
 @Data
 public class UserModifyPack {
     // 用户id
