@@ -59,12 +59,10 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
             //Redis map
             UserSession userSession = new UserSession();
             userSession.setAppId(msg.getMessageHeader().getAppId());
-
             userSession.setClientType(msg.getMessageHeader().getClientType());
             userSession.setUserId(loginpack.getUserId());
             userSession.setConnectState(ImConnectStatusEnum.ONLINE_STATUS.getCode());
             userSession.setBrokerId(brokerId);
-//            userSession.setBrokerId(3452);
             userSession.setImei(msg.getMessageHeader().getImei());
             try {
                 InetAddress localHost = InetAddress.getLocalHost();
