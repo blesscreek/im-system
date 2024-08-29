@@ -2,6 +2,7 @@ package com.bless.service.group.controller;
 
 import com.bless.common.ResponseVO;
 import com.bless.service.group.model.req.*;
+import com.bless.service.group.service.GroupMessageService;
 import com.bless.service.group.service.ImGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -15,6 +16,8 @@ public class ImGroupController {
 
     @Autowired
     ImGroupService groupService;
+    @Autowired
+    GroupMessageService groupMessageService;
 
 
     @RequestMapping("/importGroup")
@@ -65,6 +68,14 @@ public class ImGroupController {
         req.setAppId(appId);
         req.setOperater(identifier);
         return groupService.muteGroup(req);
+    }
+    @RequestMapping("/sendMessage")
+    public ResponseVO sendMessage(@RequestBody @Validated SendGroupMessageReq
+                                          req, Integer appId,
+                                  String identifier)  {
+        req.setAppId(appId);
+        req.setOperater(identifier);
+        return ResponseVO.successResponse(groupMessageService.send(req));
     }
 
 
