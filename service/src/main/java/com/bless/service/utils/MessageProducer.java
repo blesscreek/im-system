@@ -70,6 +70,7 @@ public class MessageProducer {
         List<UserSession> userSession = userSessionUtils.getUserSession(appId, toId);
         List<ClientInfo> list = new ArrayList<>();
         for (UserSession session : userSession) {
+            //发送完消息后返回发送成功的一方
             boolean b = sendPack(toId, command, data, session);
             if(b){
                 list.add(new ClientInfo(session.getAppId(),session.getClientType(),session.getImei()));

@@ -97,7 +97,7 @@ public class SessionSocketHolder {
         SessionSocketHolder.remove(appId,userId,clientType,imei);
         RedissonClient redissonClient = RedisManager.getRedissonClient();
         RMap<String, String> map = redissonClient.getMap(appId + Constants.RedisConstants.UserSessionConstants + userId);
-        String sessionStr= map.get(clientType.toString());
+        String sessionStr= map.get(clientType.toString() + ":" + imei);
         if (!StringUtils.isBlank(sessionStr)) {
             UserSession userSession = JSONObject.parseObject(sessionStr, UserSession.class);
             userSession.setConnectState(ImConnectStatusEnum.OFFLINE_STATUS.getCode());

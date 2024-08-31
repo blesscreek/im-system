@@ -5,6 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.bless.common.constant.Constants;
 import com.bless.common.enums.command.MessageCommand;
 import com.bless.common.model.message.MessageContent;
+import com.bless.common.model.message.MessageReciveAckContent;
+import com.bless.service.message.service.MessageSyncService;
 import com.bless.service.message.service.P2PMessageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +29,8 @@ public class ChatOperateReceiver {
 
     @Autowired
     P2PMessageService p2PMessageService;
+    @Autowired
+    MessageSyncService messageSyncService;
     @RabbitListener(
             bindings = @QueueBinding(
                     value = @Queue(value = Constants.RabbitConstants.Im2MessageService, durable = "true"),
@@ -46,6 +50,10 @@ public class ChatOperateReceiver {
                 //处理消息
                 MessageContent messageContent = jsonObject.toJavaObject(MessageContent.class);
                 p2PMessageService.process(messageContent);
+            } else if (command.equals(MessageCommand.MSG_RECIVE_ACK.getCommand())) {
+                //消息接受确认
+                MessageReciveAckContent messageContent = jsonObject.toJavaObject(MessageReciveAckContent.class);
+                messageSyncService.receiveMark(messageContent);
             }
             channel.basicAck(deliveryTag, false);
         } catch (Exception e) {

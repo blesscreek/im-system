@@ -1,6 +1,7 @@
 package com.bless.service.message.service;
 
 import com.bless.codec.pack.message.ChatMessageAck;
+import com.bless.codec.pack.message.MessageReciveServerAckPack;
 import com.bless.common.ResponseVO;
 import com.bless.common.enums.command.MessageCommand;
 import com.bless.common.model.ClientInfo;
@@ -73,7 +74,10 @@ public class P2PMessageService {
                 //2.发消息给同步在线端
                 syncToSender(messageContent,messageContent);
                 //3.发消息给对方在线端
-                dispatchMessage(messageContent);
+                List<ClientInfo> clientInfos = dispatchMessage(messageContent);
+                if (clientInfos.isEmpty()) {
+                    reciverAck(messageContent);
+                }
             });
 //        } else {
 //            //告诉客户端失败了
@@ -96,6 +100,17 @@ public class P2PMessageService {
                 MessageCommand.MSG_ACK, responseVO, messageContent);
     }
 
+    public void reciverAck(MessageContent messageContent) {
+        MessageReciveServerAckPack pack = new MessageReciveServerAckPack();
+        pack.setFromId(messageContent.getToId());
+        pack.setToId(messageContent.getFromId());
+        pack.setMessageKey(messageContent.getMessageKey());
+        pack.setMessageSequence(messageContent.getMessageSequence());
+        pack.setServerSend(true);
+        messageProducer.sendToUser(messageContent.getFromId(),MessageCommand.MSG_RECIVE_ACK,
+                pack,new ClientInfo(messageContent.getAppId(),messageContent.getClientType()
+                        ,messageContent.getImei()));
+    }
     private void syncToSender(MessageContent messageContent, ClientInfo clientInfo) {
         messageProducer.sendToUserExceptClient(messageContent.getFromId(),
                 MessageCommand.MSG_P2P,messageContent,messageContent);
