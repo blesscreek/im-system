@@ -1,6 +1,7 @@
 package com.bless.service.message.controller;
 
 import com.bless.common.ResponseVO;
+import com.bless.common.model.message.CheckSendMessageReq;
 import com.bless.service.message.model.req.SendMessageReq;
 import com.bless.service.message.service.P2PMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,10 @@ public class MessageController {
         return ResponseVO.successResponse(p2PMessageService.send(req));
     }
 
+    @RequestMapping("/checkSend")
+    public ResponseVO checkSend(@RequestBody @Validated CheckSendMessageReq req)  {
+        return p2PMessageService.imServerPermissionCheck(req.getFromId(),req.getToId()
+                ,req.getAppId());
+    }
 
 }

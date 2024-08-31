@@ -1,0 +1,924 @@
+2024-08-31 10:13:44 -Starting Application on bless with PID 25312 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:13:44 -The following profiles are active: dev
+2024-08-31 10:13:45 -Started Application in 1.726 seconds (JVM running for 2.343)
+2024-08-31 10:15:12 -Starting MessageStoreApplication on bless with PID 9528 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:15:12 -The following profiles are active: dev
+2024-08-31 10:15:13 -Started MessageStoreApplication in 1.613 seconds (JVM running for 2.183)
+2024-08-31 10:16:40 -Starting MessageStoreApplication on bless with PID 15396 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:16:40 -The following profiles are active: dev
+2024-08-31 10:16:42 -Started MessageStoreApplication in 1.584 seconds (JVM running for 2.173)
+2024-08-31 10:19:04 -Starting Application on bless with PID 28944 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:19:04 -The following profiles are active: dev
+2024-08-31 10:19:05 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:19:05 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:19:05 -Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2024-08-31 10:19:06 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:19:06 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:19:06 -Starting service [Tomcat]
+2024-08-31 10:19:06 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:19:06 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:19:06 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:19:06 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:19:06 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:19:06 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:19:06 -Root WebApplicationContext: initialization completed in 1695 ms
+2024-08-31 10:19:48 -Starting Application on bless with PID 28788 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:19:48 -The following profiles are active: dev
+2024-08-31 10:19:48 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:19:48 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:19:48 -Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2024-08-31 10:19:48 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:19:48 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:19:48 -Starting service [Tomcat]
+2024-08-31 10:19:48 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:19:48 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:19:48 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:19:48 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:19:48 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:19:49 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:19:49 -Root WebApplicationContext: initialization completed in 785 ms
+2024-08-31 10:20:41 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imUserController': Unsatisfied dependency expressed through field 'zKit'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ZKit': Unsatisfied dependency expressed through field 'zkClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'buildZkClient' defined in class path resource [com/bless/service/config/BeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.I0Itec.zkclient.ZkClient]: Factory method 'buildZkClient' threw exception; nested exception is org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 50000
+2024-08-31 10:20:41 -Stopping service [Tomcat]
+2024-08-31 10:20:41 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-08-31 10:20:41 -Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'imUserController': Unsatisfied dependency expressed through field 'zKit'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ZKit': Unsatisfied dependency expressed through field 'zkClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'buildZkClient' defined in class path resource [com/bless/service/config/BeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.I0Itec.zkclient.ZkClient]: Factory method 'buildZkClient' threw exception; nested exception is org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 50000
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bless.service.Application.main(Application.java:14)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ZKit': Unsatisfied dependency expressed through field 'zkClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'buildZkClient' defined in class path resource [com/bless/service/config/BeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.I0Itec.zkclient.ZkClient]: Factory method 'buildZkClient' threw exception; nested exception is org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 50000
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'buildZkClient' defined in class path resource [com/bless/service/config/BeanConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.I0Itec.zkclient.ZkClient]: Factory method 'buildZkClient' threw exception; nested exception is org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 50000
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.I0Itec.zkclient.ZkClient]: Factory method 'buildZkClient' threw exception; nested exception is org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 50000
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 46 common frames omitted
+Caused by: org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 50000
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:876)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:98)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:92)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:76)
+	at com.bless.service.config.BeanConfig.buildZkClient(BeanConfig.java:32)
+	at com.bless.service.config.BeanConfig$$EnhancerBySpringCGLIB$$381a5600.CGLIB$buildZkClient$2(<generated>)
+	at com.bless.service.config.BeanConfig$$EnhancerBySpringCGLIB$$381a5600$$FastClassBySpringCGLIB$$4069f76a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.bless.service.config.BeanConfig$$EnhancerBySpringCGLIB$$381a5600.buildZkClient(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 47 common frames omitted
+2024-08-31 10:23:27 -Starting Application on bless with PID 28700 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:23:27 -The following profiles are active: dev
+2024-08-31 10:23:27 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:23:27 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:23:27 -Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2024-08-31 10:23:28 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:23:28 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:23:28 -Starting service [Tomcat]
+2024-08-31 10:23:28 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:23:28 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:23:28 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:23:28 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:23:28 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:23:28 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:23:28 -Root WebApplicationContext: initialization completed in 785 ms
+2024-08-31 10:23:29 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:23:29 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:23:29 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 10:23:29 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:23:29 -Created new connection: rabbitConnectionFactory#512575e9:0/SimpleConnection@6f6efa4f [delegate=amqp://guest@123.60.15.140:5672/, localPort= 52473]
+2024-08-31 10:23:30 -Started Application in 3.5 seconds (JVM running for 4.129)
+2024-08-31 10:23:42 -Starting MessageStoreApplication on bless with PID 26316 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:23:42 -The following profiles are active: dev
+2024-08-31 10:23:43 -Started MessageStoreApplication in 1.572 seconds (JVM running for 2.163)
+2024-08-31 10:27:15 -Starting MessageStoreApplication on bless with PID 30340 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:27:15 -The following profiles are active: dev
+2024-08-31 10:27:16 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:27:16 -Created new connection: rabbitConnectionFactory#7ea4d397:0/SimpleConnection@6edaa77a [delegate=amqp://guest@123.60.15.140:5672/, localPort= 52616]
+2024-08-31 10:27:17 -Started MessageStoreApplication in 2.098 seconds (JVM running for 2.706)
+2024-08-31 10:29:39 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 10:29:39 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 10:29:39 -Completed initialization in 3 ms
+2024-08-31 10:29:39 -HikariPool-1 - Starting...
+2024-08-31 10:29:39 -HikariPool-1 - Start completed.
+2024-08-31 10:30:13 -Waiting for workers to finish.
+2024-08-31 10:30:13 -Successfully waited for workers to finish.
+2024-08-31 10:30:13 -Shutdown ignored - container is not active already
+2024-08-31 10:30:21 -Starting MessageStoreApplication on bless with PID 27400 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:30:21 -The following profiles are active: dev
+2024-08-31 10:30:22 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:30:23 -Created new connection: rabbitConnectionFactory#38e7ed69:0/SimpleConnection@7fc420b8 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 53088]
+2024-08-31 10:30:23 -Started MessageStoreApplication in 2.33 seconds (JVM running for 3.367)
+2024-08-31 10:32:16 -Waiting for workers to finish.
+2024-08-31 10:32:16 -Successfully waited for workers to finish.
+2024-08-31 10:32:16 -Waiting for workers to finish.
+2024-08-31 10:32:16 -Successfully waited for workers to finish.
+2024-08-31 10:32:16 -Shutdown ignored - container is not active already
+2024-08-31 10:32:16 -Shutdown ignored - container is not active already
+2024-08-31 10:32:16 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:32:21 -HikariPool-1 - Shutdown initiated...
+2024-08-31 10:32:21 -HikariPool-1 - Shutdown completed.
+2024-08-31 10:32:24 -Starting Application on bless with PID 9936 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:32:24 -The following profiles are active: dev
+2024-08-31 10:32:24 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:32:24 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:32:24 -Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2024-08-31 10:32:25 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:32:25 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:32:25 -Starting service [Tomcat]
+2024-08-31 10:32:25 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:32:25 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:32:25 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:32:25 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:32:25 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:32:25 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:32:25 -Root WebApplicationContext: initialization completed in 922 ms
+2024-08-31 10:32:26 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:32:27 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:32:27 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 10:32:27 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:32:30 -Created new connection: rabbitConnectionFactory#3dec3f87:0/SimpleConnection@24fc2c80 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 53250]
+2024-08-31 10:32:30 -Started Application in 7.429 seconds (JVM running for 8.17)
+2024-08-31 10:32:32 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 10:32:32 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 10:32:32 -Completed initialization in 4 ms
+2024-08-31 10:32:32 -HikariPool-1 - Starting...
+2024-08-31 10:32:32 -HikariPool-1 - Start completed.
+2024-08-31 10:34:02 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s782ms801µs800ns).
+2024-08-31 10:35:18 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s70ms78µs800ns).
+2024-08-31 10:35:54 -Failure in @ExceptionHandler com.bless.service.user.exception.GlobalExceptionHandler#unknowException(Exception)
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1176)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1007)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:335)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:287)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:123)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:403)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1300)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1111)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1252)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:717)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:707)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1179)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:399)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 56 common frames omitted
+2024-08-31 10:35:54 -Failure in @ExceptionHandler com.bless.service.user.exception.GlobalExceptionHandler#unknowException(Exception)
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1176)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1007)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:335)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:287)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:123)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:403)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1300)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1111)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1252)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:717)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:707)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1179)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:399)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 56 common frames omitted
+2024-08-31 10:35:54 -Failure in @ExceptionHandler com.bless.service.user.exception.GlobalExceptionHandler#unknowException(Exception)
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1176)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1007)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:335)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:287)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:123)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:403)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1300)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1111)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1252)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:717)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:707)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1179)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:399)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 56 common frames omitted
+2024-08-31 10:35:54 -Failure in @ExceptionHandler com.bless.service.user.exception.GlobalExceptionHandler#unknowException(Exception)
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1176)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1007)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:335)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:287)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:123)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:403)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1300)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1111)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1252)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:717)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:707)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1179)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:399)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 56 common frames omitted
+2024-08-31 10:35:54 -Failure in @ExceptionHandler com.bless.service.user.exception.GlobalExceptionHandler#unknowException(Exception)
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1176)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1007)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:335)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:287)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:123)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:403)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1300)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1111)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1252)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:717)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:707)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1179)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:399)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 56 common frames omitted
+2024-08-31 10:35:55 -Waiting for workers to finish.
+2024-08-31 10:35:55 -Successfully waited for workers to finish.
+2024-08-31 10:35:55 -Waiting for workers to finish.
+2024-08-31 10:35:56 -Successfully waited for workers to finish.
+2024-08-31 10:35:56 -Shutdown ignored - container is not active already
+2024-08-31 10:35:56 -Shutdown ignored - container is not active already
+2024-08-31 10:35:56 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:36:01 -HikariPool-1 - Shutdown initiated...
+2024-08-31 10:36:01 -HikariPool-1 - Shutdown completed.
+2024-08-31 10:36:03 -Starting Application on bless with PID 25900 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:36:03 -The following profiles are active: dev
+2024-08-31 10:36:04 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:36:04 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:36:04 -Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2024-08-31 10:36:04 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:36:04 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:36:04 -Starting service [Tomcat]
+2024-08-31 10:36:04 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:36:04 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:36:04 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:36:04 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:36:04 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:36:04 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:36:04 -Root WebApplicationContext: initialization completed in 875 ms
+2024-08-31 10:36:06 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:36:06 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:36:06 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 10:36:06 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:36:13 -Created new connection: rabbitConnectionFactory#149aa7b2:0/SimpleConnection@139089a4 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 53465]
+2024-08-31 10:36:14 -Started Application in 10.835 seconds (JVM running for 11.581)
+2024-08-31 10:36:16 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 10:36:16 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 10:36:16 -Completed initialization in 4 ms
+2024-08-31 10:36:16 -HikariPool-1 - Starting...
+2024-08-31 10:36:16 -HikariPool-1 - Start completed.
+2024-08-31 10:37:10 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s738ms128µs400ns).
+2024-08-31 10:37:10 -Waiting for workers to finish.
+2024-08-31 10:37:11 -Successfully waited for workers to finish.
+2024-08-31 10:37:11 -Waiting for workers to finish.
+2024-08-31 10:37:12 -Successfully waited for workers to finish.
+2024-08-31 10:37:12 -Shutdown ignored - container is not active already
+2024-08-31 10:37:12 -Shutdown ignored - container is not active already
+2024-08-31 10:37:12 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:37:17 -HikariPool-1 - Shutdown initiated...
+2024-08-31 10:37:17 -HikariPool-1 - Shutdown completed.
+2024-08-31 10:37:20 -Starting Application on bless with PID 26428 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:37:20 -The following profiles are active: dev
+2024-08-31 10:37:20 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:37:20 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:37:20 -Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2024-08-31 10:37:20 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:37:20 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:37:20 -Starting service [Tomcat]
+2024-08-31 10:37:20 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:37:20 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:37:20 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:37:20 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:37:20 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:37:20 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:37:20 -Root WebApplicationContext: initialization completed in 860 ms
+2024-08-31 10:37:22 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:37:22 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:37:22 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 10:37:22 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:37:22 -Created new connection: rabbitConnectionFactory#6d7ad0f5:0/SimpleConnection@5df2023c [delegate=amqp://guest@123.60.15.140:5672/, localPort= 53561]
+2024-08-31 10:37:23 -Started Application in 3.757 seconds (JVM running for 4.458)
+2024-08-31 10:37:27 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 10:37:27 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 10:37:27 -Completed initialization in 3 ms
+2024-08-31 10:37:28 -HikariPool-1 - Starting...
+2024-08-31 10:37:28 -HikariPool-1 - Start completed.
+2024-08-31 10:41:34 -Waiting for workers to finish.
+2024-08-31 10:41:34 -Successfully waited for workers to finish.
+2024-08-31 10:41:34 -Waiting for workers to finish.
+2024-08-31 10:41:34 -Successfully waited for workers to finish.
+2024-08-31 10:41:35 -Shutdown ignored - container is not active already
+2024-08-31 10:41:35 -Shutdown ignored - container is not active already
+2024-08-31 10:41:35 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:41:39 -HikariPool-1 - Shutdown initiated...
+2024-08-31 10:41:39 -HikariPool-1 - Shutdown completed.
+2024-08-31 10:41:42 -Starting Application on bless with PID 22148 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:41:42 -The following profiles are active: dev
+2024-08-31 10:41:42 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:41:42 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:41:42 -Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2024-08-31 10:41:43 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:41:43 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:41:43 -Starting service [Tomcat]
+2024-08-31 10:41:43 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:41:43 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:41:43 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:41:43 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:41:43 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:41:43 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:41:43 -Root WebApplicationContext: initialization completed in 905 ms
+2024-08-31 10:41:51 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:41:51 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:41:51 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 10:41:51 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:41:52 -Created new connection: rabbitConnectionFactory#29d070c7:0/SimpleConnection@45c423b3 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 54272]
+2024-08-31 10:41:52 -Started Application in 10.92 seconds (JVM running for 11.657)
+2024-08-31 10:43:18 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 10:43:18 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 10:43:18 -Completed initialization in 5 ms
+2024-08-31 10:43:18 -HikariPool-1 - Starting...
+2024-08-31 10:43:18 -HikariPool-1 - Start completed.
+2024-08-31 10:47:32 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m43s120ms815µs200ns).
+2024-08-31 10:47:32 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-08-31 10:47:50 -Channel shutdown: connection error
+2024-08-31 10:47:50 -Channel shutdown: connection error
+2024-08-31 10:48:04 -Restarting Consumer@7d3c22a5: tags=[[amq.ctag-taCa-rN4EFQDGL13DfEe_A]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,1), conn: Proxy@105dc04d Shared Rabbit Connection: SimpleConnection@45c423b3 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 54272], acknowledgeMode=MANUAL local queue size=0
+2024-08-31 10:48:04 -Restarting Consumer@305e95a4: tags=[[amq.ctag-1cECVz5gDvqHc8IeQcR8ZQ]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,2), conn: Proxy@105dc04d Shared Rabbit Connection: SimpleConnection@45c423b3 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 54272], acknowledgeMode=MANUAL local queue size=0
+2024-08-31 10:48:04 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:50:47 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m43s359ms794µs300ns).
+2024-08-31 10:50:47 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:50:47 -Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.SocketException: Connection reset by peer: socket write error
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:524)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:702)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:676)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:567)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$1600(CachingConnectionFactory.java:102)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1439)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2095)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1842)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1823)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1349)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1195)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at com.rabbitmq.client.impl.SocketFrameHandler.sendHeader(SocketFrameHandler.java:147)
+	at com.rabbitmq.client.impl.SocketFrameHandler.sendHeader(SocketFrameHandler.java:153)
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:305)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1115)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:560)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:533)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:487)
+	... 16 common frames omitted
+2024-08-31 10:50:47 -Failure in @ExceptionHandler com.bless.service.user.exception.GlobalExceptionHandler#unknowException(Exception)
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1176)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1007)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:335)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:287)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:181)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:123)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:403)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1300)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1111)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1252)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:717)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:707)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1179)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:399)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 56 common frames omitted
+2024-08-31 10:50:47 -Created new connection: rabbitConnectionFactory#29d070c7:2/SimpleConnection@2ee3c8ca [delegate=amqp://guest@123.60.15.140:5672/, localPort= 55247]
+2024-08-31 10:51:45 -Waiting for workers to finish.
+2024-08-31 10:51:45 -Successfully waited for workers to finish.
+2024-08-31 10:51:45 -Waiting for workers to finish.
+2024-08-31 10:51:46 -Successfully waited for workers to finish.
+2024-08-31 10:51:46 -Shutdown ignored - container is not active already
+2024-08-31 10:51:46 -Shutdown ignored - container is not active already
+2024-08-31 10:51:46 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:51:51 -HikariPool-1 - Shutdown initiated...
+2024-08-31 10:51:51 -HikariPool-1 - Shutdown completed.
+2024-08-31 10:51:54 -Starting Application on bless with PID 19116 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:51:54 -The following profiles are active: dev
+2024-08-31 10:51:54 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:51:54 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:51:54 -Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2024-08-31 10:51:55 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:51:55 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:51:55 -Starting service [Tomcat]
+2024-08-31 10:51:55 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:51:55 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:51:55 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:51:55 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:51:55 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:51:55 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:51:55 -Root WebApplicationContext: initialization completed in 922 ms
+2024-08-31 10:51:56 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:51:56 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:51:56 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 10:51:56 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:51:57 -Created new connection: rabbitConnectionFactory#6075b369:0/SimpleConnection@58e02359 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 55349]
+2024-08-31 10:51:57 -Started Application in 4.071 seconds (JVM running for 4.824)
+2024-08-31 10:52:39 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 10:52:39 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 10:52:39 -Completed initialization in 3 ms
+2024-08-31 10:52:39 -HikariPool-1 - Starting...
+2024-08-31 10:52:40 -HikariPool-1 - Start completed.
+2024-08-31 10:53:55 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s938ms343µs900ns).
+2024-08-31 10:53:55 -Waiting for workers to finish.
+2024-08-31 10:53:56 -Successfully waited for workers to finish.
+2024-08-31 10:53:56 -Waiting for workers to finish.
+2024-08-31 10:53:57 -Successfully waited for workers to finish.
+2024-08-31 10:53:57 -Shutdown ignored - container is not active already
+2024-08-31 10:53:57 -Shutdown ignored - container is not active already
+2024-08-31 10:53:57 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:54:01 -Waiting for workers to finish.
+2024-08-31 10:54:02 -Successfully waited for workers to finish.
+2024-08-31 10:54:02 -Shutdown ignored - container is not active already
+2024-08-31 10:54:02 -HikariPool-1 - Shutdown initiated...
+2024-08-31 10:54:02 -HikariPool-1 - Shutdown completed.
+2024-08-31 10:54:07 -Starting Application on bless with PID 27328 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:54:07 -The following profiles are active: dev
+2024-08-31 10:54:07 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 10:54:07 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 10:54:07 -Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2024-08-31 10:54:07 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 10:54:07 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:54:07 -Starting service [Tomcat]
+2024-08-31 10:54:07 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 10:54:07 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 10:54:07 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 10:54:07 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 10:54:07 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 10:54:07 -Initializing Spring embedded WebApplicationContext
+2024-08-31 10:54:07 -Root WebApplicationContext: initialization completed in 792 ms
+2024-08-31 10:54:09 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 10:54:09 -Starting MessageStoreApplication on bless with PID 33756 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-08-31 10:54:09 -The following profiles are active: dev
+2024-08-31 10:54:09 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 10:54:09 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 10:54:09 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:54:09 -Created new connection: rabbitConnectionFactory#4cbc2e3b:0/SimpleConnection@7e87ef9e [delegate=amqp://guest@123.60.15.140:5672/, localPort= 55506]
+2024-08-31 10:54:10 -Started Application in 3.758 seconds (JVM running for 4.426)
+2024-08-31 10:54:10 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 10:54:11 -Created new connection: rabbitConnectionFactory#c7a977f:0/SimpleConnection@5560bcdf [delegate=amqp://guest@123.60.15.140:5672/, localPort= 55510]
+2024-08-31 10:54:11 -Started MessageStoreApplication in 2.078 seconds (JVM running for 2.67)
+2024-08-31 10:55:13 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 10:55:13 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 10:55:13 -Completed initialization in 3 ms
+2024-08-31 10:55:13 -HikariPool-1 - Starting...
+2024-08-31 10:55:14 -HikariPool-1 - Start completed.
+2024-08-31 10:55:14 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"123","appId":10000,"messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","imei":"123","fromId":"lyx1","command":1103}
+2024-08-31 10:55:14 -msg ack,msgId=b9472dd4-b8e7-4b14-95e7-a2c55b115696,checkResut200
+2024-08-31 10:55:14 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725072914401,"delFlag":0,"messageBody":"123","messageKey":374912296419329,"securityKey":""},"messageContent":{"appId":10000,"clientType":1,"fromId":"lyx1","imei":"123","messageBody":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageKey":374912296419329,"messageSequence":0,"toId":"lyx2"}}
+2024-08-31 10:55:14 -HikariPool-1 - Starting...
+2024-08-31 10:55:14 -HikariPool-1 - Start completed.
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696"},"ok":true},"imei":"123","toId":"lyx1"}
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374912296419329,"clientType":1,"messageBody":"123","appId":10000,"imei":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageSequence":0,"fromId":"lyx1"},"imei":"300","toId":"lyx1"}
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374912296419329,"clientType":1,"messageBody":"123","appId":10000,"imei":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageSequence":0,"fromId":"lyx1"},"imei":"500","toId":"lyx1"}
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":2,"command":1103,"data":{"toId":"lyx2","messageKey":374912296419329,"clientType":1,"messageBody":"123","appId":10000,"imei":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageSequence":0,"fromId":"lyx1"},"imei":"1234","toId":"lyx1"}
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374912296419329,"clientType":1,"messageBody":"123","appId":10000,"imei":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageSequence":0,"fromId":"lyx1"},"imei":"122","toId":"lyx1"}
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374912296419329,"clientType":1,"messageBody":"123","appId":10000,"imei":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageSequence":0,"fromId":"lyx1"},"imei":"223","toId":"lyx2"}
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374912296419329,"clientType":1,"messageBody":"123","appId":10000,"imei":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageSequence":0,"fromId":"lyx1"},"imei":"100","toId":"lyx2"}
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374912296419329,"clientType":1,"messageBody":"123","appId":10000,"imei":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageSequence":0,"fromId":"lyx1"},"imei":"500","toId":"lyx2"}
+2024-08-31 10:55:15 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374912296419329,"clientType":1,"messageBody":"123","appId":10000,"imei":"123","messageId":"b9472dd4-b8e7-4b14-95e7-a2c55b115696","messageSequence":0,"fromId":"lyx1"},"imei":"400","toId":"lyx2"}

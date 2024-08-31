@@ -53,7 +53,7 @@ public class ImServer {
 //                                0,0,10
 //                        ));
                         ch.pipeline().addLast(new HeartBeatHandler(config.getHeartBeatTime()));
-                        ch.pipeline().addLast(new NettyServerHandler(config.getBrokerId()));
+                        ch.pipeline().addLast(new NettyServerHandler(config.getBrokerId(), config.getLogicUrl()));
                     }
                  });
     }

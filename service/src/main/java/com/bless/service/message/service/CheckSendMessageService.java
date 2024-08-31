@@ -69,10 +69,10 @@ public class CheckSendMessageService {
                 return fromRelation;
             }
             GetRelationReq toReq = new GetRelationReq();
-            fromReq.setFromId(toId);
-            fromReq.setToId(fromId);
-            fromReq.setAppId(appId);
-            ResponseVO<ImFriendShipEntity> toRelation = imFriendService.getRelation(fromReq);
+            toReq.setFromId(toId);
+            toReq.setToId(fromId);
+            toReq.setAppId(appId);
+            ResponseVO<ImFriendShipEntity> toRelation = imFriendService.getRelation(toReq);
             if(!toRelation.isOk()){
                 return toRelation;
             }

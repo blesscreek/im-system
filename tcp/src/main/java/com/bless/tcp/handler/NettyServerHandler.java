@@ -4,16 +4,26 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.bless.codec.pack.LoginPack;
+import com.bless.codec.pack.message.ChatMessageAck;
 import com.bless.codec.proto.Message;
+import com.bless.codec.proto.MessagePack;
+import com.bless.common.ResponseVO;
 import com.bless.common.constant.Constants;
 import com.bless.common.enums.ImConnectStatusEnum;
+import com.bless.common.enums.command.MessageCommand;
 import com.bless.common.enums.command.SystemCommand;
 import com.bless.common.model.UserClientDto;
 import com.bless.common.model.UserSession;
+import com.bless.common.model.message.CheckSendMessageReq;
+import com.bless.tcp.feign.FeignMessageService;
 import com.bless.tcp.publish.MqMessageProducer;
 import com.bless.tcp.redis.RedisManager;
 import com.bless.tcp.utils.SessionSocketHolder;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexTypeModel;
+import feign.Feign;
+import feign.Request;
+import feign.jackson.JacksonDecoder;
+import feign.jackson.JacksonEncoder;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.nio.NioSocketChannel;
@@ -40,8 +50,15 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
 
     private Integer brokerId;
 
-    public NettyServerHandler(Integer brokerId) {
+    private FeignMessageService feignMessageService;
+
+    public NettyServerHandler(Integer brokerId, String logicUrl) {
         this.brokerId = brokerId;
+        feignMessageService = Feign.builder()
+                .encoder(new JacksonEncoder())
+                .decoder(new JacksonDecoder())
+                .options(new Request.Options(1000, 3500))//设置超时时间
+                .target(FeignMessageService.class, logicUrl);
     }
 
     @Override
@@ -102,6 +119,27 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
         } else if(command == SystemCommand.PING.getCommand()) {
             ctx.channel()
                     .attr(AttributeKey.valueOf(Constants.ReadTime)).set(System.currentTimeMillis());
+        } else if (command == MessageCommand.MSG_P2P.getCommand()) {
+            CheckSendMessageReq req = new CheckSendMessageReq();
+            req.setAppId(msg.getMessageHeader().getAppId());
+            JSONObject jsonObject = JSON.parseObject(JSONObject.toJSONString(msg.getMessagePack()));
+            String fromId = jsonObject.getString("fromId");
+            String toId = jsonObject.getString("toId");
+            req.setFromId(fromId);
+            req.setToId(toId);
+
+            ResponseVO responseVO = feignMessageService.checkSendMessage(req);
+            if (responseVO.isOk()) {
+                MqMessageProducer.sendMessage(msg, command);
+            } else {
+                ChatMessageAck chatMessageAck = new ChatMessageAck(jsonObject.getString("messageId"));
+                responseVO.setData(chatMessageAck);
+                MessagePack<ResponseVO> ack = new MessagePack<>();
+                ack.setData(responseVO);
+                ack.setCommand(MessageCommand.MSG_ACK.getCommand());
+                ctx.channel().writeAndFlush(ack);
+            }
+
         } else {
             MqMessageProducer.sendMessage(msg, command);
         }
