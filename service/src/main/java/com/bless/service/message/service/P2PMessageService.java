@@ -3,11 +3,14 @@ package com.bless.service.message.service;
 import com.bless.codec.pack.message.ChatMessageAck;
 import com.bless.codec.pack.message.MessageReciveServerAckPack;
 import com.bless.common.ResponseVO;
+import com.bless.common.constant.Constants;
 import com.bless.common.enums.command.MessageCommand;
 import com.bless.common.model.ClientInfo;
 import com.bless.common.model.message.MessageContent;
 import com.bless.service.message.model.req.SendMessageReq;
 import com.bless.service.message.model.resp.SendMessageResp;
+import com.bless.service.seq.RedisSeq;
+import com.bless.service.utils.ConversationIdGenerate;
 import com.bless.service.utils.MessageProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,6 +41,8 @@ public class P2PMessageService {
     MessageProducer messageProducer;
     @Autowired
     MessageStoreService messageStoreService;
+    @Autowired
+    RedisSeq redisSeq;
 
     private final ThreadPoolExecutor threadPoolExecutor;
 
@@ -68,6 +73,12 @@ public class P2PMessageService {
 //        ResponseVO responseVO = imServerPermissionCheck(fromId, toId, messageContent);
 //        if(responseVO.isOk()){
             threadPoolExecutor.execute(()->{
+                //appId + Seq + (from + to) groupId
+                long seq = redisSeq.doGetSeq(messageContent.getAppId() + ":"
+                        + Constants.SeqConstants.Message+ ":" + ConversationIdGenerate.generateP2PId(
+                        messageContent.getFromId(),messageContent.getToId()
+                ));
+                messageContent.setMessageSequence(seq);
                 messageStoreService.storeP2PMessage(messageContent);
                 //1.回ack成功给自己
                 ack(messageContent, ResponseVO.successResponse());
@@ -93,7 +104,7 @@ public class P2PMessageService {
 
     private void ack(MessageContent messageContent, ResponseVO responseVO) {
         logger.info("msg ack,msgId={},checkResut{}",messageContent.getMessageId(),responseVO.getCode());
-        ChatMessageAck chatMessageAck = new ChatMessageAck(messageContent.getMessageId());
+        ChatMessageAck chatMessageAck = new ChatMessageAck(messageContent.getMessageId(), messageContent.getMessageSequence());
         responseVO.setData(chatMessageAck);
         //发消息
         messageProducer.sendToUser(messageContent.getFromId(),
