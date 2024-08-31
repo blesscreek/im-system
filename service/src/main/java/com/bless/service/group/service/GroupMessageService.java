@@ -12,6 +12,7 @@ package com.bless.service.group.service;
 
 import com.bless.codec.pack.message.ChatMessageAck;
 import com.bless.common.ResponseVO;
+import com.bless.common.constant.Constants;
 import com.bless.common.enums.command.GroupEventCommand;
 import com.bless.common.enums.command.MessageCommand;
 import com.bless.common.model.ClientInfo;
@@ -22,12 +23,18 @@ import com.bless.service.message.model.resp.SendMessageResp;
 import com.bless.service.message.service.CheckSendMessageService;
 
 import com.bless.service.message.service.MessageStoreService;
+import com.bless.service.seq.RedisSeq;
 import com.bless.service.utils.MessageProducer;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class GroupMessageService {
@@ -43,6 +50,25 @@ public class GroupMessageService {
     @Autowired
     MessageStoreService messageStoreService;
 
+    @Autowired
+    RedisSeq redisSeq;
+    private final ThreadPoolExecutor threadPoolExecutor;
+
+    {
+        AtomicInteger num = new AtomicInteger(0);
+        threadPoolExecutor = new ThreadPoolExecutor(8, 8, 60, TimeUnit.SECONDS,
+                new LinkedBlockingQueue<>(1000), new ThreadFactory() {
+            @Override
+            public Thread newThread(Runnable r) {
+                Thread thread = new Thread(r);
+                thread.setDaemon(true);
+                thread.setName("message-group-thread-" + num.getAndIncrement());
+                return thread;
+            }
+        });
+    }
+
+
     public void process(GroupChatMessageContent messageContent){
 
         String fromId = messageContent.getFromId();
@@ -51,21 +77,42 @@ public class GroupMessageService {
         //前置校验
         //这个用户是否被禁言 是否被禁用
         //发送方和接收方是否是好友
-        ResponseVO responseVO = imServerPermissionCheck(fromId, groupId,
-                appId);
-        if(responseVO.isOk()){
-            messageStoreService.storeGroupMessage(messageContent);
-            //1.回ack成功给自己
-            ack(messageContent, responseVO);
-            //2.发消息给同步在线端
-            syncToSender(messageContent,messageContent);
-            //3.发消息给对方在线端
-            dispatchMessage(messageContent);
-        }else{
-            //告诉客户端失败了
-            //ack
-            ack(messageContent, responseVO);
+//        ResponseVO responseVO = imServerPermissionCheck(fromId, groupId,
+//                appId);
+//        if(responseVO.isOk()){
+        GroupChatMessageContent messageFromMessageIdCache = messageStoreService.getMessageFromMessageIdCache(messageContent.getAppId(),
+                messageContent.getMessageId(), GroupChatMessageContent.class);
+        if(messageFromMessageIdCache != null){
+            threadPoolExecutor.execute(() ->{
+                //1.回ack成功给自己
+                ack(messageContent,ResponseVO.successResponse());
+                //2.发消息给同步在线端
+                syncToSender(messageContent,messageContent);
+                //3.发消息给对方在线端
+                dispatchMessage(messageContent);
+            });
         }
+        long seq = redisSeq.doGetSeq(messageContent.getAppId() + ":" + Constants.SeqConstants.GroupMessage
+                + messageContent.getGroupId());
+        messageContent.setMessageSequence(seq);
+            threadPoolExecutor.execute(()->{
+                messageStoreService.storeGroupMessage(messageContent);
+                //1.回ack成功给自己
+                ack(messageContent, ResponseVO.successResponse());
+                //2.发消息给同步在线端
+                syncToSender(messageContent,messageContent);
+                //3.发消息给对方在线端
+                dispatchMessage(messageContent);
+
+                messageStoreService.setMessageFromMessageIdCache(messageContent.getAppId(),
+                        messageContent.getMessageId(),messageContent);
+            });
+
+//        }else{
+//            //告诉客户端失败了
+//            //ack
+//            ack(messageContent, responseVO);
+//        }
     }
 
     //分发消息给发送端
@@ -89,7 +136,7 @@ public class GroupMessageService {
         responseVO.setData(chatMessageAck);
         //发消息
         messageProducer.sendToUser(messageContent.getFromId(),
-                GroupEventCommand.MSG_GROUP,
+                GroupEventCommand.GROUP_MSG_ACK,
                 responseVO, messageContent
         );
     }
@@ -97,7 +144,7 @@ public class GroupMessageService {
     //发送消息给其他端
     private void syncToSender(GroupChatMessageContent messageContent, ClientInfo clientInfo){
         messageProducer.sendToUserExceptClient(messageContent.getFromId(),
-                MessageCommand.MSG_P2P,messageContent,messageContent);
+                GroupEventCommand.MSG_GROUP,messageContent,messageContent);
     }
 
 

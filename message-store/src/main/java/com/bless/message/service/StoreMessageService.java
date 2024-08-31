@@ -1,10 +1,14 @@
 package com.bless.message.service;
 
+import com.bless.common.model.message.GroupChatMessageContent;
 import com.bless.common.model.message.MessageContent;
+import com.bless.message.dao.ImGroupMessageHistoryEntity;
 import com.bless.message.dao.ImMessageBodyEntity;
 import com.bless.message.dao.ImMessageHistoryEntity;
+import com.bless.message.dao.mapper.ImGroupMessageHistoryMapper;
 import com.bless.message.dao.mapper.ImMessageBodyMapper;
 import com.bless.message.dao.mapper.ImMessageHistoryMapper;
+import com.bless.message.model.DoStoreGroupMessageDto;
 import com.bless.message.model.DoStoreP2PMessageDto;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +31,9 @@ public class StoreMessageService {
 
     @Autowired
     ImMessageBodyMapper imMessageBodyMapper;
+
+    @Autowired
+    ImGroupMessageHistoryMapper imGroupMessageHistoryMapper;
 
 
     @Transactional
@@ -60,4 +67,21 @@ public class StoreMessageService {
     }
 
 
+    @Transactional
+    public void   doStoreGroupMessage(DoStoreGroupMessageDto doStoreGroupMessageDto) {
+        imMessageBodyMapper.insert(doStoreGroupMessageDto.getImMessageBodyEntity());
+        ImGroupMessageHistoryEntity imGroupMessageHistoryEntity = extractToGroupMessageHistory(doStoreGroupMessageDto.getGroupChatMessageContent(),doStoreGroupMessageDto.getImMessageBodyEntity());
+        imGroupMessageHistoryMapper.insert(imGroupMessageHistoryEntity);
+
+    }
+
+    private ImGroupMessageHistoryEntity extractToGroupMessageHistory(GroupChatMessageContent
+                                                                             messageContent , ImMessageBodyEntity messageBodyEntity){
+        ImGroupMessageHistoryEntity result = new ImGroupMessageHistoryEntity();
+        BeanUtils.copyProperties(messageContent,result);
+        result.setGroupId(messageContent.getGroupId());
+        result.setMessageKey(messageBodyEntity.getMessageKey());
+        result.setCreateTime(System.currentTimeMillis());
+        return result;
+    }
 }

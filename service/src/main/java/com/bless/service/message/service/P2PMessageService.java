@@ -67,6 +67,25 @@ public class P2PMessageService {
         String fromId = messageContent.getFromId();
         String toId = messageContent.getToId();
         Integer appId = messageContent.getAppId();
+
+        MessageContent messageFromMessageIdCache = messageStoreService.getMessageFromMessageIdCache(
+                messageContent.getAppId(), messageContent.getMessageId(),
+                MessageContent.class);
+        if (messageFromMessageIdCache != null) {
+            threadPoolExecutor.execute(()->{
+                //1.回ack成功给自己
+                ack(messageContent, ResponseVO.successResponse());
+                //2.发消息给同步在线端
+                syncToSender(messageContent,messageContent);
+                //3.发消息给对方在线端
+                List<ClientInfo> clientInfos = dispatchMessage(messageContent);
+                if (clientInfos.isEmpty()) {
+                    reciverAck(messageContent);
+                }
+            });
+            return;
+        }
+
         //前置校验
         //这个用户是否被禁言 是否被禁用
         //发送方和接收方是否是好友
@@ -86,6 +105,9 @@ public class P2PMessageService {
                 syncToSender(messageContent,messageContent);
                 //3.发消息给对方在线端
                 List<ClientInfo> clientInfos = dispatchMessage(messageContent);
+
+                messageStoreService.setMessageFromMessageIdCache(messageContent.getAppId(),
+                        messageContent.getMessageId(),messageContent);
                 if (clientInfos.isEmpty()) {
                     reciverAck(messageContent);
                 }
