@@ -6,7 +6,9 @@ import com.alibaba.fastjson.TypeReference;
 import com.bless.common.constant.Constants;
 import com.bless.common.enums.command.GroupEventCommand;
 import com.bless.common.model.message.GroupChatMessageContent;
+import com.bless.common.model.message.MessageReadedContent;
 import com.bless.service.group.service.GroupMessageService;
+import com.bless.service.message.service.MessageSyncService;
 import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +35,10 @@ import java.util.Map;
 public class GroupChatOperateReceiver {
     @Autowired
     GroupMessageService groupMessageService;
+
+    @Autowired
+    MessageSyncService messageSyncService;
+
     private static Logger logger = LoggerFactory.getLogger(GroupChatOperateReceiver.class);
 
     @RabbitListener(
@@ -55,12 +61,11 @@ public class GroupChatOperateReceiver {
                 GroupChatMessageContent messageContent
                         = jsonObject.toJavaObject(GroupChatMessageContent.class);
                 groupMessageService.process(messageContent);
+            } else if (command.equals(GroupEventCommand.MSG_GROUP_READED.getCommand())) {
+                MessageReadedContent messageReaded = JSON.parseObject(msg, new TypeReference<MessageReadedContent>() {
+                }.getType());
+                messageSyncService.groupReadMark(messageReaded);
             }
-//            else if (command.equals(GroupEventCommand.MSG_GROUP_READED.getCommand())) {
-//                MessageReadedContent messageReaded = JSON.parseObject(msg, new TypeReference<MessageReadedContent>() {
-//                }.getType());
-//                messageSyncService.groupReadMark(messageReaded);
-//            }
             channel.basicAck(deliveryTag, false);
         }catch (Exception e){
             logger.error("处理消息出现异常：{}", e.getMessage());

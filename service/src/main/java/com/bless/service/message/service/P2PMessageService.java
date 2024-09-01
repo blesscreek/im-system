@@ -4,9 +4,11 @@ import com.bless.codec.pack.message.ChatMessageAck;
 import com.bless.codec.pack.message.MessageReciveServerAckPack;
 import com.bless.common.ResponseVO;
 import com.bless.common.constant.Constants;
+import com.bless.common.enums.ConversationTypeEnum;
 import com.bless.common.enums.command.MessageCommand;
 import com.bless.common.model.ClientInfo;
 import com.bless.common.model.message.MessageContent;
+import com.bless.common.model.message.OfflineMessageContent;
 import com.bless.service.message.model.req.SendMessageReq;
 import com.bless.service.message.model.resp.SendMessageResp;
 import com.bless.service.seq.RedisSeq;
@@ -85,7 +87,11 @@ public class P2PMessageService {
             });
             return;
         }
-
+        long seq = redisSeq.doGetSeq(messageContent.getAppId() + ":"
+                + Constants.SeqConstants.Message+ ":" + ConversationIdGenerate.generateP2PId(
+                messageContent.getFromId(),messageContent.getToId()
+        ));
+        messageContent.setMessageSequence(seq);
         //前置校验
         //这个用户是否被禁言 是否被禁用
         //发送方和接收方是否是好友
@@ -93,12 +99,13 @@ public class P2PMessageService {
 //        if(responseVO.isOk()){
             threadPoolExecutor.execute(()->{
                 //appId + Seq + (from + to) groupId
-                long seq = redisSeq.doGetSeq(messageContent.getAppId() + ":"
-                        + Constants.SeqConstants.Message+ ":" + ConversationIdGenerate.generateP2PId(
-                        messageContent.getFromId(),messageContent.getToId()
-                ));
-                messageContent.setMessageSequence(seq);
                 messageStoreService.storeP2PMessage(messageContent);
+
+                OfflineMessageContent offlineMessageContent = new OfflineMessageContent();
+                BeanUtils.copyProperties(messageContent, offlineMessageContent);
+                offlineMessageContent.setConversationType(ConversationTypeEnum.P2P.getCode());
+                messageStoreService.storeOfflineMessage(offlineMessageContent);
+
                 //1.回ack成功给自己
                 ack(messageContent, ResponseVO.successResponse());
                 //2.发消息给同步在线端

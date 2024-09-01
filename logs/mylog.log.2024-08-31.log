@@ -1568,3 +1568,386 @@ Caused by: java.net.SocketException: Connection reset by peer: socket write erro
 2024-08-31 16:26:30 -Shutting down ExecutorService 'applicationTaskExecutor'
 2024-08-31 16:26:36 -HikariPool-1 - Shutdown initiated...
 2024-08-31 16:26:36 -HikariPool-1 - Shutdown completed.
+2024-08-31 16:26:42 -Starting Application on bless with PID 1908 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 16:26:42 -The following profiles are active: dev
+2024-08-31 16:26:42 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 16:26:42 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 16:26:42 -Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2024-08-31 16:26:43 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 16:26:43 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 16:26:43 -Starting service [Tomcat]
+2024-08-31 16:26:43 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 16:26:43 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 16:26:43 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 16:26:43 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 16:26:43 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 16:26:43 -Initializing Spring embedded WebApplicationContext
+2024-08-31 16:26:43 -Root WebApplicationContext: initialization completed in 758 ms
+2024-08-31 16:26:44 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 16:26:44 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 16:26:44 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 16:26:44 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 16:26:44 -Created new connection: rabbitConnectionFactory#2975a9e:0/SimpleConnection@15a3b42 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 62285]
+2024-08-31 16:26:45 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"messageId":"lld","imei":"100","fromId":"lyx1","command":1103}
+2024-08-31 16:26:45 -Started Application in 3.737 seconds (JVM running for 4.351)
+2024-08-31 16:26:46 -HikariPool-1 - Starting...
+2024-08-31 16:26:46 -HikariPool-1 - Start completed.
+2024-08-31 16:26:46 -msg ack,msgId=lld,checkResut200
+2024-08-31 16:26:46 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"lld","messageSequence":12},"ok":true},"imei":"100","toId":"lyx1"}
+2024-08-31 16:26:46 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374954012966913,"clientType":1,"messageBody":"lld","appId":10000,"imei":"100","messageId":"lld","messageSequence":12,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 16:26:46 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374954012966913,"serverSend":true,"messageSequence":12,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 16:26:46 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725092806437,"delFlag":0,"messageBody":"lld","messageKey":374954012966913,"securityKey":""},"messageContent":{"appId":10000,"clientType":1,"fromId":"lyx1","imei":"100","messageBody":"lld","messageId":"lld","messageKey":374954012966913,"messageSequence":12,"toId":"lyx2"}}
+2024-08-31 16:26:53 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 16:26:53 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 16:26:53 -Completed initialization in 3 ms
+2024-08-31 16:26:53 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"messageId":"lld","imei":"100","fromId":"lyx1","command":1103}
+2024-08-31 16:26:53 -msg ack,msgId=lld,checkResut200
+2024-08-31 16:26:53 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"lld","messageSequence":0},"ok":true},"imei":"100","toId":"lyx1"}
+2024-08-31 16:26:53 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"imei":"100","messageId":"lld","messageSequence":0,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 16:26:53 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","serverSend":true,"messageSequence":0,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 16:26:57 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"messageId":"lld","imei":"100","fromId":"lyx1","command":1103}
+2024-08-31 16:26:57 -msg ack,msgId=lld,checkResut200
+2024-08-31 16:26:57 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"lld","messageSequence":0},"ok":true},"imei":"100","toId":"lyx1"}
+2024-08-31 16:26:57 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"imei":"100","messageId":"lld","messageSequence":0,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 16:26:57 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","serverSend":true,"messageSequence":0,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 16:27:38 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"messageId":"lld","imei":"100","fromId":"lyx1","command":1103}
+2024-08-31 16:27:38 -msg ack,msgId=lld,checkResut200
+2024-08-31 16:27:38 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"lld","messageSequence":0},"ok":true},"imei":"100","toId":"lyx1"}
+2024-08-31 16:27:38 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"imei":"100","messageId":"lld","messageSequence":0,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 16:27:38 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","serverSend":true,"messageSequence":0,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 16:27:39 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"messageId":"lld","imei":"100","fromId":"lyx1","command":1103}
+2024-08-31 16:27:39 -msg ack,msgId=lld,checkResut200
+2024-08-31 16:27:39 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"lld","messageSequence":0},"ok":true},"imei":"100","toId":"lyx1"}
+2024-08-31 16:27:39 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","clientType":1,"messageBody":"lld","appId":10000,"imei":"100","messageId":"lld","messageSequence":0,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 16:27:39 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","serverSend":true,"messageSequence":0,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 16:57:04 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-08-31 16:57:04 -Channel shutdown: connection error
+2024-08-31 16:57:04 -Channel shutdown: connection error
+2024-08-31 16:57:04 -Channel shutdown: connection error
+2024-08-31 16:57:04 -Restarting Consumer@1fecfaea: tags=[[amq.ctag-fJeTjF0SssNE97dWkvpCUw]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,1), conn: Proxy@7b2bf745 Shared Rabbit Connection: SimpleConnection@15a3b42 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 62285], acknowledgeMode=MANUAL local queue size=0
+2024-08-31 16:57:04 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 16:57:04 -Restarting Consumer@186d8a71: tags=[[amq.ctag-xz0cSttNqljFKWWDdqbuLw]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,2), conn: Proxy@7b2bf745 Shared Rabbit Connection: null, acknowledgeMode=MANUAL local queue size=0
+2024-08-31 16:57:08 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-08-31 16:57:08 -Channel shutdown: connection error
+2024-08-31 16:57:09 -Restarting Consumer@303a5119: tags=[[amq.ctag-8kffkBeO_zBEGBOGajZMXg]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,1), conn: Proxy@245a060f Shared Rabbit Connection: SimpleConnection@10ec523c [delegate=amqp://guest@123.60.15.140:5672/, localPort= 53000], acknowledgeMode=MANUAL local queue size=0
+2024-08-31 16:57:09 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 16:57:09 -Created new connection: rabbitConnectionFactory#347bdeef:1/SimpleConnection@18fd06dd [delegate=amqp://guest@123.60.15.140:5672/, localPort= 64024]
+2024-08-31 16:57:11 -Created new connection: rabbitConnectionFactory#2975a9e:1/SimpleConnection@48399e9b [delegate=amqp://guest@123.60.15.140:5672/, localPort= 64012]
+2024-08-31 20:19:00 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-08-31 20:19:00 -Channel shutdown: connection error
+2024-08-31 20:19:00 -Channel shutdown: connection error
+2024-08-31 20:19:00 -Restarting Consumer@7db3571a: tags=[[amq.ctag-GrvNO0jIwOkQ699ofLLHpQ]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,2), conn: Proxy@7b2bf745 Shared Rabbit Connection: SimpleConnection@48399e9b [delegate=amqp://guest@123.60.15.140:5672/, localPort= 64012], acknowledgeMode=MANUAL local queue size=0
+2024-08-31 20:19:00 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 20:19:01 -Created new connection: rabbitConnectionFactory#2975a9e:2/SimpleConnection@1a8465b1 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 59306]
+2024-08-31 20:19:01 -Restarting Consumer@4cefff42: tags=[[amq.ctag-fj1xQLUqGxU2x6ocDKf-DA]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,1), conn: Proxy@7b2bf745 Shared Rabbit Connection: SimpleConnection@1a8465b1 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 59306], acknowledgeMode=MANUAL local queue size=0
+2024-08-31 20:52:12 -Waiting for workers to finish.
+2024-08-31 20:52:13 -Successfully waited for workers to finish.
+2024-08-31 20:52:13 -Waiting for workers to finish.
+2024-08-31 20:52:14 -Successfully waited for workers to finish.
+2024-08-31 20:52:14 -Shutdown ignored - container is not active already
+2024-08-31 20:52:14 -Shutdown ignored - container is not active already
+2024-08-31 20:52:14 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 20:52:19 -HikariPool-1 - Shutdown initiated...
+2024-08-31 20:52:19 -HikariPool-1 - Shutdown completed.
+2024-08-31 20:52:26 -Starting Application on bless with PID 32168 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 20:52:26 -The following profiles are active: dev
+2024-08-31 20:52:26 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 20:52:26 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 20:52:26 -Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2024-08-31 20:52:27 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 20:52:27 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 20:52:27 -Starting service [Tomcat]
+2024-08-31 20:52:27 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 20:52:27 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 20:52:27 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 20:52:27 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 20:52:27 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 20:52:27 -Initializing Spring embedded WebApplicationContext
+2024-08-31 20:52:27 -Root WebApplicationContext: initialization completed in 868 ms
+2024-08-31 20:52:28 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 20:52:28 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 20:52:28 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 20:52:28 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 20:52:34 -Created new connection: rabbitConnectionFactory#15405bd6:0/SimpleConnection@6b357eb6 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 61269]
+2024-08-31 20:52:35 -Started Application in 9.07 seconds (JVM running for 9.694)
+2024-08-31 20:56:02 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 20:56:02 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 20:56:02 -Completed initialization in 3 ms
+2024-08-31 20:56:02 -HikariPool-1 - Starting...
+2024-08-31 20:56:02 -HikariPool-1 - Start completed.
+2024-08-31 20:56:02 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":2,"messageBody":"123","appId":10000,"messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","imei":"123","fromId":"lyx1","command":1103}
+2024-08-31 20:56:03 -msg ack,msgId=90ff438a-240b-4ae5-866b-9754ca12d86c,checkResut200
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":2,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","messageSequence":13},"ok":true},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374987896651777,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","messageSequence":13,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374987896651777,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","messageSequence":13,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":2,"command":1103,"data":{"toId":"lyx2","messageKey":374987896651777,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","messageSequence":13,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374987896651777,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","messageSequence":13,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 20:56:03 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725108963609,"delFlag":0,"messageBody":"123","messageKey":374987896651777,"securityKey":""},"messageContent":{"appId":10000,"clientType":2,"fromId":"lyx1","imei":"123","messageBody":"123","messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","messageKey":374987896651777,"messageSequence":13,"toId":"lyx2"}}
+2024-08-31 20:56:03 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374987896651777,"clientType":2,"appId":10000,"messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","imei":"123","messageSequence":13,"fromId":"lyx2","command":1107}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374987896651777,"clientType":2,"appId":10000,"imei":"123","messageSequence":13,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374987896651777,"clientType":2,"appId":10000,"imei":"123","messageSequence":13,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374987896651777,"clientType":2,"appId":10000,"imei":"123","messageSequence":13,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":13,"fromId":"lyx1","command":1106}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":13,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":13,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":13,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":13,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":13,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374987896651777,"clientType":1,"appId":10000,"messageId":"90ff438a-240b-4ae5-866b-9754ca12d86c","imei":"123","messageSequence":13,"fromId":"lyx2","command":1107}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374987896651777,"clientType":1,"appId":10000,"imei":"123","messageSequence":13,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374987896651777,"clientType":1,"appId":10000,"imei":"123","messageSequence":13,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374987896651777,"clientType":1,"appId":10000,"imei":"123","messageSequence":13,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 20:56:03 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":13,"fromId":"lyx2","command":1106}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx1","messageSequence":13,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":13,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 20:56:03 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":13,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:20:45 -Waiting for workers to finish.
+2024-08-31 21:20:46 -Successfully waited for workers to finish.
+2024-08-31 21:20:46 -Waiting for workers to finish.
+2024-08-31 21:20:47 -Successfully waited for workers to finish.
+2024-08-31 21:20:47 -Shutdown ignored - container is not active already
+2024-08-31 21:20:47 -Shutdown ignored - container is not active already
+2024-08-31 21:20:47 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 21:20:52 -HikariPool-1 - Shutdown initiated...
+2024-08-31 21:20:52 -HikariPool-1 - Shutdown completed.
+2024-08-31 21:20:57 -Starting Application on bless with PID 11112 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 21:20:57 -The following profiles are active: dev
+2024-08-31 21:20:58 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 21:20:58 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 21:20:58 -Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2024-08-31 21:20:58 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 21:20:58 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 21:20:58 -Starting service [Tomcat]
+2024-08-31 21:20:58 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 21:20:58 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 21:20:58 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 21:20:58 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 21:20:58 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 21:20:58 -Initializing Spring embedded WebApplicationContext
+2024-08-31 21:20:58 -Root WebApplicationContext: initialization completed in 803 ms
+2024-08-31 21:21:00 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 21:21:00 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 21:21:00 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 21:21:00 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 21:21:00 -Created new connection: rabbitConnectionFactory#5578be42:0/SimpleConnection@2da81754 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 63219]
+2024-08-31 21:21:01 -Started Application in 3.634 seconds (JVM running for 4.245)
+2024-08-31 21:22:01 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 21:22:01 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 21:22:01 -Completed initialization in 3 ms
+2024-08-31 21:22:01 -HikariPool-1 - Starting...
+2024-08-31 21:22:01 -HikariPool-1 - Start completed.
+2024-08-31 21:22:01 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":2,"messageBody":"123","appId":10000,"messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","imei":"123","fromId":"lyx1","command":1103}
+2024-08-31 21:22:02 -msg ack,msgId=d1842bf1-2252-45f6-a2e8-34d3b3768184,checkResut200
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":2,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","messageSequence":14},"ok":true},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991164014593,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","messageSequence":14,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991164014593,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","messageSequence":14,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":2,"command":1103,"data":{"toId":"lyx2","messageKey":374991164014593,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","messageSequence":14,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991164014593,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","messageSequence":14,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:02 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725110521987,"delFlag":0,"messageBody":"123","messageKey":374991164014593,"securityKey":""},"messageContent":{"appId":10000,"clientType":2,"fromId":"lyx1","imei":"123","messageBody":"123","messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","messageKey":374991164014593,"messageSequence":14,"toId":"lyx2"}}
+2024-08-31 21:22:02 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":14,"fromId":"lyx1","command":1106}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":14,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":14,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":14,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":14,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":14,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374991164014593,"clientType":2,"appId":10000,"messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","imei":"123","messageSequence":14,"fromId":"lyx2","command":1107}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374991164014593,"clientType":2,"appId":10000,"imei":"123","messageSequence":14,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991164014593,"clientType":2,"appId":10000,"imei":"123","messageSequence":14,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991164014593,"clientType":2,"appId":10000,"imei":"123","messageSequence":14,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374991164014593,"clientType":1,"appId":10000,"messageId":"d1842bf1-2252-45f6-a2e8-34d3b3768184","imei":"123","messageSequence":14,"fromId":"lyx2","command":1107}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374991164014593,"clientType":1,"appId":10000,"imei":"123","messageSequence":14,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991164014593,"clientType":1,"appId":10000,"imei":"123","messageSequence":14,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991164014593,"clientType":1,"appId":10000,"imei":"123","messageSequence":14,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:02 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":14,"fromId":"lyx2","command":1106}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx1","messageSequence":14,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":14,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:02 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":14,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":2,"messageBody":"123","appId":10000,"messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","imei":"123","fromId":"lyx1","command":1103}
+2024-08-31 21:22:20 -msg ack,msgId=28e884bf-c6c1-402c-86e0-6cb89dcfb89a,checkResut200
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":2,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","messageSequence":15},"ok":true},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991203860481,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","messageSequence":15,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991203860481,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","messageSequence":15,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":2,"command":1103,"data":{"toId":"lyx2","messageKey":374991203860481,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","messageSequence":15,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991203860481,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","messageSequence":15,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:20 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725110540040,"delFlag":0,"messageBody":"123","messageKey":374991203860481,"securityKey":""},"messageContent":{"appId":10000,"clientType":2,"fromId":"lyx1","imei":"123","messageBody":"123","messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","messageKey":374991203860481,"messageSequence":15,"toId":"lyx2"}}
+2024-08-31 21:22:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":15,"fromId":"lyx1","command":1106}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":15,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":15,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":15,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":15,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":15,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374991203860481,"clientType":2,"appId":10000,"messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","imei":"123","messageSequence":15,"fromId":"lyx2","command":1107}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374991203860481,"clientType":2,"appId":10000,"imei":"123","messageSequence":15,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991203860481,"clientType":2,"appId":10000,"imei":"123","messageSequence":15,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991203860481,"clientType":2,"appId":10000,"imei":"123","messageSequence":15,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374991203860481,"clientType":1,"appId":10000,"messageId":"28e884bf-c6c1-402c-86e0-6cb89dcfb89a","imei":"123","messageSequence":15,"fromId":"lyx2","command":1107}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374991203860481,"clientType":1,"appId":10000,"imei":"123","messageSequence":15,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991203860481,"clientType":1,"appId":10000,"imei":"123","messageSequence":15,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991203860481,"clientType":1,"appId":10000,"imei":"123","messageSequence":15,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":15,"fromId":"lyx2","command":1106}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx1","messageSequence":15,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":15,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:20 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":15,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:55 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":2,"messageBody":"123","appId":10000,"messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","imei":"123","fromId":"lyx1","command":1103}
+2024-08-31 21:22:55 -msg ack,msgId=de580670-44e0-4e97-94f9-ef72c4401d38,checkResut200
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":2,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","messageSequence":16},"ok":true},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991277260801,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","messageSequence":16,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991277260801,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","messageSequence":16,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":2,"command":1103,"data":{"toId":"lyx2","messageKey":374991277260801,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","messageSequence":16,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991277260801,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","messageSequence":16,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:55 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725110575665,"delFlag":0,"messageBody":"123","messageKey":374991277260801,"securityKey":""},"messageContent":{"appId":10000,"clientType":2,"fromId":"lyx1","imei":"123","messageBody":"123","messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","messageKey":374991277260801,"messageSequence":16,"toId":"lyx2"}}
+2024-08-31 21:22:55 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":16,"fromId":"lyx1","command":1106}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":16,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":16,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":16,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":16,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":16,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374991277260801,"clientType":2,"appId":10000,"messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","imei":"123","messageSequence":16,"fromId":"lyx2","command":1107}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374991277260801,"clientType":2,"appId":10000,"imei":"123","messageSequence":16,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991277260801,"clientType":2,"appId":10000,"imei":"123","messageSequence":16,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991277260801,"clientType":2,"appId":10000,"imei":"123","messageSequence":16,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374991277260801,"clientType":1,"appId":10000,"messageId":"de580670-44e0-4e97-94f9-ef72c4401d38","imei":"123","messageSequence":16,"fromId":"lyx2","command":1107}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374991277260801,"clientType":1,"appId":10000,"imei":"123","messageSequence":16,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991277260801,"clientType":1,"appId":10000,"imei":"123","messageSequence":16,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991277260801,"clientType":1,"appId":10000,"imei":"123","messageSequence":16,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:22:55 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":16,"fromId":"lyx2","command":1106}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx1","messageSequence":16,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":16,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:22:55 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":16,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:23:24 -Waiting for workers to finish.
+2024-08-31 21:23:24 -Successfully waited for workers to finish.
+2024-08-31 21:23:24 -Waiting for workers to finish.
+2024-08-31 21:23:25 -Successfully waited for workers to finish.
+2024-08-31 21:23:25 -Shutdown ignored - container is not active already
+2024-08-31 21:23:25 -Shutdown ignored - container is not active already
+2024-08-31 21:23:25 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 21:23:30 -HikariPool-1 - Shutdown initiated...
+2024-08-31 21:23:30 -HikariPool-1 - Shutdown completed.
+2024-08-31 21:23:33 -Starting Application on bless with PID 9668 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 21:23:33 -The following profiles are active: dev
+2024-08-31 21:23:33 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 21:23:33 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 21:23:34 -Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2024-08-31 21:23:34 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 21:23:34 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 21:23:34 -Starting service [Tomcat]
+2024-08-31 21:23:34 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 21:23:34 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 21:23:34 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 21:23:34 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 21:23:34 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 21:23:34 -Initializing Spring embedded WebApplicationContext
+2024-08-31 21:23:34 -Root WebApplicationContext: initialization completed in 864 ms
+2024-08-31 21:23:35 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 21:23:36 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 21:23:36 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 21:23:36 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 21:23:36 -Created new connection: rabbitConnectionFactory#4a22e4d7:0/SimpleConnection@1488a861 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 63413]
+2024-08-31 21:23:37 -Started Application in 4.079 seconds (JVM running for 4.839)
+2024-08-31 21:23:47 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 21:23:47 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 21:23:47 -Completed initialization in 4 ms
+2024-08-31 21:23:47 -HikariPool-1 - Starting...
+2024-08-31 21:23:47 -HikariPool-1 - Start completed.
+2024-08-31 21:23:48 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":2,"messageBody":"123","appId":10000,"messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","imei":"123","fromId":"lyx1","command":1103}
+2024-08-31 21:23:53 -msg ack,msgId=57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8,checkResut200
+2024-08-31 21:23:53 -send messge == {"appId":10000,"clientType":2,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","messageSequence":17},"ok":true},"imei":"123","toId":"lyx1"}
+2024-08-31 21:23:53 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991398895617,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","messageSequence":17,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:23:53 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991398895617,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","messageSequence":17,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:23:53 -send messge == {"appId":10000,"clientType":2,"command":1103,"data":{"toId":"lyx2","messageKey":374991398895617,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","messageSequence":17,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:23:53 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374991398895617,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","messageSequence":17,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:23:53 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725110633529,"delFlag":0,"messageBody":"123","messageKey":374991398895617,"securityKey":""},"messageContent":{"appId":10000,"clientType":2,"fromId":"lyx1","imei":"123","messageBody":"123","messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","messageKey":374991398895617,"messageSequence":17,"toId":"lyx2"}}
+2024-08-31 21:23:53 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":17,"fromId":"lyx1","command":1106}
+2024-08-31 21:24:50 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s176ms301µs300ns).
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":17,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":1,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":17,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":17,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":17,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":17,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:24:50 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374991398895617,"clientType":1,"appId":10000,"messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","imei":"123","messageSequence":17,"fromId":"lyx2","command":1107}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374991398895617,"clientType":1,"appId":10000,"imei":"123","messageSequence":17,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991398895617,"clientType":1,"appId":10000,"imei":"123","messageSequence":17,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991398895617,"clientType":1,"appId":10000,"imei":"123","messageSequence":17,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:24:50 -Waiting for workers to finish.
+2024-08-31 21:24:50 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374991398895617,"clientType":2,"appId":10000,"messageId":"57e5b95c-2bf2-425d-9abc-3bad8c3d3ad8","imei":"123","messageSequence":17,"fromId":"lyx2","command":1107}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374991398895617,"clientType":2,"appId":10000,"imei":"123","messageSequence":17,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991398895617,"clientType":2,"appId":10000,"imei":"123","messageSequence":17,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374991398895617,"clientType":2,"appId":10000,"imei":"123","messageSequence":17,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:24:50 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":17,"fromId":"lyx2","command":1106}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx1","messageSequence":17,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":17,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:24:50 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":17,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:24:51 -Successfully waited for workers to finish.
+2024-08-31 21:24:51 -Waiting for workers to finish.
+2024-08-31 21:24:51 -Successfully waited for workers to finish.
+2024-08-31 21:24:51 -Shutdown ignored - container is not active already
+2024-08-31 21:24:51 -Shutdown ignored - container is not active already
+2024-08-31 21:24:51 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 21:24:56 -HikariPool-1 - Shutdown initiated...
+2024-08-31 21:24:56 -HikariPool-1 - Shutdown completed.
+2024-08-31 21:25:02 -Starting Application on bless with PID 33332 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-08-31 21:25:02 -The following profiles are active: dev
+2024-08-31 21:25:02 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-08-31 21:25:02 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-31 21:25:02 -Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2024-08-31 21:25:03 -Tomcat initialized with port(s): 8000 (http)
+2024-08-31 21:25:03 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-08-31 21:25:03 -Starting service [Tomcat]
+2024-08-31 21:25:03 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-08-31 21:25:03 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-08-31 21:25:03 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-08-31 21:25:03 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-08-31 21:25:03 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-08-31 21:25:03 -Initializing Spring embedded WebApplicationContext
+2024-08-31 21:25:03 -Root WebApplicationContext: initialization completed in 896 ms
+2024-08-31 21:25:04 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 21:25:05 -Starting ProtocolHandler ["http-nio-8000"]
+2024-08-31 21:25:05 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-08-31 21:25:05 -Attempting to connect to: [123.60.15.140:5672]
+2024-08-31 21:25:05 -Created new connection: rabbitConnectionFactory#2fd9fb34:0/SimpleConnection@13234ac9 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 63658]
+2024-08-31 21:25:06 -Started Application in 4.146 seconds (JVM running for 4.813)
+2024-08-31 21:31:13 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 21:31:13 -Initializing Servlet 'dispatcherServlet'
+2024-08-31 21:31:13 -Completed initialization in 4 ms
+2024-08-31 21:31:13 -HikariPool-1 - Starting...
+2024-08-31 21:31:13 -HikariPool-1 - Start completed.
+2024-08-31 21:31:13 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":2,"messageBody":"123","appId":10000,"messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","imei":"123","fromId":"lyx1","command":1103}
+2024-08-31 21:31:20 -msg ack,msgId=a1422282-cc11-42a7-8e7d-2fec6b925756,checkResut200
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":2,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","messageSequence":18},"ok":true},"imei":"123","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374992323739649,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","messageSequence":18,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374992323739649,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","messageSequence":18,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":2,"command":1103,"data":{"toId":"lyx2","messageKey":374992323739649,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","messageSequence":18,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1103,"data":{"toId":"lyx2","messageKey":374992323739649,"clientType":2,"messageBody":"123","appId":10000,"imei":"123","messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","messageSequence":18,"fromId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:31:20 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725111074574,"delFlag":0,"messageBody":"123","messageKey":374992323739649,"securityKey":""},"messageContent":{"appId":10000,"clientType":2,"fromId":"lyx1","imei":"123","messageBody":"123","messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","messageKey":374992323739649,"messageSequence":18,"toId":"lyx2"}}
+2024-08-31 21:31:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":18,"fromId":"lyx1","command":1106}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":18,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1053,"data":{"conversationType":0,"toId":"lyx2","messageSequence":18,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":18,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":18,"fromId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx2","messageSequence":18,"fromId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:31:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374992323739649,"clientType":1,"appId":10000,"messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","imei":"123","messageSequence":18,"fromId":"lyx2","command":1107}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374992323739649,"clientType":1,"appId":10000,"imei":"123","messageSequence":18,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374992323739649,"clientType":1,"appId":10000,"imei":"123","messageSequence":18,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374992323739649,"clientType":1,"appId":10000,"imei":"123","messageSequence":18,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:31:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","conversationType":0,"clientType":1,"appId":10000,"imei":"123","messageSequence":18,"fromId":"lyx2","command":1106}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":2,"command":1053,"data":{"conversationType":0,"toId":"lyx1","messageSequence":18,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":2,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":18,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1054,"data":{"conversationType":0,"toId":"lyx1","messageSequence":18,"fromId":"lyx2"},"imei":"123","toId":"lyx2"}
+2024-08-31 21:31:20 -CHAT MSG FORM QUEUE ::: {"toId":"lyx1","messageKey":374992323739649,"clientType":2,"appId":10000,"messageId":"a1422282-cc11-42a7-8e7d-2fec6b925756","imei":"123","messageSequence":18,"fromId":"lyx2","command":1107}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":2,"command":1107,"data":{"toId":"lyx1","messageKey":374992323739649,"clientType":2,"appId":10000,"imei":"123","messageSequence":18,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374992323739649,"clientType":2,"appId":10000,"imei":"123","messageSequence":18,"fromId":"lyx2"},"imei":"100","toId":"lyx1"}
+2024-08-31 21:31:20 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":374992323739649,"clientType":2,"appId":10000,"imei":"123","messageSequence":18,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-08-31 22:09:01 -Waiting for workers to finish.
+2024-08-31 22:09:01 -Waiting for workers to finish.
+2024-08-31 22:09:01 -Successfully waited for workers to finish.
+2024-08-31 22:09:01 -Successfully waited for workers to finish.
+2024-08-31 22:09:01 -Shutdown ignored - container is not active already
+2024-08-31 22:09:01 -Waiting for workers to finish.
+2024-08-31 22:09:02 -Successfully waited for workers to finish.
+2024-08-31 22:09:02 -Shutdown ignored - container is not active already
+2024-08-31 22:09:02 -Shutdown ignored - container is not active already
+2024-08-31 22:09:02 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 22:09:06 -HikariPool-1 - Shutdown initiated...
+2024-08-31 22:09:06 -HikariPool-1 - Shutdown completed.
+2024-08-31 22:09:07 -HikariPool-1 - Shutdown initiated...
+2024-08-31 22:09:07 -HikariPool-1 - Shutdown completed.

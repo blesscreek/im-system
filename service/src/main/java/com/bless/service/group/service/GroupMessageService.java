@@ -18,6 +18,7 @@ import com.bless.common.enums.command.MessageCommand;
 import com.bless.common.model.ClientInfo;
 import com.bless.common.model.message.GroupChatMessageContent;
 import com.bless.common.model.message.MessageContent;
+import com.bless.common.model.message.OfflineMessageContent;
 import com.bless.service.group.model.req.SendGroupMessageReq;
 import com.bless.service.message.model.resp.SendMessageResp;
 import com.bless.service.message.service.CheckSendMessageService;
@@ -97,6 +98,16 @@ public class GroupMessageService {
         messageContent.setMessageSequence(seq);
             threadPoolExecutor.execute(()->{
                 messageStoreService.storeGroupMessage(messageContent);
+
+                List<String> groupMemberId = imGroupMemberService.getGroupMemberId(messageContent.getGroupId(),
+                        messageContent.getAppId());
+                messageContent.setMemberId(groupMemberId);
+
+                OfflineMessageContent offlineMessageContent = new OfflineMessageContent();
+                BeanUtils.copyProperties(messageContent,offlineMessageContent);
+                offlineMessageContent.setToId(messageContent.getGroupId());
+                messageStoreService.storeGroupOfflineMessage(offlineMessageContent,groupMemberId);
+
                 //1.回ack成功给自己
                 ack(messageContent, ResponseVO.successResponse());
                 //2.发消息给同步在线端
