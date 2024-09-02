@@ -1,6 +1,7 @@
 package com.bless.service.group.service;
 
 import com.bless.common.ResponseVO;
+import com.bless.common.model.SyncReq;
 import com.bless.service.group.dao.ImGroupEntity;
 import com.bless.service.group.model.req.*;
 
@@ -20,4 +21,8 @@ public interface ImGroupService {
     public ResponseVO destroyGroup(DestroyGroupReq req);
     public ResponseVO transferGroup(TransferGroupReq req);
     public ResponseVO muteGroup(MuteGroupReq req);
+
+    public ResponseVO syncJoinedGroupList(SyncReq req);
+
+    Long getUserGroupMaxSeq(String userId, Integer appId);
 }

@@ -1,6 +1,7 @@
 package com.bless.service.group.controller;
 
 import com.bless.common.ResponseVO;
+import com.bless.common.model.SyncReq;
 import com.bless.service.group.model.req.*;
 import com.bless.service.group.service.GroupMessageService;
 import com.bless.service.group.service.ImGroupService;
@@ -77,6 +78,10 @@ public class ImGroupController {
         req.setOperater(identifier);
         return ResponseVO.successResponse(groupMessageService.send(req));
     }
-
+    @RequestMapping("/syncJoinedGroup")
+    public ResponseVO syncJoinedGroup(@RequestBody @Validated SyncReq req, Integer appId, String identifier)  {
+        req.setAppId(appId);
+        return groupService.syncJoinedGroupList(req);
+    }
 
 }

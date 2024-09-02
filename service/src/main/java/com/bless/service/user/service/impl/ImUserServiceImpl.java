@@ -10,6 +10,7 @@ import com.bless.common.enums.DelFlagEnum;
 import com.bless.common.enums.UserErrorCode;
 import com.bless.common.enums.command.UserEventCommand;
 import com.bless.common.exception.ApplicationException;
+import com.bless.service.group.service.ImGroupService;
 import com.bless.service.user.dao.ImUserDataEntity;
 import com.bless.service.user.dao.mapper.ImUserDataMapper;
 import com.bless.service.user.model.req.*;
@@ -20,12 +21,14 @@ import com.bless.service.utils.CallbackService;
 import com.bless.service.utils.MessageProducer;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author bless
@@ -44,6 +47,10 @@ public class ImUserServiceImpl implements ImUserService {
     CallbackService callbackService;
     @Autowired
     MessageProducer messageProducer;
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    ImGroupService imGroupService;
     @Override
     public ResponseVO importUser(ImportUserReq req) {
 
@@ -184,6 +191,14 @@ public class ImUserServiceImpl implements ImUserService {
     @Override
     public ResponseVO login(LoginReq req) {
         return ResponseVO.successResponse();
+    }
+
+    @Override
+    public ResponseVO getUserSequence(GetUserSequenceReq req) {
+        Map<Object, Object> map = stringRedisTemplate.opsForHash().entries(req.getAppId() + ":" + Constants.RedisConstants.SeqPrefix + ":" + req.getUserId());
+        Long groupSeq = imGroupService.getUserGroupMaxSeq(req.getUserId(),req.getAppId());
+        map.put(Constants.SeqConstants.Group,groupSeq);
+        return ResponseVO.successResponse(map);
     }
 
 }

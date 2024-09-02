@@ -1,6 +1,7 @@
 package com.bless.service.conversation.controller;
 
 import com.bless.common.ResponseVO;
+import com.bless.common.model.SyncReq;
 import com.bless.service.conversation.model.DeleteConversationReq;
 import com.bless.service.conversation.model.UpdateConversationReq;
 import com.bless.service.conversation.service.ConversationService;
@@ -36,6 +37,11 @@ public class ConversationController {
         req.setAppId(appId);
 //        req.setOperater(identifier);
         return conversationService.updateConversation(req);
+    }
+    @RequestMapping("/syncConversationList")
+    public ResponseVO syncFriendShipList(@RequestBody @Validated SyncReq req, Integer appId)  {
+        req.setAppId(appId);
+        return conversationService.syncConversationSet(req);
     }
 
 }

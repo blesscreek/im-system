@@ -22,4 +22,6 @@ public interface ImUserService {
      public ResponseVO modifyUserInfo(ModifyUserInfoReq req);
 
      public ResponseVO login(LoginReq req);
+
+    ResponseVO getUserSequence(GetUserSequenceReq req);
 }

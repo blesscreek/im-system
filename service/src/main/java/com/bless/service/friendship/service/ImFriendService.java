@@ -2,6 +2,7 @@ package com.bless.service.friendship.service;
 
 import com.bless.common.ResponseVO;
 import com.bless.common.model.RequestBase;
+import com.bless.common.model.SyncReq;
 import com.bless.service.friendship.model.req.*;
 
 import java.util.List;
@@ -31,8 +32,9 @@ public interface ImFriendService {
     public ResponseVO deleteBlack(DeleteBlackReq req);
 
     public ResponseVO checkBlack(CheckFriendShipReq req);
-//
-//    public ResponseVO syncFriendshipList(SyncReq req);
+
+
+    public ResponseVO syncFriendshipList(SyncReq req);
 //
 //    public List<String> getAllFriendId(String userId, Integer appId);
 }

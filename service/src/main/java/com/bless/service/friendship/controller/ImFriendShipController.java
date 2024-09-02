@@ -1,6 +1,7 @@
 package com.bless.service.friendship.controller;
 
 import com.bless.common.ResponseVO;
+import com.bless.common.model.SyncReq;
 import com.bless.service.friendship.model.req.*;
 import com.bless.service.friendship.service.ImFriendService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,5 +85,10 @@ public class ImFriendShipController {
         return imFriendShipService.checkBlack(req);
     }
 
-
+    @RequestMapping("/syncFriendshipList")
+    public ResponseVO syncFriendshipList(@RequestBody @Validated
+                                         SyncReq req, Integer appId){
+        req.setAppId(appId);
+        return imFriendShipService.syncFriendshipList(req);
+    }
 }

@@ -114,6 +114,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
             topic.publish(JSONObject.toJSONString(dto));
 
 
+
         }else if (command == SystemCommand.LOGOUT.getCommand()) {
             SessionSocketHolder.removeUserSession((NioSocketChannel) ctx.channel());
 

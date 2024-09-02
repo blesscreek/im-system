@@ -59,4 +59,7 @@ public interface ImGroupMemberMapper extends BaseMapper<ImGroupMemberEntity> {
     public List<GroupMemberDto> getGroupManager(String groupId, Integer appId);
 
 
+    @Select("select group_id from im_group_member where app_id = #{appId} AND member_id = #{memberId} and role != #{role}" )
+    public List<String> syncJoinedGroupId(Integer appId, String memberId, int role);
+
 }

@@ -350,3 +350,588 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 2024-09-01 11:27:57 -HikariPool-1 - Shutdown completed.
 2024-09-01 11:27:57 -HikariPool-1 - Shutdown initiated...
 2024-09-01 11:27:57 -HikariPool-1 - Shutdown completed.
+2024-09-01 12:36:19 -Starting Application on bless with PID 38388 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 12:36:19 -The following profiles are active: dev
+2024-09-01 12:36:19 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 12:36:19 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 12:36:19 -Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2024-09-01 12:36:19 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 12:36:19 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:36:19 -Starting service [Tomcat]
+2024-09-01 12:36:19 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 12:36:19 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 12:36:19 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 12:36:19 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 12:36:19 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 12:36:19 -Initializing Spring embedded WebApplicationContext
+2024-09-01 12:36:19 -Root WebApplicationContext: initialization completed in 862 ms
+2024-09-01 12:36:21 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:36:21 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:36:21 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 12:36:21 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 12:36:21 -Created new connection: rabbitConnectionFactory#12704e15:0/SimpleConnection@7d8cf9ac [delegate=amqp://guest@123.60.15.140:5672/, localPort= 59512]
+2024-09-01 12:36:22 -Started Application in 3.713 seconds (JVM running for 4.393)
+2024-09-01 12:38:39 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 12:38:39 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 12:38:39 -Completed initialization in 3 ms
+2024-09-01 12:38:39 -HikariPool-1 - Starting...
+2024-09-01 12:38:39 -HikariPool-1 - Start completed.
+2024-09-01 12:40:52 -Waiting for workers to finish.
+2024-09-01 12:40:52 -Successfully waited for workers to finish.
+2024-09-01 12:40:52 -Waiting for workers to finish.
+2024-09-01 12:40:53 -Successfully waited for workers to finish.
+2024-09-01 12:40:53 -Shutdown ignored - container is not active already
+2024-09-01 12:40:53 -Shutdown ignored - container is not active already
+2024-09-01 12:40:53 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:40:58 -HikariPool-1 - Shutdown initiated...
+2024-09-01 12:40:58 -HikariPool-1 - Shutdown completed.
+2024-09-01 12:41:04 -Starting Application on bless with PID 34780 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 12:41:04 -The following profiles are active: dev
+2024-09-01 12:41:04 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 12:41:04 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 12:41:04 -Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2024-09-01 12:41:05 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 12:41:05 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:41:05 -Starting service [Tomcat]
+2024-09-01 12:41:05 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 12:41:05 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 12:41:05 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 12:41:05 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 12:41:05 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 12:41:05 -Initializing Spring embedded WebApplicationContext
+2024-09-01 12:41:05 -Root WebApplicationContext: initialization completed in 857 ms
+2024-09-01 12:41:06 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:41:06 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:41:06 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 12:41:06 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 12:41:07 -Created new connection: rabbitConnectionFactory#52ff99cd:0/SimpleConnection@6002e944 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 59868]
+2024-09-01 12:41:07 -Started Application in 3.692 seconds (JVM running for 4.351)
+2024-09-01 12:41:14 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 12:41:14 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 12:41:14 -Completed initialization in 3 ms
+2024-09-01 12:41:14 -HikariPool-1 - Starting...
+2024-09-01 12:41:15 -HikariPool-1 - Start completed.
+2024-09-01 12:41:52 -Waiting for workers to finish.
+2024-09-01 12:41:53 -Successfully waited for workers to finish.
+2024-09-01 12:41:53 -Waiting for workers to finish.
+2024-09-01 12:41:53 -Successfully waited for workers to finish.
+2024-09-01 12:41:53 -Shutdown ignored - container is not active already
+2024-09-01 12:41:53 -Shutdown ignored - container is not active already
+2024-09-01 12:41:53 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:41:58 -HikariPool-1 - Shutdown initiated...
+2024-09-01 12:41:58 -HikariPool-1 - Shutdown completed.
+2024-09-01 12:42:01 -Starting Application on bless with PID 28100 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 12:42:01 -The following profiles are active: dev
+2024-09-01 12:42:02 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 12:42:02 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 12:42:02 -Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2024-09-01 12:42:02 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 12:42:02 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:42:02 -Starting service [Tomcat]
+2024-09-01 12:42:02 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 12:42:02 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 12:42:02 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 12:42:02 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 12:42:02 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 12:42:02 -Initializing Spring embedded WebApplicationContext
+2024-09-01 12:42:02 -Root WebApplicationContext: initialization completed in 999 ms
+2024-09-01 12:42:04 -Starting MessageStoreApplication on bless with PID 34596 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-09-01 12:42:04 -The following profiles are active: dev
+2024-09-01 12:42:04 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:42:05 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:42:05 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 12:42:05 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 12:42:05 -Created new connection: rabbitConnectionFactory#675b18ff:0/SimpleConnection@7740b0ab [delegate=amqp://guest@123.60.15.140:5672/, localPort= 59992]
+2024-09-01 12:42:05 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 12:42:05 -Created new connection: rabbitConnectionFactory#64a896b0:0/SimpleConnection@7a799159 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 59994]
+2024-09-01 12:42:05 -Started Application in 4.706 seconds (JVM running for 5.446)
+2024-09-01 12:42:06 -Started MessageStoreApplication in 2.601 seconds (JVM running for 3.302)
+2024-09-01 12:42:15 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 12:42:15 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 12:42:15 -Completed initialization in 4 ms
+2024-09-01 12:42:19 -HikariPool-1 - Starting...
+2024-09-01 12:42:19 -HikariPool-1 - Start completed.
+2024-09-01 12:42:46 -Waiting for workers to finish.
+2024-09-01 12:42:47 -Successfully waited for workers to finish.
+2024-09-01 12:42:47 -Waiting for workers to finish.
+2024-09-01 12:42:48 -Successfully waited for workers to finish.
+2024-09-01 12:42:48 -Shutdown ignored - container is not active already
+2024-09-01 12:42:48 -Shutdown ignored - container is not active already
+2024-09-01 12:42:48 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:42:53 -HikariPool-1 - Shutdown initiated...
+2024-09-01 12:42:53 -HikariPool-1 - Shutdown completed.
+2024-09-01 12:42:56 -Starting Application on bless with PID 32364 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 12:42:56 -The following profiles are active: dev
+2024-09-01 12:42:57 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 12:42:57 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 12:42:57 -Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2024-09-01 12:42:57 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 12:42:57 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:42:57 -Starting service [Tomcat]
+2024-09-01 12:42:57 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 12:42:57 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 12:42:57 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 12:42:57 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 12:42:57 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 12:42:57 -Initializing Spring embedded WebApplicationContext
+2024-09-01 12:42:57 -Root WebApplicationContext: initialization completed in 952 ms
+2024-09-01 12:42:59 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:42:59 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:42:59 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 12:42:59 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 12:42:59 -Created new connection: rabbitConnectionFactory#2dbfa972:0/SimpleConnection@71139e77 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 60107]
+2024-09-01 12:43:00 -Started Application in 4.264 seconds (JVM running for 5.064)
+2024-09-01 12:43:15 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 12:43:15 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 12:43:15 -Completed initialization in 4 ms
+2024-09-01 12:43:25 -HikariPool-1 - Starting...
+2024-09-01 12:43:25 -HikariPool-1 - Start completed.
+2024-09-01 12:44:12 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s915ms398µs300ns).
+2024-09-01 12:45:05 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s639ms631µs400ns).
+2024-09-01 12:56:07 -Waiting for workers to finish.
+2024-09-01 12:56:07 -Successfully waited for workers to finish.
+2024-09-01 12:56:08 -Waiting for workers to finish.
+2024-09-01 12:56:08 -Successfully waited for workers to finish.
+2024-09-01 12:56:09 -Shutdown ignored - container is not active already
+2024-09-01 12:56:09 -Shutdown ignored - container is not active already
+2024-09-01 12:56:09 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:56:14 -HikariPool-1 - Shutdown initiated...
+2024-09-01 12:56:14 -HikariPool-1 - Shutdown completed.
+2024-09-01 12:56:17 -Starting Application on bless with PID 44972 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 12:56:17 -The following profiles are active: dev
+2024-09-01 12:56:18 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 12:56:18 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 12:56:18 -Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2024-09-01 12:56:18 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 12:56:18 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:56:18 -Starting service [Tomcat]
+2024-09-01 12:56:18 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 12:56:18 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 12:56:18 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 12:56:18 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 12:56:18 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 12:56:18 -Initializing Spring embedded WebApplicationContext
+2024-09-01 12:56:18 -Root WebApplicationContext: initialization completed in 946 ms
+2024-09-01 12:56:20 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 12:56:20 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 12:56:20 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 12:56:20 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 12:56:20 -Created new connection: rabbitConnectionFactory#42a0786f:0/SimpleConnection@12aa381f [delegate=amqp://guest@123.60.15.140:5672/, localPort= 60957]
+2024-09-01 12:56:21 -Started Application in 4.18 seconds (JVM running for 4.909)
+2024-09-01 12:56:29 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 12:56:29 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 12:56:29 -Completed initialization in 3 ms
+2024-09-01 12:56:34 -HikariPool-1 - Starting...
+2024-09-01 12:56:34 -HikariPool-1 - Start completed.
+2024-09-01 13:10:41 -Waiting for workers to finish.
+2024-09-01 13:10:41 -Successfully waited for workers to finish.
+2024-09-01 13:10:41 -Waiting for workers to finish.
+2024-09-01 13:10:42 -Successfully waited for workers to finish.
+2024-09-01 13:10:42 -Shutdown ignored - container is not active already
+2024-09-01 13:10:42 -Shutdown ignored - container is not active already
+2024-09-01 13:10:42 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 13:10:47 -HikariPool-1 - Shutdown initiated...
+2024-09-01 13:10:47 -HikariPool-1 - Shutdown completed.
+2024-09-01 13:10:53 -Starting Application on bless with PID 39196 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 13:10:53 -The following profiles are active: dev
+2024-09-01 13:10:54 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 13:10:54 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 13:10:54 -Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2024-09-01 13:10:54 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 13:10:54 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 13:10:54 -Starting service [Tomcat]
+2024-09-01 13:10:54 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 13:10:54 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 13:10:54 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 13:10:54 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 13:10:54 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 13:10:54 -Initializing Spring embedded WebApplicationContext
+2024-09-01 13:10:54 -Root WebApplicationContext: initialization completed in 832 ms
+2024-09-01 13:10:55 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 13:10:56 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 13:10:56 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 13:10:56 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 13:10:56 -Created new connection: rabbitConnectionFactory#7b676112:0/SimpleConnection@7d4d8579 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 61729]
+2024-09-01 13:10:57 -Started Application in 3.848 seconds (JVM running for 4.504)
+2024-09-01 13:19:19 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 13:19:19 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 13:19:19 -Completed initialization in 5 ms
+2024-09-01 13:19:19 -HikariPool-1 - Starting...
+2024-09-01 13:19:19 -HikariPool-1 - Start completed.
+2024-09-01 13:19:57 -Waiting for workers to finish.
+2024-09-01 13:19:58 -Successfully waited for workers to finish.
+2024-09-01 13:19:58 -Waiting for workers to finish.
+2024-09-01 13:19:58 -Successfully waited for workers to finish.
+2024-09-01 13:19:58 -Shutdown ignored - container is not active already
+2024-09-01 13:19:58 -Shutdown ignored - container is not active already
+2024-09-01 13:19:58 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 13:20:03 -HikariPool-1 - Shutdown initiated...
+2024-09-01 13:20:03 -HikariPool-1 - Shutdown completed.
+2024-09-01 13:20:09 -Starting Application on bless with PID 44920 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 13:20:09 -The following profiles are active: dev
+2024-09-01 13:20:09 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 13:20:09 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 13:20:09 -Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2024-09-01 13:20:10 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 13:20:10 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 13:20:10 -Starting service [Tomcat]
+2024-09-01 13:20:10 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 13:20:10 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 13:20:10 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 13:20:10 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 13:20:10 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 13:20:10 -Initializing Spring embedded WebApplicationContext
+2024-09-01 13:20:10 -Root WebApplicationContext: initialization completed in 832 ms
+2024-09-01 13:20:11 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 13:20:11 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 13:20:11 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 13:20:11 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 13:20:12 -Created new connection: rabbitConnectionFactory#765ffb14:0/SimpleConnection@28279a49 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 62252]
+2024-09-01 13:20:13 -Started Application in 3.929 seconds (JVM running for 4.549)
+2024-09-01 13:20:27 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 13:20:27 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 13:20:27 -Completed initialization in 4 ms
+2024-09-01 13:20:27 -HikariPool-1 - Starting...
+2024-09-01 13:20:27 -HikariPool-1 - Start completed.
+2024-09-01 13:31:17 -Waiting for workers to finish.
+2024-09-01 13:31:17 -Successfully waited for workers to finish.
+2024-09-01 13:31:17 -Waiting for workers to finish.
+2024-09-01 13:31:18 -Successfully waited for workers to finish.
+2024-09-01 13:31:18 -Shutdown ignored - container is not active already
+2024-09-01 13:31:18 -Shutdown ignored - container is not active already
+2024-09-01 13:31:18 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 13:31:23 -HikariPool-1 - Shutdown initiated...
+2024-09-01 13:31:23 -HikariPool-1 - Shutdown completed.
+2024-09-01 13:31:29 -Starting Application on bless with PID 42540 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 13:31:29 -The following profiles are active: dev
+2024-09-01 13:31:30 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 13:31:30 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 13:31:30 -Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2024-09-01 13:31:30 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 13:31:30 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 13:31:30 -Starting service [Tomcat]
+2024-09-01 13:31:30 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 13:31:30 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 13:31:30 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 13:31:30 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 13:31:30 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 13:31:30 -Initializing Spring embedded WebApplicationContext
+2024-09-01 13:31:30 -Root WebApplicationContext: initialization completed in 869 ms
+2024-09-01 13:31:32 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 13:31:32 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 13:31:32 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 13:31:32 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 13:31:32 -Created new connection: rabbitConnectionFactory#424de326:0/SimpleConnection@566e142 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 62858]
+2024-09-01 13:31:33 -Started Application in 3.691 seconds (JVM running for 4.324)
+2024-09-01 13:32:11 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 13:32:11 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 13:32:11 -Completed initialization in 3 ms
+2024-09-01 13:32:11 -HikariPool-1 - Starting...
+2024-09-01 13:32:11 -HikariPool-1 - Start completed.
+2024-09-01 20:03:03 -Waiting for workers to finish.
+2024-09-01 20:03:03 -Successfully waited for workers to finish.
+2024-09-01 20:03:04 -Waiting for workers to finish.
+2024-09-01 20:03:04 -Successfully waited for workers to finish.
+2024-09-01 20:03:04 -Shutdown ignored - container is not active already
+2024-09-01 20:03:04 -Shutdown ignored - container is not active already
+2024-09-01 20:03:04 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 20:03:09 -HikariPool-1 - Shutdown initiated...
+2024-09-01 20:03:09 -HikariPool-1 - Shutdown completed.
+2024-09-01 20:03:19 -Starting Application on bless with PID 45904 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 20:03:19 -The following profiles are active: dev
+2024-09-01 20:03:19 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 20:03:20 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 20:03:20 -Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2024-09-01 20:03:20 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 20:03:20 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 20:03:20 -Starting service [Tomcat]
+2024-09-01 20:03:20 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 20:03:20 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 20:03:20 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 20:03:20 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 20:03:20 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 20:03:20 -Initializing Spring embedded WebApplicationContext
+2024-09-01 20:03:20 -Root WebApplicationContext: initialization completed in 992 ms
+2024-09-01 20:03:21 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 20:03:22 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 20:03:22 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 20:03:22 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 20:03:22 -Created new connection: rabbitConnectionFactory#53c6f96d:0/SimpleConnection@75fe1619 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 63262]
+2024-09-01 20:03:23 -Started Application in 3.897 seconds (JVM running for 4.562)
+2024-09-01 20:05:22 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 20:05:22 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 20:05:22 -Completed initialization in 3 ms
+2024-09-01 20:05:54 -HikariPool-1 - Starting...
+2024-09-01 20:05:55 -HikariPool-1 - Start completed.
+2024-09-01 20:50:35 -Waiting for workers to finish.
+2024-09-01 20:50:35 -Successfully waited for workers to finish.
+2024-09-01 20:50:35 -Waiting for workers to finish.
+2024-09-01 20:50:35 -Successfully waited for workers to finish.
+2024-09-01 20:50:36 -Shutdown ignored - container is not active already
+2024-09-01 20:50:36 -Shutdown ignored - container is not active already
+2024-09-01 20:50:36 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 20:50:40 -HikariPool-1 - Shutdown initiated...
+2024-09-01 20:50:40 -HikariPool-1 - Shutdown completed.
+2024-09-01 20:50:48 -Starting Application on bless with PID 41904 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 20:50:48 -The following profiles are active: dev
+2024-09-01 20:50:48 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 20:50:48 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 20:50:48 -Finished Spring Data repository scanning in 26ms. Found 0 Redis repository interfaces.
+2024-09-01 20:50:49 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 20:50:49 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 20:50:49 -Starting service [Tomcat]
+2024-09-01 20:50:49 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 20:50:49 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 20:50:49 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 20:50:49 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 20:50:49 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 20:50:49 -Initializing Spring embedded WebApplicationContext
+2024-09-01 20:50:49 -Root WebApplicationContext: initialization completed in 917 ms
+2024-09-01 20:50:50 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 20:50:50 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 20:50:50 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 20:50:50 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 20:50:51 -Created new connection: rabbitConnectionFactory#f88bfbe:0/SimpleConnection@2574a9e3 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 49375]
+2024-09-01 20:50:51 -Started Application in 3.913 seconds (JVM running for 4.586)
+2024-09-01 20:52:22 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 20:52:22 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 20:52:22 -Completed initialization in 3 ms
+2024-09-01 20:52:41 -HikariPool-1 - Starting...
+2024-09-01 20:52:41 -HikariPool-1 - Start completed.
+2024-09-01 21:18:07 -Waiting for workers to finish.
+2024-09-01 21:18:07 -Successfully waited for workers to finish.
+2024-09-01 21:18:07 -Waiting for workers to finish.
+2024-09-01 21:18:07 -Successfully waited for workers to finish.
+2024-09-01 21:18:08 -Shutdown ignored - container is not active already
+2024-09-01 21:18:08 -Shutdown ignored - container is not active already
+2024-09-01 21:18:08 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 21:18:12 -HikariPool-1 - Shutdown initiated...
+2024-09-01 21:18:12 -HikariPool-1 - Shutdown completed.
+2024-09-01 21:18:19 -Starting Application on bless with PID 43500 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 21:18:19 -The following profiles are active: dev
+2024-09-01 21:18:19 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 21:18:19 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 21:18:20 -Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2024-09-01 21:18:20 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 21:18:20 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 21:18:20 -Starting service [Tomcat]
+2024-09-01 21:18:20 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 21:18:20 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 21:18:20 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 21:18:20 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 21:18:20 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 21:18:20 -Initializing Spring embedded WebApplicationContext
+2024-09-01 21:18:20 -Root WebApplicationContext: initialization completed in 882 ms
+2024-09-01 21:18:21 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 21:18:22 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 21:18:22 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 21:18:22 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 21:18:22 -Created new connection: rabbitConnectionFactory#1caa9eb6:0/SimpleConnection@67e0ff3a [delegate=amqp://guest@123.60.15.140:5672/, localPort= 51178]
+2024-09-01 21:18:23 -Started Application in 3.858 seconds (JVM running for 4.477)
+2024-09-01 21:19:23 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 21:19:23 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 21:19:23 -Completed initialization in 4 ms
+2024-09-01 21:19:24 -HikariPool-1 - Starting...
+2024-09-01 21:19:24 -HikariPool-1 - Start completed.
+2024-09-01 22:05:37 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"111","appId":10000,"messageId":"bad45e64-0f5e-488c-8a09-66b48bc3b270","imei":"123","fromId":"lyx1","command":1103}
+2024-09-01 22:05:37 -msg ack,msgId=bad45e64-0f5e-488c-8a09-66b48bc3b270,checkResut200
+2024-09-01 22:05:37 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"bad45e64-0f5e-488c-8a09-66b48bc3b270","messageSequence":1},"ok":true},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:37 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":375177844097025,"serverSend":true,"messageSequence":1,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:37 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725199537308,"delFlag":0,"messageBody":"111","messageKey":375177844097025,"securityKey":""},"messageContent":{"appId":10000,"clientType":1,"fromId":"lyx1","imei":"123","messageBody":"111","messageId":"bad45e64-0f5e-488c-8a09-66b48bc3b270","messageKey":375177844097025,"messageSequence":1,"toId":"lyx2"}}
+2024-09-01 22:05:37 -HikariPool-1 - Starting...
+2024-09-01 22:05:37 -HikariPool-1 - Start completed.
+2024-09-01 22:05:43 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"111","appId":10000,"messageId":"6c3f77f6-d16d-4628-810c-156dbc0be76c","imei":"123","fromId":"lyx1","command":1103}
+2024-09-01 22:05:43 -msg ack,msgId=6c3f77f6-d16d-4628-810c-156dbc0be76c,checkResut200
+2024-09-01 22:05:43 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"6c3f77f6-d16d-4628-810c-156dbc0be76c","messageSequence":2},"ok":true},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:43 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":375177856679937,"serverSend":true,"messageSequence":2,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:43 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725199543714,"delFlag":0,"messageBody":"111","messageKey":375177856679937,"securityKey":""},"messageContent":{"appId":10000,"clientType":1,"fromId":"lyx1","imei":"123","messageBody":"111","messageId":"6c3f77f6-d16d-4628-810c-156dbc0be76c","messageKey":375177856679937,"messageSequence":2,"toId":"lyx2"}}
+2024-09-01 22:05:52 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"112","appId":10000,"messageId":"5e743107-7f73-43ec-9450-e07abaa74fbf","imei":"123","fromId":"lyx1","command":1103}
+2024-09-01 22:05:52 -msg ack,msgId=5e743107-7f73-43ec-9450-e07abaa74fbf,checkResut200
+2024-09-01 22:05:52 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"5e743107-7f73-43ec-9450-e07abaa74fbf","messageSequence":3},"ok":true},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:52 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":375177875554305,"serverSend":true,"messageSequence":3,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:52 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725199552472,"delFlag":0,"messageBody":"112","messageKey":375177875554305,"securityKey":""},"messageContent":{"appId":10000,"clientType":1,"fromId":"lyx1","imei":"123","messageBody":"112","messageId":"5e743107-7f73-43ec-9450-e07abaa74fbf","messageKey":375177875554305,"messageSequence":3,"toId":"lyx2"}}
+2024-09-01 22:05:55 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"113","appId":10000,"messageId":"51e69766-cbd2-4784-806b-e066189a3c73","imei":"123","fromId":"lyx1","command":1103}
+2024-09-01 22:05:55 -msg ack,msgId=51e69766-cbd2-4784-806b-e066189a3c73,checkResut200
+2024-09-01 22:05:55 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"51e69766-cbd2-4784-806b-e066189a3c73","messageSequence":4},"ok":true},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:55 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":375177881845761,"serverSend":true,"messageSequence":4,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:55 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725199555306,"delFlag":0,"messageBody":"113","messageKey":375177881845761,"securityKey":""},"messageContent":{"appId":10000,"clientType":1,"fromId":"lyx1","imei":"123","messageBody":"113","messageId":"51e69766-cbd2-4784-806b-e066189a3c73","messageKey":375177881845761,"messageSequence":4,"toId":"lyx2"}}
+2024-09-01 22:05:57 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"114","appId":10000,"messageId":"0167b3a7-8253-4c1f-8f7e-589659530ce0","imei":"123","fromId":"lyx1","command":1103}
+2024-09-01 22:05:57 -msg ack,msgId=0167b3a7-8253-4c1f-8f7e-589659530ce0,checkResut200
+2024-09-01 22:05:57 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"0167b3a7-8253-4c1f-8f7e-589659530ce0","messageSequence":5},"ok":true},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:57 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":375177886040065,"serverSend":true,"messageSequence":5,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-09-01 22:05:57 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725199557690,"delFlag":0,"messageBody":"114","messageKey":375177886040065,"securityKey":""},"messageContent":{"appId":10000,"clientType":1,"fromId":"lyx1","imei":"123","messageBody":"114","messageId":"0167b3a7-8253-4c1f-8f7e-589659530ce0","messageKey":375177886040065,"messageSequence":5,"toId":"lyx2"}}
+2024-09-01 22:06:02 -CHAT MSG FORM QUEUE ::: {"toId":"lyx2","clientType":1,"messageBody":"115","appId":10000,"messageId":"4f22a51e-314b-4573-8629-8ae1dbe2914f","imei":"123","fromId":"lyx1","command":1103}
+2024-09-01 22:06:02 -msg ack,msgId=4f22a51e-314b-4573-8629-8ae1dbe2914f,checkResut200
+2024-09-01 22:06:02 -send messge == {"appId":10000,"clientType":1,"command":1046,"data":{"msg":"success","code":200,"data":{"messageId":"4f22a51e-314b-4573-8629-8ae1dbe2914f","messageSequence":6},"ok":true},"imei":"123","toId":"lyx1"}
+2024-09-01 22:06:02 -send messge == {"appId":10000,"clientType":1,"command":1107,"data":{"toId":"lyx1","messageKey":375177896525825,"serverSend":true,"messageSequence":6,"fromId":"lyx2"},"imei":"123","toId":"lyx1"}
+2024-09-01 22:06:02 -CHAT MSG FORM QUEUE ::: {"messageBody":{"appId":10000,"createTime":1725199562545,"delFlag":0,"messageBody":"115","messageKey":375177896525825,"securityKey":""},"messageContent":{"appId":10000,"clientType":1,"fromId":"lyx1","imei":"123","messageBody":"115","messageId":"4f22a51e-314b-4573-8629-8ae1dbe2914f","messageKey":375177896525825,"messageSequence":6,"toId":"lyx2"}}
+2024-09-01 22:08:00 -Waiting for workers to finish.
+2024-09-01 22:08:00 -Successfully waited for workers to finish.
+2024-09-01 22:08:00 -Waiting for workers to finish.
+2024-09-01 22:08:01 -Successfully waited for workers to finish.
+2024-09-01 22:08:01 -Shutdown ignored - container is not active already
+2024-09-01 22:08:01 -Shutdown ignored - container is not active already
+2024-09-01 22:08:01 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 22:08:06 -HikariPool-1 - Shutdown initiated...
+2024-09-01 22:08:06 -HikariPool-1 - Shutdown completed.
+2024-09-01 22:08:12 -Starting Application on bless with PID 42720 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 22:08:12 -The following profiles are active: dev
+2024-09-01 22:08:13 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 22:08:13 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 22:08:13 -Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2024-09-01 22:08:13 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 22:08:13 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 22:08:13 -Starting service [Tomcat]
+2024-09-01 22:08:13 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 22:08:13 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 22:08:13 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 22:08:13 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 22:08:13 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 22:08:13 -Initializing Spring embedded WebApplicationContext
+2024-09-01 22:08:13 -Root WebApplicationContext: initialization completed in 906 ms
+2024-09-01 22:08:15 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 22:08:15 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 22:08:15 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 22:08:15 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 22:08:15 -Created new connection: rabbitConnectionFactory#2975a9e:0/SimpleConnection@566e142 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 55505]
+2024-09-01 22:08:16 -Started Application in 3.926 seconds (JVM running for 4.557)
+2024-09-01 22:08:20 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 22:08:20 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 22:08:20 -Completed initialization in 3 ms
+2024-09-01 22:09:06 -Waiting for workers to finish.
+2024-09-01 22:09:06 -Successfully waited for workers to finish.
+2024-09-01 22:09:06 -Waiting for workers to finish.
+2024-09-01 22:09:06 -Successfully waited for workers to finish.
+2024-09-01 22:09:07 -Shutdown ignored - container is not active already
+2024-09-01 22:09:07 -Shutdown ignored - container is not active already
+2024-09-01 22:09:07 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 22:09:15 -Starting Application on bless with PID 34340 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-01 22:09:15 -The following profiles are active: dev
+2024-09-01 22:09:15 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-01 22:09:15 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-01 22:09:15 -Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2024-09-01 22:09:16 -Tomcat initialized with port(s): 8000 (http)
+2024-09-01 22:09:16 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-01 22:09:16 -Starting service [Tomcat]
+2024-09-01 22:09:16 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-01 22:09:16 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-01 22:09:16 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-01 22:09:16 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-01 22:09:16 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-01 22:09:16 -Initializing Spring embedded WebApplicationContext
+2024-09-01 22:09:16 -Root WebApplicationContext: initialization completed in 925 ms
+2024-09-01 22:09:17 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-01 22:09:17 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-01 22:09:17 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-01 22:09:17 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 22:09:18 -Created new connection: rabbitConnectionFactory#5b0dbfb:0/SimpleConnection@7e8f23ad [delegate=amqp://guest@123.60.15.140:5672/, localPort= 55594]
+2024-09-01 22:09:19 -Started Application in 4.426 seconds (JVM running for 5.206)
+2024-09-01 22:12:04 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-01 22:12:04 -Initializing Servlet 'dispatcherServlet'
+2024-09-01 22:12:04 -Completed initialization in 3 ms
+2024-09-01 22:36:54 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-09-01 22:36:54 -Channel shutdown: connection error
+2024-09-01 22:36:54 -Channel shutdown: connection error
+2024-09-01 22:36:55 -Restarting Consumer@f14e5bf: tags=[[amq.ctag-Ds4BtWAyNG969ghMA8Jb1A]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,2), conn: Proxy@21719a0 Shared Rabbit Connection: SimpleConnection@7a799159 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 59994], acknowledgeMode=MANUAL local queue size=0
+2024-09-01 22:36:55 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 22:36:55 -Restarting Consumer@659a2455: tags=[[amq.ctag-ZkmaAQpCIpzGp5qwlKMuZQ]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,1), conn: Proxy@21719a0 Shared Rabbit Connection: null, acknowledgeMode=MANUAL local queue size=0
+2024-09-01 22:37:02 -Created new connection: rabbitConnectionFactory#64a896b0:1/SimpleConnection@5bf05a7f [delegate=amqp://guest@123.60.15.140:5672/, localPort= 57342]
+2024-09-01 22:38:09 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-09-01 22:38:09 -Channel shutdown: connection error
+2024-09-01 22:38:09 -Channel shutdown: connection error
+2024-09-01 22:38:10 -Restarting Consumer@43ef3252: tags=[[amq.ctag-QOpcjtyfnFpNJZ6fXRbVeQ]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,1), conn: Proxy@21719a0 Shared Rabbit Connection: SimpleConnection@5bf05a7f [delegate=amqp://guest@123.60.15.140:5672/, localPort= 57342], acknowledgeMode=MANUAL local queue size=0
+2024-09-01 22:38:10 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 22:38:10 -Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.SocketException: Network is unreachable: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:524)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:702)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:676)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:567)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$1600(CachingConnectionFactory.java:102)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1439)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2095)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1842)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1823)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1349)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1195)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Network is unreachable: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1113)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:560)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:533)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:487)
+	... 16 common frames omitted
+2024-09-01 22:38:10 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 22:38:10 -Restarting Consumer@17742105: tags=[[amq.ctag-GlGXAo1eyXycBNyubnCbSQ]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,2), conn: Proxy@21719a0 Shared Rabbit Connection: null, acknowledgeMode=MANUAL local queue size=0
+2024-09-01 22:38:10 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 22:38:10 -Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpIOException: java.net.SocketException: Network is unreachable: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:524)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1842)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1823)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1349)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1195)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Network is unreachable: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1113)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:560)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:533)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:487)
+	... 12 common frames omitted
+2024-09-01 22:38:10 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 22:38:15 -Restarting Consumer@164a2e22: tags=[[]], channel=null, acknowledgeMode=MANUAL local queue size=0
+2024-09-01 22:38:15 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-01 22:38:15 -Restarting Consumer@72676742: tags=[[]], channel=null, acknowledgeMode=MANUAL local queue size=0
+2024-09-01 22:38:15 -Created new connection: rabbitConnectionFactory#64a896b0:6/SimpleConnection@78ae2ab2 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 57658]
+2024-09-01 23:11:03 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-09-01 23:11:03 -Channel shutdown: connection error
+2024-09-01 23:11:03 -Channel shutdown: connection error
+2024-09-01 23:11:03 -Waiting for workers to finish.
+2024-09-01 23:11:03 -Successfully waited for workers to finish.
+2024-09-01 23:11:03 -Waiting for workers to finish.
+2024-09-01 23:11:03 -Successfully waited for workers to finish.
+2024-09-01 23:11:03 -Waiting for workers to finish.
+2024-09-01 23:11:03 -Shutdown ignored - container is not active already
+2024-09-01 23:11:03 -Shutdown ignored - container is not active already
+2024-09-01 23:11:03 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-01 23:11:04 -Successfully waited for workers to finish.
+2024-09-01 23:11:04 -Waiting for workers to finish.
+2024-09-01 23:11:04 -Successfully waited for workers to finish.
+2024-09-01 23:11:04 -Shutdown ignored - container is not active already
+2024-09-01 23:11:04 -Shutdown ignored - container is not active already
+2024-09-01 23:11:09 -HikariPool-1 - Shutdown initiated...
+2024-09-01 23:11:09 -HikariPool-1 - Shutdown completed.

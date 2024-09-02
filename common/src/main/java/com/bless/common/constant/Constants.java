@@ -50,6 +50,14 @@ public class Constants {
         public static final String cacheMessage = "cacheMessage";
 
         public static final String OfflineMessage = "offlineMessage";
+
+
+        /**
+         * seq 前缀
+         */
+        public static final String SeqPrefix = "seq";
+
+
     }
     public static class RabbitConstants{
 
