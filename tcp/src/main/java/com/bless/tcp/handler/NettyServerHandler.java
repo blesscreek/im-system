@@ -5,6 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.bless.codec.pack.LoginPack;
 import com.bless.codec.pack.message.ChatMessageAck;
+import com.bless.codec.pack.user.LoginAckPack;
+import com.bless.codec.pack.user.UserStatusChangeNotifyPack;
 import com.bless.codec.proto.Message;
 import com.bless.codec.proto.MessagePack;
 import com.bless.common.ResponseVO;
@@ -13,6 +15,7 @@ import com.bless.common.enums.ImConnectStatusEnum;
 import com.bless.common.enums.command.GroupEventCommand;
 import com.bless.common.enums.command.MessageCommand;
 import com.bless.common.enums.command.SystemCommand;
+import com.bless.common.enums.command.UserEventCommand;
 import com.bless.common.model.UserClientDto;
 import com.bless.common.model.UserSession;
 import com.bless.common.model.message.CheckSendMessageReq;
@@ -113,6 +116,21 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<Message> {
             RTopic topic = redissonClient.getTopic(Constants.RedisConstants.UserLoginChannel);
             topic.publish(JSONObject.toJSONString(dto));
 
+            //用户上线投递给mq
+            UserStatusChangeNotifyPack userStatusChangeNotifyPack = new UserStatusChangeNotifyPack();
+            userStatusChangeNotifyPack.setAppId(msg.getMessageHeader().getAppId());
+            userStatusChangeNotifyPack.setUserId(loginpack.getUserId());
+            userStatusChangeNotifyPack.setStatus(ImConnectStatusEnum.ONLINE_STATUS.getCode());
+            MqMessageProducer.sendMessage(userStatusChangeNotifyPack,msg.getMessageHeader(), UserEventCommand.USER_ONLINE_STATUS_CHANGE.getCommand());
+
+            MessagePack<LoginAckPack> loginSuccess = new MessagePack<>();
+            LoginAckPack loginAckPack = new LoginAckPack();
+            loginAckPack.setUserId(loginpack.getUserId());
+            loginSuccess.setCommand(SystemCommand.LOGINACK.getCommand());
+            loginSuccess.setData(loginAckPack);
+            loginSuccess.setImei(msg.getMessageHeader().getImei());
+            loginSuccess.setAppId(msg.getMessageHeader().getAppId());
+            ctx.channel().writeAndFlush(loginSuccess);
 
 
         }else if (command == SystemCommand.LOGOUT.getCommand()) {

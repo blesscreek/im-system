@@ -5,11 +5,9 @@ import com.bless.common.ResponseVO;
 import com.bless.common.route.RouteHandle;
 import com.bless.common.route.RouteInfo;
 import com.bless.common.utils.RouteInfoParseUtil;
-import com.bless.service.user.model.req.DeleteUserReq;
-import com.bless.service.user.model.req.GetUserSequenceReq;
-import com.bless.service.user.model.req.ImportUserReq;
-import com.bless.service.user.model.req.LoginReq;
+import com.bless.service.user.model.req.*;
 import com.bless.service.user.service.ImUserService;
+import com.bless.service.user.service.ImUserStatusService;
 import com.bless.service.utils.ZKit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -35,6 +33,9 @@ public class ImUserController {
 
     @Autowired
     ZKit zKit;
+
+    @Autowired
+    ImUserStatusService imUserStatusService;
 
 
     @RequestMapping("importUser")
@@ -78,41 +79,41 @@ public class ImUserController {
         req.setAppId(appId);
         return imUserService.getUserSequence(req);
     }
-//
-//    @RequestMapping("/subscribeUserOnlineStatus")
-//    public ResponseVO subscribeUserOnlineStatus(@RequestBody @Validated
-//                                                        SubscribeUserOnlineStatusReq req, Integer appId,String identifier) {
-//        req.setAppId(appId);
-//        req.setOperater(identifier);
-//        imUserStatusService.subscribeUserOnlineStatus(req);
-//        return ResponseVO.successResponse();
-//    }
-//
-//    @RequestMapping("/setUserCustomerStatus")
-//    public ResponseVO setUserCustomerStatus(@RequestBody @Validated
-//                                                        SetUserCustomerStatusReq req, Integer appId,String identifier) {
-//        req.setAppId(appId);
-//        req.setOperater(identifier);
-//        imUserStatusService.setUserCustomerStatus(req);
-//        return ResponseVO.successResponse();
-//    }
-//
-//    @RequestMapping("/queryFriendOnlineStatus")
-//    public ResponseVO queryFriendOnlineStatus(@RequestBody @Validated
-//                                                      PullFriendOnlineStatusReq req, Integer appId,String identifier) {
-//        req.setAppId(appId);
-//        req.setOperater(identifier);
-//        return ResponseVO.successResponse(imUserStatusService.queryFriendOnlineStatus(req));
-//    }
-//
-//    @RequestMapping("/queryUserOnlineStatus")
-//    public ResponseVO queryUserOnlineStatus(@RequestBody @Validated
-//                                                      PullUserOnlineStatusReq req, Integer appId,String identifier) {
-//        req.setAppId(appId);
-//        req.setOperater(identifier);
-//        return ResponseVO.successResponse(imUserStatusService.queryUserOnlineStatus(req));
-//    }
-//
+
+    @RequestMapping("/subscribeUserOnlineStatus")
+    public ResponseVO subscribeUserOnlineStatus(@RequestBody @Validated
+                                                SubscribeUserOnlineStatusReq req, Integer appId, String identifier) {
+        req.setAppId(appId);
+        req.setOperater(identifier);
+        imUserStatusService.subscribeUserOnlineStatus(req);
+        return ResponseVO.successResponse();
+    }
+
+    @RequestMapping("/setUserCustomerStatus")
+    public ResponseVO setUserCustomerStatus(@RequestBody @Validated
+                                                        SetUserCustomerStatusReq req, Integer appId,String identifier) {
+        req.setAppId(appId);
+        req.setOperater(identifier);
+        imUserStatusService.setUserCustomerStatus(req);
+        return ResponseVO.successResponse();
+    }
+
+    @RequestMapping("/queryFriendOnlineStatus")
+    public ResponseVO queryFriendOnlineStatus(@RequestBody @Validated
+                                                      PullFriendOnlineStatusReq req, Integer appId,String identifier) {
+        req.setAppId(appId);
+        req.setOperater(identifier);
+        return ResponseVO.successResponse(imUserStatusService.queryFriendOnlineStatus(req));
+    }
+
+    @RequestMapping("/queryUserOnlineStatus")
+    public ResponseVO queryUserOnlineStatus(@RequestBody @Validated
+                                                      PullUserOnlineStatusReq req, Integer appId,String identifier) {
+        req.setAppId(appId);
+        req.setOperater(identifier);
+        return ResponseVO.successResponse(imUserStatusService.queryUserOnlineStatus(req));
+    }
+
 
 
 }

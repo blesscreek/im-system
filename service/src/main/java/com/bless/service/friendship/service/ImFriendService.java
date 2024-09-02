@@ -35,6 +35,6 @@ public interface ImFriendService {
 
 
     public ResponseVO syncFriendshipList(SyncReq req);
-//
-//    public List<String> getAllFriendId(String userId, Integer appId);
+
+    public List<String> getAllFriendId(String userId, Integer appId);
 }

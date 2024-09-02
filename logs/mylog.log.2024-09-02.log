@@ -1,0 +1,622 @@
+2024-09-02 17:06:56 -Starting Application on bless with PID 50824 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 17:06:56 -The following profiles are active: dev
+2024-09-02 17:06:56 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 17:06:56 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 17:06:56 -Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2024-09-02 17:06:56 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 17:06:56 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:06:56 -Starting service [Tomcat]
+2024-09-02 17:06:56 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 17:06:56 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 17:06:56 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 17:06:56 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 17:06:56 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 17:06:57 -Initializing Spring embedded WebApplicationContext
+2024-09-02 17:06:57 -Root WebApplicationContext: initialization completed in 1035 ms
+2024-09-02 17:07:03 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:07:03 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:07:03 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 17:07:03 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:07:03 -Created new connection: rabbitConnectionFactory#3722c145:0/SimpleConnection@30bf26df [delegate=amqp://guest@123.60.15.140:5672/, localPort= 54122]
+2024-09-02 17:07:04 -Started Application in 8.906 seconds (JVM running for 9.628)
+2024-09-02 17:07:07 -Starting MessageStoreApplication on bless with PID 51720 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-09-02 17:07:07 -The following profiles are active: dev
+2024-09-02 17:07:09 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:07:09 -Created new connection: rabbitConnectionFactory#4925f4f5:0/SimpleConnection@57fae983 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 54138]
+2024-09-02 17:07:10 -Started MessageStoreApplication in 2.584 seconds (JVM running for 3.307)
+2024-09-02 17:25:52 -Waiting for workers to finish.
+2024-09-02 17:25:52 -Successfully waited for workers to finish.
+2024-09-02 17:25:52 -Waiting for workers to finish.
+2024-09-02 17:25:52 -Waiting for workers to finish.
+2024-09-02 17:25:52 -Successfully waited for workers to finish.
+2024-09-02 17:25:52 -Shutdown ignored - container is not active already
+2024-09-02 17:25:52 -Shutdown ignored - container is not active already
+2024-09-02 17:25:52 -Successfully waited for workers to finish.
+2024-09-02 17:25:52 -Waiting for workers to finish.
+2024-09-02 17:25:53 -Successfully waited for workers to finish.
+2024-09-02 17:25:53 -Shutdown ignored - container is not active already
+2024-09-02 17:25:53 -Shutdown ignored - container is not active already
+2024-09-02 17:25:53 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:35:10 -Starting Application on bless with PID 27464 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 17:35:10 -The following profiles are active: dev
+2024-09-02 17:35:10 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 17:35:10 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 17:35:10 -Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2024-09-02 17:35:11 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 17:35:11 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:35:11 -Starting service [Tomcat]
+2024-09-02 17:35:11 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 17:35:11 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 17:35:11 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 17:35:11 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 17:35:11 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 17:35:11 -Initializing Spring embedded WebApplicationContext
+2024-09-02 17:35:11 -Root WebApplicationContext: initialization completed in 1013 ms
+2024-09-02 17:35:12 -Starting MessageStoreApplication on bless with PID 27264 (E:\code\im-system\message-store\target\classes started by bless in E:\code\im-system)
+2024-09-02 17:35:12 -The following profiles are active: dev
+2024-09-02 17:35:14 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:35:14 -Created new connection: rabbitConnectionFactory#6d868997:0/SimpleConnection@777c350f [delegate=amqp://guest@123.60.15.140:5672/, localPort= 50650]
+2024-09-02 17:35:14 -Started MessageStoreApplication in 2.613 seconds (JVM running for 3.273)
+2024-09-02 17:35:20 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:35:20 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:35:20 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 17:35:20 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:35:20 -Created new connection: rabbitConnectionFactory#7b676112:0/SimpleConnection@2f20f7ad [delegate=amqp://guest@123.60.15.140:5672/, localPort= 50689]
+2024-09-02 17:35:21 -Started Application in 11.276 seconds (JVM running for 13.169)
+2024-09-02 17:45:06 -Waiting for workers to finish.
+2024-09-02 17:45:06 -Waiting for workers to finish.
+2024-09-02 17:45:07 -Successfully waited for workers to finish.
+2024-09-02 17:45:07 -Successfully waited for workers to finish.
+2024-09-02 17:45:07 -Waiting for workers to finish.
+2024-09-02 17:45:07 -Waiting for workers to finish.
+2024-09-02 17:45:07 -Successfully waited for workers to finish.
+2024-09-02 17:45:07 -Successfully waited for workers to finish.
+2024-09-02 17:45:07 -Shutdown ignored - container is not active already
+2024-09-02 17:45:07 -Shutdown ignored - container is not active already
+2024-09-02 17:45:07 -Shutdown ignored - container is not active already
+2024-09-02 17:45:07 -Shutdown ignored - container is not active already
+2024-09-02 17:45:07 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:46:33 -Starting Application on bless with PID 11780 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 17:46:33 -The following profiles are active: dev
+2024-09-02 17:46:33 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 17:46:33 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 17:46:33 -Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2024-09-02 17:46:33 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 17:46:33 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:46:33 -Starting service [Tomcat]
+2024-09-02 17:46:33 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 17:46:33 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 17:46:33 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 17:46:33 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 17:46:33 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 17:46:33 -Initializing Spring embedded WebApplicationContext
+2024-09-02 17:46:33 -Root WebApplicationContext: initialization completed in 845 ms
+2024-09-02 17:46:42 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:46:42 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:46:42 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 17:46:42 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:46:42 -Created new connection: rabbitConnectionFactory#7b676112:0/SimpleConnection@2f20f7ad [delegate=amqp://guest@123.60.15.140:5672/, localPort= 50104]
+2024-09-02 17:46:43 -Started Application in 10.596 seconds (JVM running for 11.309)
+2024-09-02 17:52:33 -Waiting for workers to finish.
+2024-09-02 17:52:34 -Successfully waited for workers to finish.
+2024-09-02 17:52:34 -Waiting for workers to finish.
+2024-09-02 17:52:34 -Successfully waited for workers to finish.
+2024-09-02 17:52:35 -Shutdown ignored - container is not active already
+2024-09-02 17:52:35 -Shutdown ignored - container is not active already
+2024-09-02 17:52:35 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:52:42 -Starting Application on bless with PID 27552 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 17:52:42 -The following profiles are active: dev
+2024-09-02 17:52:42 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 17:52:42 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 17:52:42 -Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2024-09-02 17:52:42 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 17:52:42 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:52:42 -Starting service [Tomcat]
+2024-09-02 17:52:42 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 17:52:42 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 17:52:42 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 17:52:42 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 17:52:42 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 17:52:43 -Initializing Spring embedded WebApplicationContext
+2024-09-02 17:52:43 -Root WebApplicationContext: initialization completed in 946 ms
+2024-09-02 17:52:51 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:52:51 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:52:51 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 17:52:51 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:52:51 -Created new connection: rabbitConnectionFactory#7741ae1b:0/SimpleConnection@24615687 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 51191]
+2024-09-02 17:52:52 -Started Application in 10.895 seconds (JVM running for 11.648)
+2024-09-02 17:56:54 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-09-02 17:56:54 -Channel shutdown: connection error
+2024-09-02 17:56:54 -Channel shutdown: connection error
+2024-09-02 17:56:55 -Restarting Consumer@1ff463bb: tags=[[amq.ctag-E2VwZptsTUFWLQg7TDabAA]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,2), conn: Proxy@67ceeffd Shared Rabbit Connection: SimpleConnection@24615687 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 51191], acknowledgeMode=MANUAL local queue size=0
+2024-09-02 17:56:55 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:56:55 -Restarting Consumer@1bdafb01: tags=[[amq.ctag-iPosG_dYjmcWbBM3voj-Vg]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,1), conn: Proxy@67ceeffd Shared Rabbit Connection: null, acknowledgeMode=MANUAL local queue size=0
+2024-09-02 17:56:57 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:56:57 -Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:524)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:702)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:676)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:567)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$1600(CachingConnectionFactory.java:102)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1439)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2095)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1842)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1823)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1349)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1195)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1113)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:560)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:533)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:487)
+	... 16 common frames omitted
+2024-09-02 17:56:59 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:56:59 -Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:524)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2089)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1842)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1823)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1349)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1195)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1113)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:560)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:533)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:487)
+	... 12 common frames omitted
+2024-09-02 17:57:01 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:57:03 -Created new connection: rabbitConnectionFactory#7741ae1b:4/SimpleConnection@113b67a2 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 51887]
+2024-09-02 17:57:06 -Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+2024-09-02 17:57:06 -Restarting Consumer@6be4da5e: tags=[[]], channel=null, acknowledgeMode=MANUAL local queue size=0
+2024-09-02 17:58:06 -Waiting for workers to finish.
+2024-09-02 17:58:06 -Successfully waited for workers to finish.
+2024-09-02 17:58:06 -Waiting for workers to finish.
+2024-09-02 17:58:06 -Successfully waited for workers to finish.
+2024-09-02 17:58:06 -Shutdown ignored - container is not active already
+2024-09-02 17:58:06 -Shutdown ignored - container is not active already
+2024-09-02 17:58:06 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:58:14 -Starting Application on bless with PID 14788 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 17:58:14 -The following profiles are active: dev
+2024-09-02 17:58:14 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 17:58:14 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 17:58:14 -Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2024-09-02 17:58:15 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 17:58:15 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:58:15 -Starting service [Tomcat]
+2024-09-02 17:58:15 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 17:58:15 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 17:58:15 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 17:58:15 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 17:58:15 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 17:58:15 -Initializing Spring embedded WebApplicationContext
+2024-09-02 17:58:15 -Root WebApplicationContext: initialization completed in 921 ms
+2024-09-02 17:58:23 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 17:58:24 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 17:58:24 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 17:58:24 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 17:58:24 -Created new connection: rabbitConnectionFactory#2373ad99:0/SimpleConnection@3663d0ba [delegate=amqp://guest@123.60.15.140:5672/, localPort= 52233]
+2024-09-02 17:58:24 -Started Application in 10.732 seconds (JVM running for 11.52)
+2024-09-02 18:03:01 -Waiting for workers to finish.
+2024-09-02 18:03:02 -Successfully waited for workers to finish.
+2024-09-02 18:03:02 -Waiting for workers to finish.
+2024-09-02 18:03:02 -Successfully waited for workers to finish.
+2024-09-02 18:03:02 -Shutdown ignored - container is not active already
+2024-09-02 18:03:02 -Shutdown ignored - container is not active already
+2024-09-02 18:03:02 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:03:09 -Starting Application on bless with PID 3176 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 18:03:09 -The following profiles are active: dev
+2024-09-02 18:03:10 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 18:03:10 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 18:03:10 -Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2024-09-02 18:03:10 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 18:03:10 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:03:10 -Starting service [Tomcat]
+2024-09-02 18:03:10 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 18:03:10 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 18:03:10 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 18:03:10 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 18:03:10 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 18:03:10 -Initializing Spring embedded WebApplicationContext
+2024-09-02 18:03:10 -Root WebApplicationContext: initialization completed in 948 ms
+2024-09-02 18:03:19 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:03:19 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:03:19 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 18:03:19 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 18:03:19 -Created new connection: rabbitConnectionFactory#75bd28d:0/SimpleConnection@7d3c22a5 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 53143]
+2024-09-02 18:03:20 -Started Application in 11.057 seconds (JVM running for 11.884)
+2024-09-02 18:32:13 -Waiting for workers to finish.
+2024-09-02 18:32:13 -Successfully waited for workers to finish.
+2024-09-02 18:32:13 -Waiting for workers to finish.
+2024-09-02 18:32:14 -Successfully waited for workers to finish.
+2024-09-02 18:32:14 -Shutdown ignored - container is not active already
+2024-09-02 18:32:14 -Shutdown ignored - container is not active already
+2024-09-02 18:32:14 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:32:26 -Starting Application on bless with PID 29544 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 18:32:26 -The following profiles are active: dev
+2024-09-02 18:32:27 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 18:32:27 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 18:32:27 -Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2024-09-02 18:32:27 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 18:32:27 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:32:27 -Starting service [Tomcat]
+2024-09-02 18:32:27 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 18:32:27 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 18:32:27 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 18:32:27 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 18:32:27 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 18:32:27 -Initializing Spring embedded WebApplicationContext
+2024-09-02 18:32:27 -Root WebApplicationContext: initialization completed in 947 ms
+2024-09-02 18:32:36 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:32:36 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:32:36 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 18:32:36 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 18:32:36 -Created new connection: rabbitConnectionFactory#435cc7f9:0/SimpleConnection@2574a9e3 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 56600]
+2024-09-02 18:32:37 -Started Application in 11.167 seconds (JVM running for 11.789)
+2024-09-02 18:32:55 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx1","command":4001,"status":1}
+2024-09-02 18:32:55 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx1"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx1"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx1"}],"userId":"lyx1","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:32:55 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx1"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx1"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx1"}],"userId":"lyx1","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:32:55 -HikariPool-1 - Starting...
+2024-09-02 18:32:55 -HikariPool-1 - Start completed.
+2024-09-02 18:33:04 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:33:04 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:33:04 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:33:47 -Waiting for workers to finish.
+2024-09-02 18:33:47 -Successfully waited for workers to finish.
+2024-09-02 18:33:47 -Waiting for workers to finish.
+2024-09-02 18:33:48 -Successfully waited for workers to finish.
+2024-09-02 18:33:48 -Waiting for workers to finish.
+2024-09-02 18:33:48 -Successfully waited for workers to finish.
+2024-09-02 18:33:48 -Shutdown ignored - container is not active already
+2024-09-02 18:33:48 -Shutdown ignored - container is not active already
+2024-09-02 18:33:48 -Shutdown ignored - container is not active already
+2024-09-02 18:33:48 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:33:53 -HikariPool-1 - Shutdown initiated...
+2024-09-02 18:33:53 -HikariPool-1 - Shutdown completed.
+2024-09-02 18:33:56 -Starting Application on bless with PID 4912 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 18:33:56 -The following profiles are active: dev
+2024-09-02 18:33:56 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 18:33:56 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 18:33:57 -Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2024-09-02 18:33:57 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 18:33:57 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:33:57 -Starting service [Tomcat]
+2024-09-02 18:33:57 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 18:33:57 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 18:33:57 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 18:33:57 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 18:33:57 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 18:33:57 -Initializing Spring embedded WebApplicationContext
+2024-09-02 18:33:57 -Root WebApplicationContext: initialization completed in 945 ms
+2024-09-02 18:34:05 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:34:06 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:34:06 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 18:34:06 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 18:34:06 -Created new connection: rabbitConnectionFactory#a3cba3a:0/SimpleConnection@6ec3d8e4 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 56783]
+2024-09-02 18:34:07 -Started Application in 11.159 seconds (JVM running for 11.926)
+2024-09-02 18:34:12 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx1","command":4001,"status":1}
+2024-09-02 18:34:22 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx1"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx1"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx1"}],"userId":"lyx1","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:34:22 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx1"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx1"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx1"}],"userId":"lyx1","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:34:22 -HikariPool-1 - Starting...
+2024-09-02 18:34:22 -HikariPool-1 - Start completed.
+2024-09-02 18:34:25 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:34:38 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:34:38 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:35:46 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s252ms213µs500ns).
+2024-09-02 18:35:46 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:35:47 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:35:47 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:35:47 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:35:47 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:35:47 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:40:29 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-02 18:40:29 -Initializing Servlet 'dispatcherServlet'
+2024-09-02 18:40:29 -Completed initialization in 5 ms
+2024-09-02 18:42:28 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:42:30 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:42:30 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:42:30 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:42:30 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:42:30 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:42:42 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:42:49 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:42:49 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:42:56 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:42:56 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:42:56 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:43:18 -Waiting for workers to finish.
+2024-09-02 18:43:19 -Successfully waited for workers to finish.
+2024-09-02 18:43:19 -Waiting for workers to finish.
+2024-09-02 18:43:20 -Successfully waited for workers to finish.
+2024-09-02 18:43:20 -Waiting for workers to finish.
+2024-09-02 18:43:21 -Successfully waited for workers to finish.
+2024-09-02 18:43:21 -Shutdown ignored - container is not active already
+2024-09-02 18:43:21 -Shutdown ignored - container is not active already
+2024-09-02 18:43:21 -Shutdown ignored - container is not active already
+2024-09-02 18:43:21 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:43:26 -HikariPool-1 - Shutdown initiated...
+2024-09-02 18:43:26 -HikariPool-1 - Shutdown completed.
+2024-09-02 18:43:32 -Starting Application on bless with PID 34824 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 18:43:32 -The following profiles are active: dev
+2024-09-02 18:43:32 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 18:43:32 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 18:43:32 -Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2024-09-02 18:43:33 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 18:43:33 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:43:33 -Starting service [Tomcat]
+2024-09-02 18:43:33 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 18:43:33 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 18:43:33 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 18:43:33 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 18:43:33 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 18:43:33 -Initializing Spring embedded WebApplicationContext
+2024-09-02 18:43:33 -Root WebApplicationContext: initialization completed in 874 ms
+2024-09-02 18:43:41 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:43:41 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:43:41 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 18:43:41 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 18:43:42 -Created new connection: rabbitConnectionFactory#44032fde:0/SimpleConnection@1c34365c [delegate=amqp://guest@123.60.15.140:5672/, localPort= 57467]
+2024-09-02 18:43:43 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:43:43 -Started Application in 11.035 seconds (JVM running for 11.666)
+2024-09-02 18:43:43 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:43:43 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:43:43 -HikariPool-1 - Starting...
+2024-09-02 18:43:43 -HikariPool-1 - Start completed.
+2024-09-02 18:43:43 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:43:43 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:43:43 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:43:53 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:43:53 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:43:53 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:43:53 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:43:53 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:43:53 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:43:59 -Waiting for workers to finish.
+2024-09-02 18:44:00 -Successfully waited for workers to finish.
+2024-09-02 18:44:00 -Waiting for workers to finish.
+2024-09-02 18:44:00 -Successfully waited for workers to finish.
+2024-09-02 18:44:00 -Waiting for workers to finish.
+2024-09-02 18:44:01 -Successfully waited for workers to finish.
+2024-09-02 18:44:01 -Shutdown ignored - container is not active already
+2024-09-02 18:44:01 -Shutdown ignored - container is not active already
+2024-09-02 18:44:01 -Shutdown ignored - container is not active already
+2024-09-02 18:44:01 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:44:06 -HikariPool-1 - Shutdown initiated...
+2024-09-02 18:44:06 -HikariPool-1 - Shutdown completed.
+2024-09-02 18:44:09 -Starting Application on bless with PID 35136 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 18:44:09 -The following profiles are active: dev
+2024-09-02 18:44:10 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 18:44:10 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 18:44:10 -Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2024-09-02 18:44:10 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 18:44:10 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:44:10 -Starting service [Tomcat]
+2024-09-02 18:44:10 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 18:44:10 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 18:44:10 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 18:44:10 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 18:44:10 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 18:44:10 -Initializing Spring embedded WebApplicationContext
+2024-09-02 18:44:10 -Root WebApplicationContext: initialization completed in 938 ms
+2024-09-02 18:44:19 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 18:44:19 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 18:44:19 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 18:44:19 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 18:44:19 -Created new connection: rabbitConnectionFactory#3cb6e0ee:0/SimpleConnection@782e6b40 [delegate=amqp://guest@123.60.15.140:5672/, localPort= 57568]
+2024-09-02 18:44:20 -Started Application in 11.217 seconds (JVM running for 11.903)
+2024-09-02 18:44:26 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:44:34 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:44:34 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:44:38 -HikariPool-1 - Starting...
+2024-09-02 18:44:38 -HikariPool-1 - Start completed.
+2024-09-02 18:44:39 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:44:39 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:44:39 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:53:56 -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m17s737ms994µs200ns).
+2024-09-02 18:53:56 -处理消息出现异常：Connection reset by peer: socket write error
+2024-09-02 18:53:56 -An unexpected connection driver error occured (Exception message: Connection reset)
+2024-09-02 18:53:56 -Channel shutdown: connection error
+2024-09-02 18:53:56 -Channel shutdown: connection error
+2024-09-02 18:53:56 -RMQ_CHAT_TRAN_ERROR
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at com.rabbitmq.client.impl.SocketFrameHandler.flush(SocketFrameHandler.java:177)
+	at com.rabbitmq.client.impl.AMQConnection.flush(AMQConnection.java:573)
+	at com.rabbitmq.client.impl.AMQCommand.transmit(AMQCommand.java:134)
+	at com.rabbitmq.client.impl.AMQChannel.quiescingTransmit(AMQChannel.java:455)
+	at com.rabbitmq.client.impl.AMQChannel.transmit(AMQChannel.java:428)
+	at com.rabbitmq.client.impl.AMQChannel.transmit(AMQChannel.java:421)
+	at com.rabbitmq.client.impl.ChannelN.basicAck(ChannelN.java:1179)
+	at org.springframework.amqp.rabbit.connection.PublisherCallbackChannelImpl.basicAck(PublisherCallbackChannelImpl.java:417)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1184)
+	at com.sun.proxy.$Proxy123.basicAck(Unknown Source)
+	at com.bless.service.user.mq.UserOnlineStatusReceiver.onChatMessage(UserOnlineStatusReceiver.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:171)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:120)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:53)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:220)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:148)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:133)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1591)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1510)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1498)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1489)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1433)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:970)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:916)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:83)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1291)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1197)
+	at java.lang.Thread.run(Thread.java:748)
+2024-09-02 18:53:56 -Channel shutdown: connection error
+2024-09-02 18:53:56 -NACK_MSG:{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:53:56 -Channel shutdown: connection error
+2024-09-02 18:53:56 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 18:53:56 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-02 18:53:56 -Initializing Servlet 'dispatcherServlet'
+2024-09-02 18:53:56 -Completed initialization in 4 ms
+2024-09-02 18:53:56 -Created new connection: rabbitConnectionFactory#3cb6e0ee:1/SimpleConnection@797f2a1b [delegate=amqp://guest@123.60.15.140:5672/, localPort= 58056]
+2024-09-02 18:53:57 -Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method 'public void com.bless.service.user.mq.UserOnlineStatusReceiver.onChatMessage(org.springframework.amqp.core.Message,java.util.Map<java.lang.String, java.lang.Object>,com.rabbitmq.client.Channel) throws java.lang.Exception' threw exception
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:228)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:148)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:133)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1591)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1510)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1498)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1489)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1433)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:970)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:916)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$1600(SimpleMessageListenerContainer.java:83)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1291)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1197)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.amqp.AmqpException: PublisherCallbackChannel is closed
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1166)
+	at com.sun.proxy.$Proxy123.basicNack(Unknown Source)
+	at com.bless.service.user.mq.UserOnlineStatusReceiver.onChatMessage(UserOnlineStatusReceiver.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:171)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:120)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:53)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:220)
+	... 13 common frames omitted
+2024-09-02 18:53:57 -Restarting Consumer@19d27c27: tags=[[amq.ctag-lw_Y7FeueNNeIZhRDDmTmA]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,2), conn: Proxy@5db9f51f Shared Rabbit Connection: SimpleConnection@797f2a1b [delegate=amqp://guest@123.60.15.140:5672/, localPort= 58056], acknowledgeMode=MANUAL local queue size=0
+2024-09-02 18:53:57 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:54:09 -Restarting Consumer@52657d5f: tags=[[amq.ctag-SochVd60x21yyYuP4rRQMw]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,1), conn: Proxy@5db9f51f Shared Rabbit Connection: SimpleConnection@797f2a1b [delegate=amqp://guest@123.60.15.140:5672/, localPort= 58056], acknowledgeMode=MANUAL local queue size=0
+2024-09-02 18:54:09 -Restarting Consumer@7d537616: tags=[[amq.ctag-XlB-RRoUTrcqw2oESikaGQ]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@123.60.15.140:5672/,2), conn: Proxy@5db9f51f Shared Rabbit Connection: SimpleConnection@797f2a1b [delegate=amqp://guest@123.60.15.140:5672/, localPort= 58056], acknowledgeMode=MANUAL local queue size=0
+2024-09-02 18:54:09 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:54:09 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:54:09 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:54:09 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:54:09 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:54:09 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:54:09 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:54:09 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:54:20 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:54:22 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:54:22 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:54:22 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:54:22 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:54:22 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:54:22 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:54:22 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:54:22 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:54:51 -CHAT MSG FROM QUEUE :::::{"clientType":1,"appId":10000,"imei":"100","userId":"lyx2","command":4001,"status":1}
+2024-09-02 18:54:52 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx2"}
+2024-09-02 18:54:52 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx2"}
+2024-09-02 18:54:52 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:54:52 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:54:52 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 18:54:52 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"123","toId":"lyx1"}
+2024-09-02 18:54:52 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"111","toId":"lyx1"}
+2024-09-02 18:54:52 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"appId":10000,"client":[{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"111","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"123","connectState":1,"userId":"lyx2"},{"brokerId":1000,"clientType":1,"appId":10000,"brokerHost":"192.168.56.1","imei":"100","connectState":1,"userId":"lyx2"}],"userId":"lyx2","status":1},"imei":"100","toId":"lyx1"}
+2024-09-02 20:04:09 -Waiting for workers to finish.
+2024-09-02 20:04:09 -Successfully waited for workers to finish.
+2024-09-02 20:04:09 -Waiting for workers to finish.
+2024-09-02 20:04:09 -Successfully waited for workers to finish.
+2024-09-02 20:04:09 -Waiting for workers to finish.
+2024-09-02 20:04:10 -Successfully waited for workers to finish.
+2024-09-02 20:04:10 -Shutdown ignored - container is not active already
+2024-09-02 20:04:10 -Shutdown ignored - container is not active already
+2024-09-02 20:04:10 -Shutdown ignored - container is not active already
+2024-09-02 20:04:10 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 20:04:15 -HikariPool-1 - Shutdown initiated...
+2024-09-02 20:04:15 -HikariPool-1 - Shutdown completed.
+2024-09-02 20:04:23 -Starting Application on bless with PID 3208 (E:\code\im-system\service\target\classes started by bless in E:\code\im-system)
+2024-09-02 20:04:23 -The following profiles are active: dev
+2024-09-02 20:04:23 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-09-02 20:04:23 -Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-09-02 20:04:23 -Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2024-09-02 20:04:24 -Tomcat initialized with port(s): 8000 (http)
+2024-09-02 20:04:24 -Initializing ProtocolHandler ["http-nio-8000"]
+2024-09-02 20:04:24 -Starting service [Tomcat]
+2024-09-02 20:04:24 -Starting Servlet engine: [Apache Tomcat/9.0.37]
+2024-09-02 20:04:24 -Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.4].
+2024-09-02 20:04:24 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2024-09-02 20:04:24 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-09-02 20:04:24 -OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2024-09-02 20:04:24 -Initializing Spring embedded WebApplicationContext
+2024-09-02 20:04:24 -Root WebApplicationContext: initialization completed in 897 ms
+2024-09-02 20:04:32 -Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-02 20:04:33 -Starting ProtocolHandler ["http-nio-8000"]
+2024-09-02 20:04:33 -Tomcat started on port(s): 8000 (http) with context path ''
+2024-09-02 20:04:33 -Attempting to connect to: [123.60.15.140:5672]
+2024-09-02 20:04:33 -Created new connection: rabbitConnectionFactory#5578be42:0/SimpleConnection@412c5e8b [delegate=amqp://guest@123.60.15.140:5672/, localPort= 59260]
+2024-09-02 20:04:37 -Started Application in 14.508 seconds (JVM running for 15.129)
+2024-09-02 20:07:07 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-02 20:07:07 -Initializing Servlet 'dispatcherServlet'
+2024-09-02 20:07:07 -Completed initialization in 3 ms
+2024-09-02 20:07:08 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"customStatus":1,"customText":"在线","userId":"lyx1"},"imei":"123","toId":"lyx1"}
+2024-09-02 20:07:08 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"customStatus":1,"customText":"在线","userId":"lyx1"},"imei":"111","toId":"lyx1"}
+2024-09-02 20:07:08 -send messge == {"appId":10000,"clientType":1,"command":4005,"data":{"customStatus":1,"customText":"在线","userId":"lyx1"},"imei":"100","toId":"lyx1"}
+2024-09-02 20:07:08 -HikariPool-1 - Starting...
+2024-09-02 20:07:08 -HikariPool-1 - Start completed.
+2024-09-02 20:07:08 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"customStatus":1,"customText":"在线","userId":"lyx1"},"imei":"111","toId":"lyx2"}
+2024-09-02 20:07:08 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"customStatus":1,"customText":"在线","userId":"lyx1"},"imei":"123","toId":"lyx2"}
+2024-09-02 20:07:08 -send messge == {"appId":10000,"clientType":1,"command":4004,"data":{"customStatus":1,"customText":"在线","userId":"lyx1"},"imei":"100","toId":"lyx2"}
+2024-09-02 20:18:11 -Waiting for workers to finish.
+2024-09-02 20:18:11 -Successfully waited for workers to finish.
+2024-09-02 20:18:11 -Waiting for workers to finish.
+2024-09-02 20:18:12 -Successfully waited for workers to finish.
+2024-09-02 20:18:12 -Waiting for workers to finish.
+2024-09-02 20:18:12 -Successfully waited for workers to finish.
+2024-09-02 20:18:13 -Shutdown ignored - container is not active already
+2024-09-02 20:18:13 -Shutdown ignored - container is not active already
+2024-09-02 20:18:13 -Shutdown ignored - container is not active already
+2024-09-02 20:18:13 -Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-02 20:18:17 -HikariPool-1 - Shutdown initiated...
+2024-09-02 20:18:17 -HikariPool-1 - Shutdown completed.

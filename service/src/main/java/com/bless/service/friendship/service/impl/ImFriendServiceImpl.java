@@ -629,5 +629,12 @@ public class ImFriendServiceImpl implements ImFriendService {
         return ResponseVO.successResponse(resp);
     }
 
+    @Override
+    public List<String> getAllFriendId(String userId, Integer appId) {
+        return imFriendShipMapper.getAllFriendId(userId,appId);
+
+
+    }
+
 
 }
