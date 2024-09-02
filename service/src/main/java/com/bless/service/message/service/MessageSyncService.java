@@ -1,21 +1,35 @@
 package com.bless.service.message.service;
 
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.bless.codec.pack.message.MessageReadedPack;
+import com.bless.codec.pack.message.RecallMessageNotifyPack;
 import com.bless.codec.proto.Message;
 import com.bless.common.ResponseVO;
 import com.bless.common.constant.Constants;
+import com.bless.common.enums.ConversationTypeEnum;
+import com.bless.common.enums.DelFlagEnum;
+import com.bless.common.enums.MessageErrorCode;
 import com.bless.common.enums.command.Command;
 import com.bless.common.enums.command.GroupEventCommand;
 import com.bless.common.enums.command.MessageCommand;
+import com.bless.common.model.ClientInfo;
 import com.bless.common.model.SyncReq;
 import com.bless.common.model.SyncResp;
 import com.bless.common.model.message.MessageReadedContent;
 import com.bless.common.model.message.MessageReciveAckContent;
 import com.bless.common.model.message.OfflineMessageContent;
+import com.bless.common.model.message.RecallMessageContent;
 import com.bless.service.conversation.service.ConversationService;
+import com.bless.service.group.service.ImGroupMemberService;
+import com.bless.service.message.dao.ImMessageBodyEntity;
+import com.bless.service.message.dao.mapper.ImMessageBodyMapper;
+import com.bless.service.seq.RedisSeq;
+import com.bless.service.utils.ConversationIdGenerate;
+import com.bless.service.utils.GroupMessageProducer;
 import com.bless.service.utils.MessageProducer;
+import com.bless.service.utils.SnowflakeIdWorker;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.DefaultTypedTuple;
@@ -41,6 +55,20 @@ public class MessageSyncService {
     ConversationService conversationService;
     @Autowired
     RedisTemplate redisTemplate;
+    @Autowired
+    RedisSeq redisSeq;
+
+    @Autowired
+    SnowflakeIdWorker snowflakeIdWorker;
+
+    @Autowired
+    ImGroupMemberService imGroupMemberService;
+
+    @Autowired
+    GroupMessageProducer groupMessageProducer;
+    @Autowired
+    ImMessageBodyMapper imMessageBodyMapper;
+
 
     public void receiveMark(MessageReciveAckContent messageReciveAckContent) {
         messageProducer.sendToUser(messageReciveAckContent.getToId(),
@@ -119,4 +147,107 @@ public class MessageSyncService {
 
 
     }
+
+
+    //修改历史消息的状态
+    //修改离线消息的状态
+    //ack给发送方
+    //发送给同步端
+    //分发给消息的接收方
+    public void recallMessage(RecallMessageContent content) {
+
+        Long messageTime = content.getMessageTime();
+        Long now = System.currentTimeMillis();
+
+        RecallMessageNotifyPack pack = new RecallMessageNotifyPack();
+        BeanUtils.copyProperties(content,pack);
+
+        if(120000L < now - messageTime){
+            recallAck(pack,ResponseVO.errorResponse(MessageErrorCode.MESSAGE_RECALL_TIME_OUT),content);
+            return;
+        }
+
+        QueryWrapper<ImMessageBodyEntity> query = new QueryWrapper<>();
+        query.eq("app_id",content.getAppId());
+        query.eq("message_key",content.getMessageKey());
+        ImMessageBodyEntity body = imMessageBodyMapper.selectOne(query);
+
+        if(body == null){
+            //TODO ack失败 不存在的消息不能撤回
+            recallAck(pack,ResponseVO.errorResponse(MessageErrorCode.MESSAGEBODY_IS_NOT_EXIST),content);
+            return;
+        }
+
+        if(body.getDelFlag() == DelFlagEnum.DELETE.getCode()){
+            recallAck(pack,ResponseVO.errorResponse(MessageErrorCode.MESSAGE_IS_RECALLED),content);
+
+            return;
+        }
+
+        body.setDelFlag(DelFlagEnum.DELETE.getCode());
+        imMessageBodyMapper.update(body,query);
+
+        if(content.getConversationType() == ConversationTypeEnum.P2P.getCode()){
+
+            // 找到fromId的队列
+            String fromKey = content.getAppId() + ":" + Constants.RedisConstants.OfflineMessage + ":" + content.getFromId();
+            // 找到toId的队列
+            String toKey = content.getAppId() + ":" + Constants.RedisConstants.OfflineMessage + ":" + content.getToId();
+
+            OfflineMessageContent offlineMessageContent = new OfflineMessageContent();
+            BeanUtils.copyProperties(content,offlineMessageContent);
+            offlineMessageContent.setDelFlag(DelFlagEnum.DELETE.getCode());
+            offlineMessageContent.setMessageKey(content.getMessageKey());
+            offlineMessageContent.setConversationType(ConversationTypeEnum.P2P.getCode());
+            offlineMessageContent.setConversationId(conversationService.convertConversationId(offlineMessageContent.getConversationType()
+                    ,content.getFromId(),content.getToId()));
+            offlineMessageContent.setMessageBody(body.getMessageBody());
+
+            long seq = redisSeq.doGetSeq(content.getAppId() + ":" + Constants.SeqConstants.Message + ":" + ConversationIdGenerate.generateP2PId(content.getFromId(),content.getToId()));
+            offlineMessageContent.setMessageSequence(seq);
+
+            long messageKey = SnowflakeIdWorker.nextId();
+
+            redisTemplate.opsForZSet().add(fromKey,JSONObject.toJSONString(offlineMessageContent),messageKey);
+            redisTemplate.opsForZSet().add(toKey,JSONObject.toJSONString(offlineMessageContent),messageKey);
+
+            //ack
+            recallAck(pack,ResponseVO.successResponse(),content);
+            //分发给同步端
+            messageProducer.sendToUserExceptClient(content.getFromId(),
+                    MessageCommand.MSG_RECALL_NOTIFY,pack,content);
+            //分发给对方
+            messageProducer.sendToUser(content.getToId(),MessageCommand.MSG_RECALL_NOTIFY,
+                    pack,content.getAppId());
+        }else{
+            List<String> groupMemberId = imGroupMemberService.getGroupMemberId(content.getToId(), content.getAppId());
+            long seq = redisSeq.doGetSeq(content.getAppId() + ":" + Constants.SeqConstants.Message + ":" + ConversationIdGenerate.generateP2PId(content.getFromId(),content.getToId()));
+            //ack
+            recallAck(pack,ResponseVO.successResponse(),content);
+            //发送给同步端
+            messageProducer.sendToUserExceptClient(content.getFromId(), MessageCommand.MSG_RECALL_NOTIFY, pack
+                    , content);
+            for (String memberId : groupMemberId) {
+                String toKey = content.getAppId() + ":" + Constants.SeqConstants.Message + ":" + memberId;
+                OfflineMessageContent offlineMessageContent = new OfflineMessageContent();
+                offlineMessageContent.setDelFlag(DelFlagEnum.DELETE.getCode());
+                BeanUtils.copyProperties(content,offlineMessageContent);
+                offlineMessageContent.setConversationType(ConversationTypeEnum.GROUP.getCode());
+                offlineMessageContent.setConversationId(conversationService.convertConversationId(offlineMessageContent.getConversationType()
+                        ,content.getFromId(),content.getToId()));
+                offlineMessageContent.setMessageBody(body.getMessageBody());
+                offlineMessageContent.setMessageSequence(seq);
+                redisTemplate.opsForZSet().add(toKey,JSONObject.toJSONString(offlineMessageContent),seq);
+
+                groupMessageProducer.producer(content.getFromId(), MessageCommand.MSG_RECALL_NOTIFY, pack,content);
+            }
+        }
+
+    }
+    private void recallAck(RecallMessageNotifyPack recallPack, ResponseVO<Object> success, ClientInfo clientInfo) {
+        ResponseVO<Object> wrappedResp = success;
+        messageProducer.sendToUser(recallPack.getFromId(),
+                MessageCommand.MSG_RECALL_ACK, wrappedResp, clientInfo);
+    }
+
 }

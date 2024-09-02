@@ -1,8 +1,10 @@
 package com.bless.service.message.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.bless.codec.pack.message.ChatMessageAck;
 import com.bless.codec.pack.message.MessageReciveServerAckPack;
 import com.bless.common.ResponseVO;
+import com.bless.common.config.AppConfig;
 import com.bless.common.constant.Constants;
 import com.bless.common.enums.ConversationTypeEnum;
 import com.bless.common.enums.command.MessageCommand;
@@ -12,6 +14,7 @@ import com.bless.common.model.message.OfflineMessageContent;
 import com.bless.service.message.model.req.SendMessageReq;
 import com.bless.service.message.model.resp.SendMessageResp;
 import com.bless.service.seq.RedisSeq;
+import com.bless.service.utils.CallbackService;
 import com.bless.service.utils.ConversationIdGenerate;
 import com.bless.service.utils.MessageProducer;
 import org.slf4j.Logger;
@@ -45,6 +48,10 @@ public class P2PMessageService {
     MessageStoreService messageStoreService;
     @Autowired
     RedisSeq redisSeq;
+    @Autowired
+    AppConfig appConfig;
+    @Autowired
+    CallbackService callbackService;
 
     private final ThreadPoolExecutor threadPoolExecutor;
 
@@ -87,6 +94,19 @@ public class P2PMessageService {
             });
             return;
         }
+
+        //回调
+        ResponseVO responseVO = ResponseVO.successResponse();
+        if(appConfig.isSendMessageAfterCallback()){
+            responseVO = callbackService.beforeCallback(messageContent.getAppId(), Constants.CallbackCommand.SendMessageBefore
+                    , JSONObject.toJSONString(messageContent));
+        }
+
+        if(!responseVO.isOk()){
+            ack(messageContent,responseVO);
+            return;
+        }
+
         long seq = redisSeq.doGetSeq(messageContent.getAppId() + ":"
                 + Constants.SeqConstants.Message+ ":" + ConversationIdGenerate.generateP2PId(
                 messageContent.getFromId(),messageContent.getToId()
@@ -97,28 +117,34 @@ public class P2PMessageService {
         //发送方和接收方是否是好友
 //        ResponseVO responseVO = imServerPermissionCheck(fromId, toId, messageContent);
 //        if(responseVO.isOk()){
-            threadPoolExecutor.execute(()->{
-                //appId + Seq + (from + to) groupId
-                messageStoreService.storeP2PMessage(messageContent);
+        threadPoolExecutor.execute(()->{
+            //appId + Seq + (from + to) groupId
+            messageStoreService.storeP2PMessage(messageContent);
 
-                OfflineMessageContent offlineMessageContent = new OfflineMessageContent();
-                BeanUtils.copyProperties(messageContent, offlineMessageContent);
-                offlineMessageContent.setConversationType(ConversationTypeEnum.P2P.getCode());
-                messageStoreService.storeOfflineMessage(offlineMessageContent);
+            OfflineMessageContent offlineMessageContent = new OfflineMessageContent();
+            BeanUtils.copyProperties(messageContent, offlineMessageContent);
+            offlineMessageContent.setConversationType(ConversationTypeEnum.P2P.getCode());
+            messageStoreService.storeOfflineMessage(offlineMessageContent);
 
-                //1.回ack成功给自己
-                ack(messageContent, ResponseVO.successResponse());
-                //2.发消息给同步在线端
-                syncToSender(messageContent,messageContent);
-                //3.发消息给对方在线端
-                List<ClientInfo> clientInfos = dispatchMessage(messageContent);
+            //1.回ack成功给自己
+            ack(messageContent, ResponseVO.successResponse());
+            //2.发消息给同步在线端
+            syncToSender(messageContent,messageContent);
+            //3.发消息给对方在线端
+            List<ClientInfo> clientInfos = dispatchMessage(messageContent);
 
-                messageStoreService.setMessageFromMessageIdCache(messageContent.getAppId(),
-                        messageContent.getMessageId(),messageContent);
-                if (clientInfos.isEmpty()) {
-                    reciverAck(messageContent);
-                }
-            });
+            messageStoreService.setMessageFromMessageIdCache(messageContent.getAppId(),
+                    messageContent.getMessageId(),messageContent);
+            if (clientInfos.isEmpty()) {
+                reciverAck(messageContent);
+            }
+
+            if(appConfig.isSendMessageAfterCallback()){
+                callbackService.callback(messageContent.getAppId(),Constants.CallbackCommand.SendMessageAfter,
+                        JSONObject.toJSONString(messageContent));
+            }
+            logger.info("消息处理完成：{}",messageContent.getMessageId());
+        });
 //        } else {
 //            //告诉客户端失败了
 //            //ack

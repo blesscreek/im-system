@@ -27,16 +27,18 @@ public class CallbackService {
 
     @Autowired
     AppConfig appConfig;
+    @Autowired
+    ShareThreadPool shareThreadPool;
 
-    public ResponseVO callback(Integer appId, String callbackCommand, String jsonBody) {
-        try {
-            ResponseVO responseVO = httpRequestUtils.doPost(appConfig.getCallbackUrl(), ResponseVO.class, builderUrlParams(appId, callbackCommand),
-                    jsonBody, null);
-            return responseVO;
-        }catch (Exception e) {
-            logger.error("callback 回调{} : {}出现异常 ： {} ",callbackCommand , appId, e.getMessage());
-            return ResponseVO.successResponse();
-        }
+    public void callback(Integer appId,String callbackCommand,String jsonBody){
+        shareThreadPool.submit(() -> {
+            try {
+                httpRequestUtils.doPost(appConfig.getCallbackUrl(),Object.class,builderUrlParams(appId,callbackCommand),
+                        jsonBody,null);
+            }catch (Exception e){
+                logger.error("callback 回调{} : {}出现异常 ： {} ",callbackCommand , appId, e.getMessage());
+            }
+        });
     }
 
     public ResponseVO beforeCallback(Integer appId,String callbackCommand,String jsonBody){
